@@ -1,7 +1,7 @@
 ---
 title: Hallo Homelab!
 date: 2022-05-29 14:00:00 -500
-categories: [homelab, start]
+categories: [homelab,start]
 tags: [server,proxmox,start,homelab,netwerk]
 ---
 

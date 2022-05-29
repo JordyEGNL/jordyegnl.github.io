@@ -6,5 +6,4 @@ order: 4
 
 Mijn naam is Jordy Hoebergen en ik ben momenteel 18 jaar oud. Ik zit momenteel in het tweede leerjaar van de opleiding Expert IT systems and devices op MBO4 niveau.
 
-#> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-#{: .prompt-tip }
+In mijn vrije tijd vind ik het leuk om bezig te zijn met mijn (nu nog kleine) homelab.
