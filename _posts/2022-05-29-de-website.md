@@ -1,8 +1,8 @@
 ---
 title: Hallo Homelab
 layout: post
-categories: [homelab,start]
-tags: [server,proxmox,start,homelab,netwerk]
+categories: [start]
+tags: [server,proxmox,start,netwerk]
 ---
 
 # Welkom op de documentatie website!
