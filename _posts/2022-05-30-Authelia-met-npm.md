@@ -32,9 +32,7 @@ I'm not going to explain how to install docker, you can find a simple tutorial h
 
 # Deploy the Authelia Container
 
-<details>
-<summary>docker-compose.yaml</summary><br/>
-  
+## docker-compose.yaml
 ```yaml
 
 version: '3.3'
@@ -71,13 +69,10 @@ services:
     environment:
       - TZ=Europe/Amsterdam
 ```
-</details>
 
 You can change /docker_data/authelia, /docker_data/redis and Europe/Amsterdam to your own values.
 
-<details>
-<summary>configuration.yml</summary><br/>
-
+## configuration.yml
 ```yaml
 
 ---
@@ -162,10 +157,8 @@ webauthn:
   timeout: 60s
 ...
 ```
-</details>
 
-<details>
-<summary>users_database.yml</summary><br/>
+## users_database.yml
   
 ```yaml
 
@@ -187,8 +180,7 @@ users:
       - admins
       - dev
 ...
-  ```
-</details>
+```
 
 
 
@@ -201,11 +193,9 @@ Create a new proxy host for the authentication website. I use auth.example.com i
 Forward it to Authelia http://x.x.x.x:9001. 
 
 Then place the following in the Advanced section
-<details>
-<summary>Advanced settings for auth host</summary><br/>
 
+## Advanced settings for auth host
 ```yaml
-
 location / {
 set $upstream_authelia http://x.x.x.x:9001;
 proxy_pass $upstream_authelia;
@@ -237,7 +227,6 @@ real_ip_header CF-Connecting-IP;
 add_header Referrer-Policy "no-referrer";
 }
 ```
-</details>
 
 
 You need to replace x.x.x.x with your server ip. You can also use the container name of Authelia if you know how.
@@ -246,11 +235,9 @@ Now you are going to create (or modify) the protected website host. In my exampl
 
 You can forward it to your service in the Details tab. In the Advanced tab you need to add the following
 
-<details>
-<summary>Advanced settings for protected host</summary><br/>
+## Advanced settings for protected host
 
 ```yaml
-
 location /authelia {
 internal;
 set $upstream_authelia http://YOUR AUTHELIA IP AND PORT/api/verify;
@@ -327,7 +314,6 @@ real_ip_header CF-Connecting-IP;
 There are 3 placeholders in this example, YOUR SERVICE (nextcloud:80), YOUR AUTHELIA IP AND PORT (192.168.0.20:9001) and YOUR AUTH DOMAIN (auth.example.com).
   
 The real_ip_header is going to forward the real ip of the visiter.
-</details>
 
 
 # Hopefully this has helped you!
