@@ -35,7 +35,8 @@ I'm not going to explain how to install docker, you can find a simple tutorial h
 <details>
 <summary>docker-compose.yaml</summary><br/>
   
-``` yaml
+```yaml
+
 version: '3.3'
 
 networks:
@@ -78,6 +79,7 @@ You can change /docker_data/authelia, /docker_data/redis and Europe/Amsterdam to
 <summary>configuration.yml</summary><br/>
 
 ```yaml
+
 ---
 ###############################################################
 #                   Authelia configuration                    #
@@ -166,6 +168,7 @@ webauthn:
 <summary>users_database.yml</summary><br/>
   
 ```yaml
+
 ---
 ###############################################################
 #                         Users Database                      #
@@ -202,6 +205,7 @@ Then place the following in the Advanced section
 <summary>Advanced settings for auth host</summary><br/>
 
 ```yaml
+
 location / {
 set $upstream_authelia http://x.x.x.x:9001;
 proxy_pass $upstream_authelia;
@@ -246,6 +250,7 @@ You can forward it to your service in the Details tab. In the Advanced tab you n
 <summary>Advanced settings for protected host</summary><br/>
 
 ```yaml
+
 location /authelia {
 internal;
 set $upstream_authelia http://YOUR AUTHELIA IP AND PORT/api/verify;
