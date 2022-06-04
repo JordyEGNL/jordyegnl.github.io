@@ -13,7 +13,7 @@ tags: [cisco,ccna3,ospf,netwerk,aanvallen,beveiliging]
 
 # Verkenningsaanvallen
 | Techniek | Beschrijving |
-| --- | :------ |
+|---|:------|
 | Informatiequery | De aanvaller zoekt informatie op over een doelwit |
 | Ping sweep | Wordt gebruikt om de actieve IP adressen te achterhalen |
 | Port scan | Wordt gebruikt om open poorten te sannen van een service. Wordt uitgevoerd door bijvoorbeeld Nmap of SuperScan |
