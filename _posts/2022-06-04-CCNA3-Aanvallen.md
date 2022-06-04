@@ -42,4 +42,6 @@ Hieronder staan een aantal social engineering aanvallen
 |--- | :--- |
 |Pretexting |Aanvaller doet alsof hij persoonlijke of financiele data nodig heeft om de identiteit van de ontvanger te bevestigen.
 
+\
+\
 Meer info volgt!
