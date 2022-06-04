@@ -14,11 +14,11 @@ tags: [cisco,ccna3,ospf,netwerk,aanvallen,beveiliging]
 # Verkenningsaanvallen
 |Techniek |Beschrijving|
 |--- | :--- |
-|Informatiequery| De aanvaller zoekt informatie op over een doelwit
-|Ping sweep| Wordt gebruikt om de actieve IP adressen te achterhalen
-|Port scan| Wordt gebruikt om open poorten te sannen van een service. Wordt uitgevoerd door bijvoorbeeld Nmap of SuperScan
-|Kwetsbaarheden scan| Laat de gebruikte versies and type zien van een bepaalde applicatie of server. Met bijvoorbeeld Nipper of Secuna PSI
-| Exploits gebruiken en zoeken |Als er kwetsbaarheden zijn gevonden kun je gaan kijken op welke manier deze gebruikt kunnen gaan worden
+|Informatiequery |De aanvaller zoekt informatie op over een doelwit
+|Ping sweep |Wordt gebruikt om de actieve IP adressen te achterhalen
+|Port scan |Wordt gebruikt om open poorten te sannen van een service. Wordt uitgevoerd door bijvoorbeeld Nmap of SuperScan
+|Kwetsbaarheden scan |Laat de gebruikte versies and type zien van een bepaalde applicatie of server. Met bijvoorbeeld Nipper of Secuna PSI
+|Exploits gebruiken en zoeken |Als er kwetsbaarheden zijn gevonden kun je gaan kijken op welke manier deze gebruikt kunnen gaan worden
 
 # Toegangsaanvallen
 ## Wachtwoord aanvallen
