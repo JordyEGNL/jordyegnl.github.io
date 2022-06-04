@@ -12,6 +12,10 @@ tags: [cisco,ccna3,ospf,netwerk,aanvallen,beveiliging]
 4. Social Engineering
 
 # Verkenningsaanvallen
+|Aanval |Beschrijving|
+|--- | :--- |
+|Pretexting |Aanvaller doet alsof hij persoonlijke of financiele data nodig heeft om de identiteit van de ontvanger te bevestigen.|
+
 |Techniek |Beschrijving|
 |--- | :------ |
 |Informatiequery | De aanvaller zoekt informatie op over een doelwit |
