@@ -26,7 +26,7 @@ title: Jordy Hoebergen                         # the main title
 tagline: De documentatie van mijn homelab   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  De documentatie van Jordy zijn homelab. Met korte uitleg over hoe alles werkt.
+  Allemaal handige dingen voor je homelab of ICT studie!
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://docs.jordyhoebergen.nl'
