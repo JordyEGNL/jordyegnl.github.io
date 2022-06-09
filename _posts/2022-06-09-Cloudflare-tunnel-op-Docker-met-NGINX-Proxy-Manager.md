@@ -17,7 +17,7 @@ In deze post laat ik zien hoe ik een Cloudflare tunnel heb gemaakt en deze heb g
 
 # Installatie op Cloudflare
 
-Als eerste ga je naar https://cloudflare.com en log je in. Eenmal aangekomen op het dashboard klik je links in de side-bar op Zero Trust. Het kan zijn dat je gevraagd wordt om wat basis instellingen te configureren zoals een team naam. Deze wordt gebruikt voor Cloudflare Acces Authenticatie, als je dit wilt gaan gebruiken.
+Als eerste ga je naar [cloudflare.com](https://cloudflare.com) en log je in. Eenmal aangekomen op het dashboard klik je links in de side-bar op Zero Trust. Het kan zijn dat je gevraagd wordt om wat basis instellingen te configureren zoals een team naam. Deze wordt gebruikt voor Cloudflare Acces Authenticatie, als je dit wilt gaan gebruiken.
 
 ![Navigeren naar Cloudflare Zero Trust](https://i.imgur.com/yj9dXfb.png)
 
@@ -47,7 +47,7 @@ Zoals je ziet kom je direct in de console terecht van de container. Klik nu op C
 
 Je kunt de container nu weer starten met Portainer als je dit geconfigureerd hebt. Als je geen gebruik maakt van Portainer kun je het volgende doen.
 
-```console©©
+```console
 # Ga op zoek naar de zojuist aangemaakte container.
 docker ps
 ```
@@ -71,6 +71,7 @@ Bij service heb ik gekozen voor HTTP :// 192.168.2.33
 {: .prompt-warning}
 
 > Je kunt ook de naam van de NPM container gebruiken als de Cloudflare container en NPM in hetzelfde netwerk zitten.
+{: .prompt-tip}
 
 Daarna kun je deze configuratie opslaan.
 
