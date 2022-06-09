@@ -23,7 +23,7 @@ timezone: Europe/Amsterdam
 
 title: Jordy Hoebergen                         # the main title
 
-tagline: De documentatie van mijn homelab   # it will display as the sub-title
+tagline: Allemaal handige dingen voor je homelab of ICT studie!   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Allemaal handige dingen voor je homelab of ICT studie!
