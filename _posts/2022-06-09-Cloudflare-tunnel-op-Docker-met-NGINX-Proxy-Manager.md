@@ -48,7 +48,7 @@ Zoals je ziet kom je direct in de console terecht van de container. Klik nu op C
 Je kunt de container nu weer starten met Portainer als je dit geconfigureerd hebt. Als je geen gebruik maakt van Portainer kun je het volgende doen.
 
 ```console
-# Ga op zoek naar de zojuist aangemaakte container.
+# Ga op zoek naar de zojuist aangemaakte container
 docker ps
 ```
 
@@ -79,7 +79,7 @@ Daarna kun je deze configuratie opslaan.
 
 Nu gaan we verder met het configureren van NGINX Proxy Manager.
 
-> Als je dit al gedaan hebt, zorg ervoor dat FORCE SSL uit staat!
+> Als je dit al gedaan hebt, zorg er dan voor dat FORCE SSL uit staat!
 {: .prompt-warning}
 
 ## Nieuwe Proxy Host toevoegen
@@ -95,5 +95,5 @@ Als alles is gelukt, zou de pagina nu moeten werken. Het is niet nodig om HTTPS 
 ![Eindresultaat website](https://i.imgur.com/HNEir9w.png)
 
 
-
+    
 
