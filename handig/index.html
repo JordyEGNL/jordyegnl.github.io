@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jordy Hoebergen | DANE TLSA instellen</title>
+        <link rel="icon" href="../img/websitelogo.ico">
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        <!-- dark mode-->
+        <meta name="color-scheme" content="dark light">
+    </head>
+<body class="dark-theme || light-theme">
+    <div class="body">
+        <div class="titlePadding">
+            <h1>DANE TLSA instellen</h1>
+        </div>
+        <div class="text">
+<ol> 
+    <li>Ga naar web1 en vraag een nieuwe certificaat aan voor de volgende domeinen, ftp.jordyhoebergen.nl, mail.jordyhoebergen.nl, mta-sts.jordyhoebergen.nl, smtp.jordyhoebergen.nl.</li>
+    <br><li>Ga daarna naar <a href="https://mta-sts.jordyhoebergen.nl/">https://mta-sts.jordyhoebergen.nl/</a>. Of naar <a href="https://mail.jordyhoebergen.nl/">https://mail.jordyhoebergen.nl/</a>, zorg er in ieder geval voor dat het certificaat geldig is.</li>
+    <br><li>Ga dan naar het slotje, certificaat en exporteren als PEM-cert (natuurlijk gebruik je hiervoor Firefox)</li>
+    <br><li>Dan kopiee&#1043;«r je die dingen en plak je die in <a href="https://www.huque.com/bin/gen_tlsa">https://www.huque.com/bin/gen_tlsa</a> neer (3 1 1) heb je hiervoor nodig.</li>
+    <br><li>Pas daarna de uitkomst aan bij je Cloudflare account.</li>
+    <br><li>Hopelijk werkt het nu, anders keihard gaan huilen in een hoekje :(</li>
+</ol>
+    
+
+        </div>
+    </div>
+</body>
+<footer>
+    <script  src="js/index.js"></script>
+    <div class="footer">
+        <a1>Jordy Hoebergen &#1042;© 2022</a1>
+    </div>
+</footer>
+</html>
