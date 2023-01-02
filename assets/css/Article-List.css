@@ -56,12 +56,14 @@
   color: inherit;
 }
 
-.article-list .item .description {
-  font-size: 15px;
-  margin-top: 15px;
-  margin-bottom: 0;
-  padding: 0 10px;
-  text-align: left;
+@media (min-width: 994px) {
+  .article-list .item .description {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0 20px;
+    text-align: left;
+  }
 }
 
 .article-list .item .action {
@@ -118,6 +120,12 @@
 @media (max-width: 1200px) {
   .col-sm-4 {
     padding-top: 7%;
+  }
+}
+
+@media (max-width: 992px) {
+  .description {
+    padding: 0 15%;
   }
 }
 
