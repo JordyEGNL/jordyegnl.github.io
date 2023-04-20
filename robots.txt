@@ -7,3 +7,4 @@ Disallow: /mta-sts/
 Disallow: /mail/
 Disallow: /handig/
 Disallow: /dierenwinkel/
+Disallow: /jhwatchfaces/
