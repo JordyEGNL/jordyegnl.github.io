@@ -1,10 +1,10 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
+Disallow: /tools/
+Disallow: /assets/
+Disallow: /git/
 Disallow: /css/
 Disallow: /cdn-cgi/
 Disallow: /mta-sts/
-Disallow: /mail/
 Disallow: /handig/
-Disallow: /dierenwinkel/
-Disallow: /jhwatchfaces/
