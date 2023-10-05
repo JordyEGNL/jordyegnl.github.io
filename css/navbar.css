@@ -1,0 +1,162 @@
+/* Navigation bar */
+.navbarFull {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 10px 2%;
+    transition: all .5s ease;
+    color: var(--primaryText);
+    box-sizing: border-box;
+    background-color: var(--backgroundSubColor);
+
+}
+
+.navbarLogo {
+    display: flex;
+}
+
+
+.navbarLogo img {
+    color: var(--primaryText);
+    max-width: 54px;
+
+}
+
+.navbarItems {
+    display: flex;
+    list-style: none; /* Removes the dot from the list */
+    text-decoration: none;
+}
+
+.navbarItems a {
+    color: var(--primaryText);
+    font-size: 1.1rem;
+    padding: 5px 0;
+    margin: 0 30px;
+    transition: margin 0.5s ease;
+    text-decoration: none; /* Removes underline for links */
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.navbarLogo {
+    color: var(--primaryText);
+    font-size: 1.1rem;
+    padding: 5px 0;
+    margin: 0 30px;
+    transition: margin 0.5s ease;
+    text-decoration: none; /* Removes underline for links */
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+
+/* Change color when hovering over items */
+.navbarItems a:hover {
+    filter: brightness(80%);
+}
+
+.navbarItems a.active {
+    color: var(--mainThemeColor);
+}
+
+.navbarMain {
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.navbarMain span {
+    color: var(--primaryText);
+    font-size: 28px;
+    margin-right: 3px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .navbarFull {
+        padding: 8px 2%;
+        transition: all 0.2s ease;
+    }
+    .navbarItems a{
+        padding: 5px 0;
+        margin: 0 20px;
+    }
+    .navbarLogo img {
+        max-width: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    #navbarIcon {
+        display: block;
+    }
+    .navbarFull {
+        padding: 14px 20px;
+    }
+
+    .navbarLogo {
+        margin: 0;
+    }
+
+    .navbarItems {
+        position: absolute;
+        top: 97%;
+        right: -100%;
+        width: 270px;
+        height: 95vh;
+        padding: 2%;
+        background-color: var(--backgroundSubColor);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 20px;
+        transition: all 0.2s ease;
+    }
+
+    .navbarItems a{
+        display: block;
+        margin: 1px 0;
+        padding: 16px 25px;
+        border-radius: 20px;
+        width: 70%;
+    }
+
+    .navbarItems a:link {
+        color: var(--primaryText);
+        background-color: var(--backgroundSubColor);
+    }
+
+    .navbarItems a:hover  {
+        background-color: var(--backgroundTertiaryColor);
+        border-radius: 20px;
+    }
+
+    .navbarItems a.active {
+        color: var(--primaryContainerText);
+        background-color: var(--primaryContainer);
+        border-radius: 20px;
+    }
+
+    .navbarItems a.active:hover {
+        background-color: var(--primaryContainerHover);
+    }
+
+    .navbarMain {
+        display: block;
+    }
+
+
+    .navbarItems.open {
+        right: -5%;
+    }
+}
