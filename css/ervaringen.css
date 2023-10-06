@@ -1,7 +1,7 @@
 .sections {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     justify-content: space-between;
 }
@@ -36,6 +36,12 @@
     margin-bottom: 10px;
 
 }
+
+.sections > div h1 {
+    font-size: 2.5rem;
+}
+
+
 
 .buttonBox {
     display: flex;
@@ -73,16 +79,33 @@
     margin-bottom: 10px;
 }
 
+@media (max-width: 1400px) {
+    .sections {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 1000px) {
+    .sections {
+        grid-template-columns: 1fr;
+    }
     .subPageSection {
         grid-template-columns: 1fr;
     }
     .subPageSection > div img {
         max-height: 25em;
     }
+    
 }
+
+
 
 .subPageSection > div a {
     margin-bottom: 10px;
 
+}
+
+.subPageSection > .text {
+    flex-direction: inherit;
+    align-items: center;
 }
