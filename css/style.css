@@ -66,6 +66,7 @@ body {
 .mainContent {
     animation: fadeIn 0.5s 1 ease-in;
     margin-top: clamp(4vh, 14vh/2, 9vh); /* margin for navbar */
+    padding-bottom: 10vh;
 }
 
 .footer {
@@ -85,20 +86,19 @@ body {
 .centerSmall {
     width: clamp(10rem, 80%, 45rem);
     padding: 0.5rem 2rem;
-    margin: auto;
+    margin: 30px auto auto auto;    
 }
 
 .centerMedium {
     width: clamp(10rem, 90%, 65rem);
     padding: 0.5rem 1rem;
-    
-    margin: auto;
+    margin: 30px auto auto auto;
 }
 
 .centerBig {
     width: clamp(10rem, 90%, 95rem);
     padding: 0.5rem 1rem;
-    margin: auto;
+    margin: 30px auto auto auto;
 }
 
 
@@ -222,7 +222,7 @@ body {
 .header > div h1 {
     margin: 0 auto;
     font-size: clamp(43px, 7vw, 4rem);
-    text-shadow: 3px 3px 7px rgba(0,0,0,0.5);
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
     padding: 0 5%;
     color: white;
 }

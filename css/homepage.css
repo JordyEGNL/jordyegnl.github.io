@@ -2,16 +2,17 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 20px;
-    height: 90vh;
+    height: 80vh;
 }
 
 .container > div {
     text-align: left;
-    padding: 0;
+    padding: 0.5rem 0 0 0;
     font-size: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 70vh;
 }
 
 .personalText > .button {
@@ -20,7 +21,7 @@
     grid-template-columns: auto auto;
     width: 100px;
     grid-gap: 20px;
-    padding: 22px 0;
+    padding: 22px 0 0 0;
 }
 
 .container > div img {
@@ -36,6 +37,8 @@
 .container > .socialMediaFooter {
     grid-column: span 2;
     flex-direction: inherit;
+    margin-bottom: 5vh;
+    height: 10vh;
 }
 
 @media (max-width: 800px) {
@@ -69,6 +72,7 @@
 }
 .personalText > h2 {
     margin-bottom: 20px;
+    font-size: 85%;
 }
 
 .personalText > a {

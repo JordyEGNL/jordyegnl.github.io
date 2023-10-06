@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordy Hoebergen - Student ICT</title>
+    <title>Jordy Hoebergen - Contact</title>
 
-    <link href="./css/style.css" rel="stylesheet" />
-    <link href="./css/navbar.css" rel="stylesheet" />
-    <link href="./css/homepage.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/navbar.css" rel="stylesheet" />
+    <link href="/css/contactpage.css" rel="stylesheet" />
     
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
@@ -28,10 +28,10 @@
     
             <!-- Main site items -->
             <ul class="navbarItems">
-                <li><a class="active" href="#">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/ervaringen">Ervaringen</a></li>
                 <li><a href="/over-mij">Over mij</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a class="active" href="#">Contact</a></li>
             </ul>
     
             
@@ -45,39 +45,48 @@
         <!-- content -->
 
         <div class="mainContent"> 
-            <div class="container centerMedium">
-                <div class="personalText">
-                    <h1>Hey 👋🏼 ik ben Jordy!</h1>
-                    <h2>Student ICT & Winnaar Skills the Finals 2023 in de categorie ICT-beheerder.</h2>
-                    <a>Momenteel ben ik 19 jaar en volg ik de opleiding AD-ICT bij het Fontys.
-                        In het dagelijks leven vind ik het leuk om bezig te zijn met IT. Zoals familie helpen met computer problemen, of verder werken aan eigen projecten zoals mijn homelab.</a>
-                    <div class="button">
-                        <a class="primaryButton" href="/ervaringen">Mijn ervaringen</a>
-                    </div>
-                </div>
-
+            <div class="header">
+                <div class="headerImage" style="background-image: url('/img/Skills-Finale-1.webp'); background-position: center 18%;"></div>
                 <div>
-                    <img src="./img/fotojordyzoom.webp" alt="Jordy Hoebergen">
-                </div>
-
-                <div class="socialMediaFooter">
-                    <a href="mailto:contact@jordyhoebergen.nl" target="_blank">
-                        <i class="fa-solid fa-envelope socialMediaIcon"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/jordy-hoebergen" target="_blank">
-                        <i class="fa-brands fa-linkedin socialMediaIcon"></i>
-                    </a>
-                    <a href="https://github.com/jordyegnl" target="_blank">
-                        <i class="fa fa-github socialMediaIcon"></i>
-                    </a>
+                    <h1>Contact</h1>
                 </div>
             </div>
+            <div class="centerMedium">
 
+                <div class="socialMediaColumns">
 
+                    <a href="mailto:contact@jordyhoebergen.nl" target="_blank">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div class="socialMediaText">
+                                <h1>Email</h1>
+                                <a1>contact@jordyhoebergen.nl</a1>
+                            </div>
+                    </a>
+    
+                    <a href="https://linkedin.com/in/jordy-hoebergen" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <div class="socialMediaText">
+                            <h1>LinkedIn</h1>
+                            <a1>jordy-hoebergen</a1>
+                        </div>
+                    </a>
+                    
+                    <a href="https://github.com/jordyegnl" target="_blank">
+                        <i class="fa fa-github"></i>
+                        <div class="socialMediaText">
+                            <h1>GitHub</h1>
+                            <a1>JordyEGNL</a1>
+                        </div>
+                    </a>
+    
+    
+                </div>
+
+            </div>
         </div>
 </body>
 
 <footer>
-    <script src="./js/navbar.js"></script>
+    <script src="/js/navbar.js"></script>
     <script async src="https://kit.fontawesome.com/a43959776c.js" crossorigin="anonymous"></script>
 </html>
