@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://jordyhoebergen.nl/</loc>
+  <lastmod>2023-10-06T10:00:20+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://jordyhoebergen.nl/ervaringen/</loc>
+  <lastmod>2023-10-06T10:00:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jordyhoebergen.nl/over-mij/</loc>
+  <lastmod>2023-10-06T10:00:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jordyhoebergen.nl/contact/</loc>
+  <lastmod>2023-10-06T10:00:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jordyhoebergen.nl/ervaringen/stage-vdl/</loc>
+  <lastmod>2023-10-06T10:00:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jordyhoebergen.nl/ervaringen/skills-heroes/</loc>
+  <lastmod>2023-10-06T10:00:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jordyhoebergen.nl/ervaringen/stage-agrippa/</loc>
+  <lastmod>2023-10-06T10:00:20+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
