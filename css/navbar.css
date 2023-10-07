@@ -39,7 +39,7 @@
     font-size: 1.1rem;
     padding: 5px 0;
     margin: 0 30px;
-    transition: margin 0.5s ease;
+    transition: all 0.45s ease;
     text-decoration: none; /* Removes underline for links */
     font-weight: 500;
     letter-spacing: 1px;
