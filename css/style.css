@@ -29,7 +29,7 @@ body {
         --backgroundSubColor: #121314;
         --backgroundTertiaryColor: #232626;
         --onBackgroundColor: #1a1c1e;
-        --primaryText: #f2f2f2;
+        --primaryText: rgb(242, 242, 242);
         --primaryTextThemed: #d5e3ff;
         --secondaryText: #b5b5b5;
         --tertiaryText: #515151;
@@ -37,6 +37,8 @@ body {
         --primaryContainerText: #d5e3ff;
         --primaryContainerHover: #00315f;
 
+        --boxShadowColor: rgba(40, 53, 53, 0.2);
+        
         --secondaryContainer: #3d4758;
         --secondaryContainerText: #d9e3f8;
         --secondaryContainerHover: #273141;
@@ -49,12 +51,14 @@ body {
         --backgroundSubColor: #f3f7ff;
         --backgroundTertiaryColor: #dbdbdb;
         --onBackgroundColor: #d5e3ff;
-        --primaryText: #1d2a2a;
+        --primaryText: rgb(29, 42, 42);
         --primaryTextThemed: #002248;
         --secondaryText: #5c5e5e;
         --primaryContainer: #205fa6;
         --primaryContainerText: #ffffff;
         --primaryContainerHover: #205fa6;
+
+        --boxShadowColor: rgba(29, 42, 42, 0.2);
 
         --secondaryContainer: #555f71;
         --secondaryContainerText: #ffffff;
