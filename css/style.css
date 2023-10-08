@@ -219,7 +219,6 @@ body {
     margin: 0 auto;
     text-align: center;
     vertical-align: middle;
-    text-transform: uppercase;
     display: flex; 
     align-items: center;
     flex-direction: column;
@@ -232,14 +231,17 @@ body {
     text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
     padding: 0 5%;
     color: white;
+    text-transform: uppercase;
 }
 
+/* Timerange under header title */
 .header > div h2 {
     margin: 0 auto;
-    font-size: clamp(18px, 3vw, 1.5rem);
-    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    font-size: clamp(18px, 3vw, 1.3rem);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    font-weight: 400;
     padding: 0 5%;
-    color: white;
+    color: #e8e8e8;
 }
 
 .headerImage {
