@@ -1,3 +1,7 @@
+h1 {
+    padding-bottom: 10px;
+}
+
 .sections {
     margin-top: 30px;
     display: grid;
@@ -82,7 +86,7 @@
 .subPageSection {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 15px 30px;
     justify-content: space-between;
 }
 
@@ -92,9 +96,15 @@
     flex-direction: column;
 }
 
+.subPageSection > h1 {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    grid-column: span 2;
+}
+
 
 .subPageSection img {
-    max-height: 100%;
+    height: 100%;
     width: 100%; /* max width of parent div */
     object-fit: cover; /* crop image to fit */
     border-radius: 25px;
@@ -102,9 +112,25 @@
     box-shadow: 5px 10px 10px var(--boxShadowColor);
 }
 
-h1 {
-    padding-bottom: 10px;
+
+.video-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
 }
+
+.video-frame  > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+    box-shadow: 5px 10px 10px var(--boxShadowColor);
+}
+
+
 
 
 @media (max-width: 1400px) {
@@ -121,8 +147,12 @@ h1 {
         grid-template-columns: 1fr;
     }
 
+    .subPageSection > h1 {
+        grid-column: span 1;
+    }
+
     /* Used to show text above the img div */
-    .moveImgDownMobile > div:first-child {
+    .moveImgDownMobile > div:nth-child(2) {
         order: 2;
       }
 
@@ -133,11 +163,6 @@ h1 {
 }
 
 
-
-.subPageSection > div a {
-    margin-bottom: 10px;
-
-}
 
 .subPageSection > .text {
     flex-direction: inherit;

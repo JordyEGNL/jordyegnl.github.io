@@ -205,10 +205,11 @@ body {
 
 .header {
     position: relative;
-    height: clamp(35px, 40vw, 33vh);
+    height: clamp(35px, 50vw, 33vh);
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .header > div {
@@ -221,11 +222,21 @@ body {
     text-transform: uppercase;
     display: flex; 
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .header > div h1 {
     margin: 0 auto;
     font-size: clamp(43px, 7vw, 4rem);
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    padding: 0 5%;
+    color: white;
+}
+
+.header > div h2 {
+    margin: 0 auto;
+    font-size: clamp(18px, 3vw, 1.5rem);
     text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
     padding: 0 5%;
     color: white;
