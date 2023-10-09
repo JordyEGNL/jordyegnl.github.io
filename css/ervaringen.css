@@ -103,6 +103,10 @@ h1 {
     grid-column: span 2;
 }
 
+.subPageSection > .centerSection {
+    grid-column: span 2;
+}
+
 
 .subPageSection img {
     height: 100%;
@@ -149,6 +153,10 @@ h1 {
     }
 
     .subPageSection > h1 {
+        grid-column: span 1;
+    }
+
+    .subPageSection > .centerSection {
         grid-column: span 1;
     }
 
