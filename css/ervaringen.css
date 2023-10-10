@@ -97,6 +97,15 @@ h1 {
     flex-direction: column;
 }
 
+.subPageSectionVertical > .subPageSection > div {
+flex: 0;
+}
+
+.subPageSectionVertical > .subPageSection {
+    justify-content: flex-start;
+}
+
+
 .subPageSection > h1 {
     padding-top: 20px;
     padding-bottom: 0px;
@@ -108,8 +117,9 @@ h1 {
 }
 
 
-.subPageSection img {
+.subPageSection img, .subPageSection .blur-load {
     height: 100%;
+    aspect-ratio: 16 / 9;
     width: 100%; /* max width of parent div */
     object-fit: cover; /* crop image to fit */
     border-radius: 25px;
@@ -178,3 +188,54 @@ h1 {
     align-items: center;
 }
 
+
+
+.subPageSectionVertical {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2.75rem;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.subPageSectionVertical > h1 {
+    grid-column: span 2;
+    margin-top: 30px;
+}
+
+@media (max-width: 1000px) {
+    .subPageSectionVertical {
+        grid-template-columns: 1fr;
+    }
+    .subPageSectionVertical > h1 {
+        grid-column: span 1;
+    }
+
+    .subPageSectionVertical > .subPageSection > h2 {
+        order: 1;
+        text-align: center;
+    }
+    
+    .subPageSectionVertical > .subPageSection > div {
+        order: 2;
+    }
+
+    .subPageSection img, .subPageSection .blur-load {
+        aspect-ratio: auto;
+    }
+}
+
+.subPageSectionVertical > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    animation: 0.25s ease-out 0s 1 slideInFromTop;
+    width: 100%;
+}
+
+
+.subPageSectionVertical > div > .text > a {
+    margin-bottom: 15px;
+
+}
