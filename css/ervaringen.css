@@ -116,11 +116,15 @@ flex: 0;
     grid-column: span 2;
 }
 
+/* If we remove this we get issues on subPageSectionVertical */
+.subPageSection > .blur-load, .centerMedium > .subPageSection > .blur-load > img {
+    height: 100%;
+}
 
 .subPageSection img, .subPageSection .blur-load {
-    height: 100%;
     aspect-ratio: 16 / 9;
     width: 100%; /* max width of parent div */
+
     object-fit: cover; /* crop image to fit */
     border-radius: 25px;
     transition: all 0.5s ease;
