@@ -303,7 +303,10 @@ body {
 
 .blur-load::before {
     content: "";
-    position: absolute;
+    /* This causes some weird artificats on /ervaringen page */
+    /* When enabled it makes the hoeberen status page redirect show on the whole page*/
+    /* Seems to work fine when this is disabled */
+    /* position: absolute; */
     
     inset: 0;
     opacity: 0;
