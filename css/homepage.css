@@ -38,8 +38,8 @@
 .container > .socialMediaFooter {
     grid-column: span 2;
     flex-direction: inherit;
-    margin-bottom: 5vh;
-    height: 10vh;
+    margin-bottom: 4vh;
+    height: 8vh;
 }
 
 @media (max-width: 800px) {
