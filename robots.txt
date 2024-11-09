@@ -1,7 +1,8 @@
 User-agent: *
+Allow: /
+Allow: /img/
 Disallow: /css/
 Disallow: /git/
-Disallow: /img/
 Disallow: /js/
 
 Sitemap: https://jordyhoebergen.nl/sitemap.xml
