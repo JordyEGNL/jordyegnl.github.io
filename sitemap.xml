@@ -4,50 +4,42 @@
 
 <url>
   <loc>https://jordyhoebergen.nl/</loc>
-  <lastmod>2024-11-09T10:17:43+00:00</lastmod>
-  <priority>1.00</priority>
   <image:image>
     <image:loc>https://jordyhoebergen.nl/img/fotojordyzoom.webp</image:loc>
   </image:image>
 </url>
 <url>
   <loc>https://jordyhoebergen.nl/ervaringen/</loc>
-  <lastmod>2024-11-09T10:17:42+00:00</lastmod>
-  <priority>0.80</priority>
   <image:image>
     <image:loc>https://jordyhoebergen.nl/img/Skills-Finale-2.webp</image:loc>
   </image:image>
 </url>
 <url>
   <loc>https://jordyhoebergen.nl/over-mij/</loc>
-  <lastmod>2024-11-09T10:17:42+00:00</lastmod>
-  <priority>0.80</priority>
+  <image:image>
+    <image:loc>https://jordyhoebergen.nl/img/Skills-Finale-1.webp</image:loc>
+  </image:image>
 </url>
 <url>
   <loc>https://jordyhoebergen.nl/contact/</loc>
-  <lastmod>2024-11-09T10:17:43+00:00</lastmod>
-  <priority>0.80</priority>
+  <image:image>
+    <image:loc>https://jordyhoebergen.nl/img/Stage-Agrippa-1.webp</image:loc>
+  </image:image>
 </url>
 <url>
   <loc>https://jordyhoebergen.nl/ervaringen/stage-vdl/</loc>
-  <lastmod>2024-11-09T10:17:43+00:00</lastmod>
-  <priority>0.64</priority>
   <image:image>
     <image:loc>https://jordyhoebergen.nl/img/Stage-VDL-1-1.webp</image:loc>
   </image:image>
 </url>
 <url>
   <loc>https://jordyhoebergen.nl/ervaringen/skills-heroes/</loc>
-  <lastmod>2024-11-09T10:17:42+00:00</lastmod>
-  <priority>0.64</priority>
   <image:image>
     <image:loc>https://jordyhoebergen.nl/img/Skills-Finale-1.webp</image:loc>
   </image:image>
 </url>
 <url>
   <loc>https://jordyhoebergen.nl/ervaringen/stage-agrippa/</loc>
-  <lastmod>2024-11-09T10:17:43+00:00</lastmod>
-  <priority>0.64</priority>
   <image:image>
     <image:loc>https://jordyhoebergen.nl/img/Stage-Agrippa-1.webp</image:loc>
   </image:image>
