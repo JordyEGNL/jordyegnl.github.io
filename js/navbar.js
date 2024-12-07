@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
         
     });
+
+    function calculcateWomanSalary
   
     document.addEventListener('click', function(e) {
       if (!navbarFull.contains(e.target) && e.target !== menu) {

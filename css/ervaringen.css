@@ -137,6 +137,10 @@ flex: 0;
     box-shadow: 5px 10px 10px var(--boxShadowColor);
 }
 
+.headerImage {
+    z-index: -1;
+    opacity: 0.8;
+}
 
 .video-frame {
     position: relative;
