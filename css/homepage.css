@@ -82,3 +82,20 @@
 }
 
 
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--primaryText);
+    }
+}
+
+.cursor {
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--primaryText);
+    margin-left: 0.1em;
+    border-right: 0.1em solid var(--primaryText);
+    animation: blink-caret 1.25s steps(1, end) infinite;
+}

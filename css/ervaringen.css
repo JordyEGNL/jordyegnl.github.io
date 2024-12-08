@@ -159,9 +159,6 @@ flex: 0;
     box-shadow: 5px 10px 10px var(--boxShadowColor);
 }
 
-
-
-
 @media (max-width: 1400px) {
     .sections {
         grid-template-columns: 1fr 1fr;

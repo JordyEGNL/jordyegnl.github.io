@@ -142,7 +142,7 @@ body {
 .primaryButton {
     color: var(--primaryContainerText);
     background-color: var(--primaryContainer);
-    transition: all 0.25s ease-in-out;
+    transition: all 0.15s ease-in-out;
     padding: 20px 34px;
     border-radius: 30px;
     white-space: nowrap;
@@ -157,7 +157,7 @@ body {
 .secondaryButton {
     color: var(--secondaryContainerText);
     background-color: var(--secondaryContainer);
-    transition: all 0.25s ease-in-out;
+    transition: all 0.15s ease-in-out;
     padding: 20px 34px;
     border-radius: 30px;
     white-space: nowrap;
@@ -193,7 +193,7 @@ body {
 }
 
 .socialMediaIcon {
-    transition: all 0.25s ease-in-out;
+    transition: all 0.15s ease-in-out;
 }
 
 .socialMediaIcon:hover {
@@ -311,7 +311,7 @@ body {
 
 .blur-load > img {
     opacity: 0;
-    transition: all 250ms ease-in-out;
+    transition: all 150ms ease-in-out;
 }
 
 .blur-load.loaded > img {
