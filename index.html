@@ -1,98 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jordy Hoebergen - Portfolio</title>
 
-    <link href="/css/style.css" rel="stylesheet" />
-    <link href="/css/navbar.css" rel="stylesheet" />
-    <link href="/css/homepage.css" rel="stylesheet" />
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" type="image/png">
+    <!-- SEO -->
+    <meta name="description" content="Persoonlijke website van Jordy Hoebergen. Winnaar Skills The Finals 2023 in de categorie ICT-Beheerder.">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="googlebot-image" content="index">
+    <link rel="canonical" href="https://jordyhoebergen.nl/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jordy Hoebergen">
+    <meta property="og:description" content="Persoonlijke website van Jordy Hoebergen. Winnaar Skills The Finals 2023 in de categorie ICT-Beheerder.">
+    <meta property="og:url" content="https://jordyhoebergen.nl/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jordyhoebergen.nl/img/fotojordyzoom.webp">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="icon" href="/img/favicon.ico" sizes="any">
 
-    <meta name="description" content="Persoonlijke website van Jordy Hoebergen. Winnaar Skills The Finals 2023 in de categorie ICT-Beheerder">
-    <meta name="og:description" content="Persoonlijke website van Jordy Hoebergen. Winnaar Skills The Finals 2023 in de categorie ICT-Beheerder">
-    <meta name="og:title" property="og:title" content="Jordy Hoebergen">
-    <link rel="canonical" href="https://jordyhoebergen.nl/">
-    <meta property="og:url" content="https://jordyhoebergen.nl/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://jordyhoebergen.nl/img/fotojordyzoom.webp" />
-  
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="googlebot-image" content="index">
+    <link rel="preload" as="image" href="/img/fotojordyzoom.webp" type="image/webp" fetchpriority="high">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/homepage.css">
+
+    <!-- Scripts -->
+    <script src="/js/navbar.js" defer></script>
+    <script src="/js/homepage.js" defer></script>
+    <script src="https://kit.fontawesome.com/a43959776c.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-        <!-- Navbar -->
-        <div class="navbarFull">
+    <header class="navbarFull">
+        <a href="/" class="navbarLogo">Jordy Hoebergen</a>
 
-            <!-- Website logo -->
-            <a href="#" class="navbarLogo">Jordy Hoebergen</a>
-    
-            <!-- Main site items -->
+        <nav id="main-navigation" aria-label="Hoofdnavigatie">
             <ul class="navbarItems">
-                <li><a class="active" href="#">Home</a></li>
+                <li><a class="active" href="/">Home</a></li>
                 <li><a href="/ervaringen">Ervaringen</a></li>
                 <li><a href="/over-mij">Over mij</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
-    
-            
-            <!-- Hamburger menu  -->
-            <div class="navbarMain">
-                <span id="navbarIcon" class="material-symbols-outlined">menu</span>
+        </nav>
+
+        <button
+            class="navbarMain"
+            id="navbarToggle"
+            type="button"
+            aria-label="Menu openen"
+            aria-expanded="false"
+            aria-controls="main-navigation">
+            <span id="navbarIcon" class="material-symbols-outlined" aria-hidden="true">menu</span>
+        </button>
+    </header>
+
+    <main class="mainContent">
+        <section class="container centerMedium">
+            <div class="personalText box">
+                <h1>
+                    <span id="typing-text"></span>
+                    <span class="cursor" aria-hidden="true"></span>
+                    👋🏼 ik ben Jordy!
+                </h1>
+
+                <h2>
+                    Service Engineer bij Advantive &amp; winnaar van Skills The Finals 2023
+                    in de categorie ICT-beheerder.
+                </h2>
+
+                <p>
+                    Momenteel ben ik 22 jaar en werk ik bij Advantive als Service Engineer.
+                    In het dagelijks leven vind ik het leuk om bezig te zijn met IT, zoals
+                    familie helpen met computerproblemen of verder werken aan eigen projecten
+                    zoals mijn homelab.
+                </p>
+
+                <div class="button">
+                    <a class="primaryButton" href="/ervaringen">Mijn ervaringen</a>
+                </div>
             </div>
-    
-        </div>
 
-        <!-- content -->
-
-        <div class="mainContent"> 
-            <div class="container centerMedium">
-                <div class="personalText box">
-                    <h1><span id="typing-text"></span><span class="cursor"></span> 👋🏼 ik ben Jordy!</h1>
-                    <h2>Service Engineer bij Advantive & Winnaar Skills the Finals 2023 in de categorie ICT-beheerder.</h2>
-                    <a>Momenteel ben ik 22 jaar en werk ik bij Advantive als Service Engineer.
-                        In het dagelijks leven vind ik het leuk om bezig te zijn met IT. Zoals familie helpen met computer problemen, of verder werken aan eigen projecten zoals mijn homelab.</a>
-                    <div class="button">
-                        <a class="primaryButton" href="/ervaringen">Mijn ervaringen</a>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <img src="/img/fotojordyzoom.webp" id="mainImg" alt="Foto van Jordy Hoebergen" loading="lazy" title="Foto van Jordy Hoebergen">
-                </div>
-
-                <div class="socialMediaFooter box">
-                    <a href="mailto:jordy@hoebergen.net" target="_blank">
-                        <i class="fa-solid fa-envelope socialMediaIcon"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/jordy-hoebergen" target="_blank">
-                        <i class="fa-brands fa-linkedin socialMediaIcon"></i>
-                    </a>
-                    <a href="https://github.com/jordyegnl" target="_blank">
-                        <i class="fa fa-github socialMediaIcon"></i>
-                    </a>
-                </div>
+            <div class="box">
+                <img
+                    src="/img/fotojordyzoom.webp"
+                    id="mainImg"
+                    alt="Foto van Jordy Hoebergen"
+                    width="600"
+                    height="600"
+                    decoding="async"
+                    fetchpriority="high">
             </div>
-        </div> 
+
+            <div class="socialMediaFooter box" aria-label="Social media links">
+                <a href="mailto:jordy@hoebergen.net" aria-label="Stuur een e-mail naar Jordy Hoebergen">
+                    <i class="fa-solid fa-envelope socialMediaIcon" aria-hidden="true"></i>
+                </a>
+                <a href="https://linkedin.com/in/jordy-hoebergen" target="_blank" rel="noopener noreferrer" aria-label="Bekijk het LinkedIn-profiel van Jordy Hoebergen">
+                    <i class="fa-brands fa-linkedin socialMediaIcon" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/jordyegnl" target="_blank" rel="noopener noreferrer" aria-label="Bekijk het GitHub-profiel van Jordy Hoebergen">
+                    <i class="fa-brands fa-github socialMediaIcon" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
 </body>
-
-<footer>
-    <script src="/js/navbar.js"></script>
-    <script async src="https://kit.fontawesome.com/a43959776c.js" crossorigin="anonymous"></script>
-    <script src="/js/homepage.js"></script>
-</footer>
 </html>
