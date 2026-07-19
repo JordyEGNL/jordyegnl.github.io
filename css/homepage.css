@@ -45,10 +45,12 @@
 @media (max-width: 800px) {
     .container {
         grid-template-columns: auto;
+        /* Vaste 80vh knipt de social icons af op kleine schermen */
+        height: auto;
     }
 
     .container > div {
-        height: 100%;
+        height: auto;
     }
 
     .container > div img {

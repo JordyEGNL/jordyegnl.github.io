@@ -114,6 +114,8 @@
         right: -100%;
         width: 270px;
         height: 95vh;
+        /* dvh houdt rekening met de adresbalk op mobiele browsers */
+        height: 95dvh;
         padding: 2%;
         background-color: var(--backgroundSubColor);
         display: flex;

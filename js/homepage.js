@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
     imageElement.addEventListener('click', function() {
         clickCount++;
         if (clickCount === 10) {
-            imageElement.src = '/img/cat.gif';
+            imageElement.src = 'img/cat.gif';
         }
     });
 });
