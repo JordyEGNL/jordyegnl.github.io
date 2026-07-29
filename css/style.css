@@ -192,11 +192,11 @@ body {
 
 }
 
-.socialMediaIcon {
+.socialIcons {
     transition: all 0.15s ease-in-out;
 }
 
-.socialMediaIcon:hover {
+.socialIcons:hover {
     color: var(--mainThemeColor);
 }
 
