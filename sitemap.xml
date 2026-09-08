@@ -51,4 +51,10 @@
   </image:image>
 </url>
 
+<url>
+  <loc>https://jordyhoebergen.nl/certificeringen/</loc>
+  <image:image>
+    <image:loc>https://jordyhoebergen.nl/img/fotojordyzoom.webp</image:loc>
+  </image:image>
+</url>
 </urlset>
