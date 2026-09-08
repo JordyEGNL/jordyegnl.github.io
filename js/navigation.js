@@ -12,7 +12,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
-  // ─── Navigation Drawer ───────────────────────────────────
+  // --- Navigation Drawer -----------------------------------
   const menuBtn = document.getElementById('nav-menu-btn');
   const drawer = document.getElementById('nav-drawer');
   const scrim = document.getElementById('nav-scrim');
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // ─── Scroll-aware Top App Bar ────────────────────────────
+  // --- Scroll-aware Top App Bar ----------------------------
   const appBar = document.querySelector('.top-app-bar');
   let lastScrollY = 0;
   const SCROLL_THRESHOLD = 8;
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateAppBarElevation(); // Initial check
 
 
-  // ─── Typing Animation (Homepage) ─────────────────────────
+  // --- Typing Animation (Homepage) -------------------------
   const typingEl = document.getElementById('typing-text');
   if (typingEl) {
     const texts = ['Hey', 'Hallo'];
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // ─── Easter Egg ──────────────────────────────────────────
+  // --- Easter Egg ------------------------------------------
   const mainImg = document.getElementById('mainImg');
   if (mainImg) {
     let clickCount = 0;
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // ─── Lazy Load Images ────────────────────────────────────
+  // --- Lazy Load Images ------------------------------------
   const blurDivs = document.querySelectorAll('.blur-load');
   blurDivs.forEach(div => {
     const img = div.querySelector('img');
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // ─── Fade-in Animation on Scroll ─────────────────────────
+  // --- Fade-in Animation on Scroll -------------------------
   const fadeEls = document.querySelectorAll('.fade-in');
   if (fadeEls.length > 0 && 'IntersectionObserver' in window) {
     const fadeObserver = new IntersectionObserver((entries) => {
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeEls.forEach(el => fadeObserver.observe(el));
   }
 
-  // ─── Dynamic Age Calculator ──────────────────────────────
+  // --- Dynamic Age Calculator ------------------------------
   const birthDateString = '2004-03-12';
   const ageEls = document.querySelectorAll('.dynamic-age');
   if (ageEls.length > 0) {
