@@ -456,7 +456,7 @@ a.md-card--elevated:hover {
    Hero Section (Home page - Modern Pane Layout)
    ----------------------------------------------- */
 .hero {
-  padding-top: 0;
+  padding-top: 8px;
   padding-bottom: 24px;
   position: relative;
 }
@@ -466,6 +466,8 @@ a.md-card--elevated:hover {
   flex-direction: column;
   gap: var(--md-sys-spacing-4);
   position: relative;
+  width: 100%;
+  max-width: 100%;
 }
 
 .hero__image-pane {
@@ -487,7 +489,7 @@ a.md-card--elevated:hover {
 .hero__content-pane {
   background-color: var(--md-sys-color-surface-container-low);
   border-radius: var(--md-sys-shape-corner-extra-large);
-  padding: var(--md-sys-spacing-7);
+  padding: var(--md-sys-spacing-5);
   box-shadow: var(--md-sys-elevation-level-2);
   margin-top: 0; /* Fixed: Don't pull outside container */
   position: relative;
@@ -1032,5 +1034,93 @@ a.social-card:hover .social-card__arrow {
 .article-pane h2:first-child,
 .article-pane .display-medium:first-child {
   margin-top: 0 !important;
+}
+
+
+/* -----------------------------------------------
+   Contact Card (Compact Modern Split Layout)
+   ----------------------------------------------- */
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 840px;
+  border-radius: var(--md-sys-shape-corner-extra-large);
+  overflow: hidden;
+  background: var(--md-sys-color-surface-container-lowest);
+  box-shadow: var(--md-sys-elevation-level-2);
+}
+
+.contact-card__image-pane {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.contact-card__image-pane img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+.contact-card__content-pane {
+  padding: var(--md-sys-spacing-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--md-sys-color-surface-container-low);
+  flex: 1;
+}
+
+.contact-card__title {
+  margin: 0 0 8px 0;
+  color: var(--md-sys-color-on-surface);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.contact-card__subtitle {
+  color: var(--md-sys-color-on-surface-variant);
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+
+.contact-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-btn {
+  justify-content: flex-start;
+  height: 48px;
+  padding: 0 20px;
+  font-size: 15px;
+  border-radius: var(--md-sys-shape-corner-medium);
+  gap: 12px;
+}
+
+@media (min-width: 680px) {
+  .contact-card {
+    flex-direction: row;
+  }
+  
+  .contact-card__image-pane {
+    width: 360px;
+    height: auto;
+    min-height: 100%;
+  }
+
+  .contact-card__content-pane {
+    padding: var(--md-sys-spacing-7);
+  }
+
+  .contact-card__title {
+    font-size: 28px;
+  }
 }
 
