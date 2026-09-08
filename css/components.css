@@ -536,7 +536,6 @@ a.md-card--elevated:hover {
 .hero__content-pane .hero__subtitle {
   color: var(--md-sys-color-on-surface-variant);
   margin: 0;
-  margin-bottom: var(--md-sys-spacing-7);
 }
 
 .hero__description {
@@ -755,11 +754,6 @@ a.social-card:hover .social-card__arrow {
   background-repeat: no-repeat;
 }
 
-.blur-load > img {
-  opacity: 0;
-  transition: opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
-}
-
 .blur-load.loaded > img {
   opacity: 1;
 }
@@ -802,7 +796,6 @@ a.social-card:hover .social-card__arrow {
   display: block;
   transition: transform var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-standard);
 }
-
 
 /* -----------------------------------------------
    Video Frame
