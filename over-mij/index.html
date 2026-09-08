@@ -1,132 +1,195 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordy Hoebergen - Over mij</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordy Hoebergen - Over mij</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="../img/Skills-Finale-4.webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="../img/Skills-Finale-4.webp" fetchpriority="high">
 
-    <link href="../css/style.css" rel="stylesheet" />
-    <link href="../css/navbar.css" rel="stylesheet" />
-    <link href="../css/ervaringen.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=block" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=block" rel="stylesheet">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="../img/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../img/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
 
-    <meta name="description" content="Persoonlijke website van Jordy Hoebergen. Op deze pagina zie je van alles over mij, zoals welke opleidingen ik heb gevolgd.">
-    <meta property="og:description" content="Persoonlijke website van Jordy Hoebergen. Op deze pagina zie je van alles over mij, zoals welke opleidingen ik heb gevolgd.">
-    <meta property="og:title" content="Jordy Hoebergen - Over mij">
-    <link rel="canonical" href="https://jordyhoebergen.nl/over-mij/">
-    <meta property="og:url" content="https://jordyhoebergen.nl/over-mij/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://jordyhoebergen.nl/img/fotojordyzoom.webp" />
-    <meta property="og:locale" content="nl_NL" />
-    <meta property="og:site_name" content="Jordy Hoebergen" />
-    <meta name="twitter:card" content="summary">
+  <meta name="description" content="Persoonlijke website van Jordy Hoebergen. Op deze pagina zie je van alles over mij, zoals welke opleidingen ik heb gevolgd.">
+  <meta name="theme-color" content="#FAFDFB">
+  <meta property="og:description" content="Persoonlijke website van Jordy Hoebergen. Op deze pagina zie je van alles over mij, zoals welke opleidingen ik heb gevolgd.">
+  <meta property="og:title" content="Jordy Hoebergen - Over mij">
+  <link rel="canonical" href="https://jordyhoebergen.nl/over-mij/">
+  <meta property="og:url" content="https://jordyhoebergen.nl/over-mij/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jordyhoebergen.nl/img/fotojordyzoom.webp">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Jordy Hoebergen">
+  <meta name="twitter:card" content="summary">
+
+  <script src="../js/theme.js"></script>
 </head>
 <body>
-        <!-- Navbar -->
-        <div class="navbarFull">
+  <div class="app-shell">
+    <!-- Top App Bar (Mobile only) -->
+    <header class="top-app-bar" role="banner">
+      <a href="/" class="top-app-bar__logo">Jordy Hoebergen</a>
+      <div class="top-app-bar__actions">
+        <button class="md-icon-btn" id="theme-toggle" aria-label="Schakel thema">
+          <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+        <button class="md-icon-btn top-app-bar__menu-btn" id="nav-menu-btn" aria-label="Menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </header>
 
-            <!-- Website logo -->
-            <a href="../" class="navbarLogo">Jordy Hoebergen</a>
-    
-            <!-- Main site items -->
-            <ul class="navbarItems">
-                <li><a href="../">Home</a></li>
-                <li><a href="../ervaringen/">Ervaringen</a></li>
-                <li><a class="active" href="#">Over mij</a></li>
-                <li><a href="../contact/">Contact</a></li>
-            </ul>
-    
-            
-            <!-- Hamburger menu  -->
-            <div class="navbarMain">
-                <span id="navbarIcon" class="material-symbols-outlined">menu</span>
+    <!-- Navigation Rail (Desktop only) -->
+    <nav class="nav-rail" aria-label="Hoofdnavigatie">
+      <a href="/" class="nav-rail__item" aria-label="Home">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">home</span>
+        <span class="nav-rail__label">Home</span>
+      </a>
+      <a href="/ervaringen/" class="nav-rail__item" aria-label="Ervaringen">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">work</span>
+        <span class="nav-rail__label">Ervaringen</span>
+      </a>
+      <a href="/over-mij/" class="nav-rail__item nav-rail__item--active" aria-label="Over mij">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">person</span>
+        <span class="nav-rail__label">Over mij</span>
+      </a>
+      <a href="/contact/" class="nav-rail__item" aria-label="Contact">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">mail</span>
+        <span class="nav-rail__label">Contact</span>
+      </a>
+      <div class="nav-rail__spacer"></div>
+      <button class="md-icon-btn" id="theme-toggle-rail" aria-label="Schakel thema">
+        <span class="material-symbols-outlined">dark_mode</span>
+      </button>
+    </nav>
+
+    <!-- Navigation Drawer (Mobile) -->
+    <div class="nav-scrim" id="nav-scrim"></div>
+    <aside class="nav-drawer" id="nav-drawer">
+      <nav class="nav-drawer__content">
+        <a href="/" class="nav-drawer__item">
+          <span class="material-symbols-outlined">home</span>
+          Home
+        </a>
+        <a href="/ervaringen/" class="nav-drawer__item">
+          <span class="material-symbols-outlined">work</span>
+          Ervaringen
+        </a>
+        <a href="/over-mij/" class="nav-drawer__item nav-drawer__item--active">
+          <span class="material-symbols-outlined">person</span>
+          Over mij
+        </a>
+        <a href="/contact/" class="nav-drawer__item">
+          <span class="material-symbols-outlined">mail</span>
+          Contact
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container-large" style="display: flex; gap: 40px; flex-wrap: wrap; margin-top: 40px;">
+        <!-- Left Main Content -->
+        <div style="flex: 1; min-width: 300px;">
+          <!-- Wie ben ik? -->
+          <section class="section-grid fade-in" style="margin-bottom: 24px;">
+            <div class="section-grid__text">
+              <h2 class="headline-large" style="margin: 0 0 8px 0; font-weight: 700;">Wie ben ik?</h2>
+              <p class="body-large" style="margin: 0 0 12px 0;">
+                Ik ben Jordy Hoebergen en momenteel ben ik <span class="dynamic-age">22</span> jaar oud. Momenteel ben ik werkzaam bij Advantive.
+              </p>
+              <p class="body-large" style="margin: 0;">
+                Al sinds jonge leeftijd ben ik erg geïnteresseerd in computers en alles wat daar mee te maken heeft. Het begon met simpele dingen zoals wat instellingen aanpassen op mijn computer (waardoor er soms dingen kapot gingen haha), tot wat hardware vervangen. Uiteindelijk ben ik steeds meer gaan leren. Zowel op school als thuis.
+              </p>
             </div>
-    
+            <div class="section-grid__media">
+              <div class="img-container blur-load" style="background-image: url(../img/small.jpg);">
+                <img src="../img/Skills-Finale-1.webp" alt="Foto van de top-3 ICT-beheerders tijdens de prijsuitreiking van Skills The Finals" loading="lazy" style="object-position: top; max-width: 100%; border-radius: 16px;">
+              </div>
+            </div>
+          </section>
+
+          <!-- Mijn skills -->
+          <section class="section-grid fade-in">
+            <div class="section-grid__text">
+              <h2 class="headline-large" style="margin: 0 0 8px 0; font-weight: 700;">Mijn skills</h2>
+              <p class="body-large" style="margin: 0 0 12px 0;">
+                Ik vind het leuk om netwerken te realiseren en te configureren. Denk aan het instellen van switches, het maken van een IP-plan en het opzetten van een site-to-site VPN.
+              </p>
+              <p class="body-large" style="margin: 0;">
+                Daarnaast vind ik het belangrijk om ervoor te zorgen dat de infrastructuur makkelijk te beheren is met behulp van tools zoals Ansible en Terraform.
+              </p>
+              <div class="skills-chips" style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px;">
+                <span class="md-chip">Ansible</span>
+                <span class="md-chip">Terraform</span>
+                <span class="md-chip">Microsoft Azure</span>
+                <span class="md-chip">Proxmox</span>
+                <span class="md-chip">VMware</span>
+                <span class="md-chip">Docker</span>
+                <span class="md-chip">Kubernetes</span>
+                <span class="md-chip">Linux</span>
+                <span class="md-chip">Intune</span>
+              </div>
+            </div>
+            <div class="section-grid__media">
+              <div class="img-container blur-load" style="background-image: url(../img/small.jpg);">
+                <img src="../img/Stage-Agrippa-1.webp" alt="Foto van de stagiairs voor het gebouw van Agrippa BV" loading="lazy" style="object-position: center 20%; max-width: 100%; border-radius: 16px;">
+              </div>
+            </div>
+          </section>
         </div>
 
-        <!-- content -->
-
-        <div class="mainContent"> 
-            <div class="header">
-                <h1>Over mij</h1>
-                <img class="headerImage" src="../img/Skills-Finale-4.webp" alt="Jordy aan het werk tijdens de Skills Heroes finale" fetchpriority="high" style="object-position: center 10%">
+        <!-- Right Supporting Pane (Sticky) -->
+        <aside class="supporting-pane-sidebar" style="flex-shrink: 0; position: sticky; top: 100px; background: var(--md-sys-color-surface-container-low); padding: 32px; border-radius: 28px; align-self: start;">
+          <h2 class="headline-large" style="margin: 0 0 16px 0; font-weight: 700;">Opleidingen</h2>
+          <div class="about-education" style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="about-education__item" style="display: flex; gap: 16px; align-items: start;">
+              <div class="about-education__icon" style="background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); padding: 12px; border-radius: 50%;">
+                <span class="material-symbols-outlined">school</span>
+              </div>
+              <div>
+                <p class="title-medium" style="margin: 0;">AD-ICT – Infrastructuur</p>
+                <p class="body-medium" style="margin: 4px 0 0; color: var(--md-sys-color-on-surface-variant);">Fontys Hogeschool Eindhoven · Afgerond in 2025</p>
+              </div>
             </div>
-            <div class="centerMedium">
-
-                <div class="subPageSection">
-
-                    <!-- First section -->
-                    <div class="text ">
-                        <a>
-                        <h1 class="leftAlign">Wie ben ik?</h1>
-                            Ik ben Jordy Hoebergen en momenteel ben ik 21 jaar oud. Momenteel ben ik werkzaam bij Advantive.<br><br>
-
-                            Al sinds jonge leeftijd ben ik erg geïntereseerd in computers en alles wat daar mee te maken heeft. Het begon met simpele dingen zoals wat instellingen aanpassen op mijn computer (waardoor er soms dingen kapot gingen haha), tot wat hardware vervangen. Uiteindelijk ben ik steeds meer gaan leren. Zowel op school als thuis.
-                        </a>
-                    </div>
-
-                    <div class="blur-load" style="background-image: url(../img/small.jpg);">
-                        <img src="../img/Skills-Finale-1.webp" alt="Foto van de top-3 ICT-beheerders tijdens de prijsuitreiking van Skills The Finals" style="object-position: top;" loading="lazy">
-                    </div>
-
-                </div>
-
-                <!-- Second section -->
-                
-                <div class="subPageSection ">
-                    <h1 class="center">Opleidingen</h1>
-                    <div class="blur-load" style="background-image: url(../img/small.jpg);">
-                        <img src="../img/Fontys.webp" alt="Logo van Fontys Hogeschool in Eindhoven" loading="lazy">
-                    </div>
-
-                    <div class="text">
-                        <a style="vertical-align: middle; line-height: 100%;">
-                            In 2025 heb ik de opleiding AD-ICT in de richting 'infrastructuur' afgerond bij het Fontys in Eindhoven.<br><br>
-
-                            In 2023 heb ik de opleiding Expert IT systems & devices afgerond bij het ROC ter AA in Helmond. <br><br>
-
-                            Tijdens de deze opleiding heb ik veel gewerkt met Windows desktops & servers, Active Directory, Linux desktops & servers, VMware, Cisco switches & routers en Fortinet Firewalls.
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Third section -->
-                
-                <div class="subPageSection moveImgDownMobile">
-                    <h1 class="center">Skills</h1>
-                    <div class="text">
-                        <a>
-                            Ik vind het leuk om netwerken te realiseren en te configureren. Denk aan het instellen van switches, het maken van een IP-plan en het opzetten van een site-to-site VPN.<br><br>
-
-                            Daarnaast vind ik het belangrijk om ervoor te zorgen dat de infrastructuur makkelijk te beheren is met behulp van tools zoals Ansible en Terraform.<br><br>
-
-                            Ik ben ook bekend met Microsoft Azure, Office programma's en hypervisors zoals Proxmox, VMware (ESXi) en VirtualBox.<br><br>
-                        </a>
-                    </div>
-                    <div class="blur-load" style="background-image: url(../img/small.jpg);">
-                        <img src="../img/Stage-Agrippa-1.webp" alt="Foto van de stagiairs voor het gebouw van Agrippa BV" style="object-position: center 20%;" loading="lazy">
-                    </div>
-                </div>
-
-
+            <div class="about-education__item" style="display: flex; gap: 16px; align-items: start;">
+              <div class="about-education__icon" style="background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); padding: 12px; border-radius: 50%;">
+                <span class="material-symbols-outlined">school</span>
+              </div>
+              <div>
+                <p class="title-medium" style="margin: 0;">Expert IT systems &amp; devices</p>
+                <p class="body-medium" style="margin: 4px 0 0; color: var(--md-sys-color-on-surface-variant);">ROC ter AA Helmond · Afgerond in 2023</p>
+              </div>
             </div>
+          </div>
+          <p class="body-large" style="margin-top: 24px;">
+            Tijdens mijn opleiding heb ik veel gewerkt met Windows desktops &amp; servers, Active Directory, Linux desktops &amp; servers, VMware, Cisco switches &amp; routers en Fortinet Firewalls.
+          </p>
+          <div class="img-container blur-load" style="background-image: url(../img/small.jpg); margin-top: 24px; border-radius: 16px; overflow: hidden;">
+            <img src="../img/Fontys.webp" alt="Logo van Fontys Hogeschool in Eindhoven" loading="lazy" style="width: 100%; display: block;">
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
 
-        </div>
-
-    <script defer src="../js/lazy-load.js"></script>
-    <script defer src="../js/navbar.js"></script>
+  <script defer src="../js/navigation.js"></script>
 </body>
 </html>

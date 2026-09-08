@@ -1,104 +1,122 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordy Hoebergen - Contact</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordy Hoebergen - Contact</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
-    <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin>
-    <link rel="preload" as="image" href="../img/Skills-Finale-1.webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="../img/Skills-Finale-1.webp" fetchpriority="high">
 
-    <link href="../css/style.css" rel="stylesheet" />
-    <link href="../css/navbar.css" rel="stylesheet" />
-    <link href="../css/contactpage.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=block" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=block" rel="stylesheet">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
 
-    <meta name="description" content="Persoonlijke website van Jordy Hoebergen. Op deze pagina vind je alle manieren om met mij contact op te nemen.">
-    <meta property="og:description" content="Persoonlijke website van Jordy Hoebergen. Op deze pagina vind je alle manieren om met mij contact op te nemen.">
-    <meta property="og:title" content="Jordy Hoebergen - Contact">
-    <link rel="canonical" href="https://jordyhoebergen.nl/contact/">
-    <meta property="og:url" content="https://jordyhoebergen.nl/contact/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://jordyhoebergen.nl/img/fotojordyzoom.webp" />
-    <meta property="og:locale" content="nl_NL" />
-    <meta property="og:site_name" content="Jordy Hoebergen" />
-    <meta name="twitter:card" content="summary">
+  <meta name="description" content="Persoonlijke website van Jordy Hoebergen. Op deze pagina vind je alle manieren om met mij contact op te nemen.">
+  <meta name="theme-color" content="#FAFDFB">
+  <meta property="og:description" content="Persoonlijke website van Jordy Hoebergen. Op deze pagina vind je alle manieren om met mij contact op te nemen.">
+  <meta property="og:title" content="Jordy Hoebergen - Contact">
+  <link rel="canonical" href="https://jordyhoebergen.nl/contact/">
+  <meta property="og:url" content="https://jordyhoebergen.nl/contact/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jordyhoebergen.nl/img/fotojordyzoom.webp">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Jordy Hoebergen">
+  <meta name="twitter:card" content="summary">
+
+  <script src="../js/theme.js"></script>
 </head>
 <body>
-        <!-- Navbar -->
-        <div class="navbarFull">
 
-            <!-- Website logo -->
-            <a href="../" class="navbarLogo">Jordy Hoebergen</a>
-    
-            <!-- Main site items -->
-            <ul class="navbarItems">
-                <li><a href="../">Home</a></li>
-                <li><a href="../ervaringen/">Ervaringen</a></li>
-                <li><a href="../over-mij/">Over mij</a></li>
-                <li><a class="active" href="#">Contact</a></li>
-            </ul>
-    
+  <div class="app-shell">
+    <!-- Top App Bar (Mobile) -->
+    <header class="top-app-bar" role="banner">
+      <a href="/" class="top-app-bar__logo">Jordy Hoebergen</a>
+      <div class="top-app-bar__actions">
+        <button class="md-icon-btn theme-toggle-btn" aria-label="Schakel thema"><span class="material-symbols-outlined">dark_mode</span></button>
+        <button class="md-icon-btn top-app-bar__menu-btn" id="nav-menu-btn"><span class="material-symbols-outlined">menu</span></button>
+      </div>
+    </header>
+
+    <!-- Navigation Rail (Desktop) -->
+    <nav class="nav-rail" aria-label="Hoofdnavigatie">
+      <a href="../" class="nav-rail__item" aria-label="Home">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">home</span><span class="nav-rail__label">Home</span>
+      </a>
+      <a href="../ervaringen/" class="nav-rail__item" aria-label="Ervaringen">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">work</span><span class="nav-rail__label">Ervaringen</span>
+      </a>
+      <a href="../over-mij/" class="nav-rail__item" aria-label="Over mij">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">person</span><span class="nav-rail__label">Over mij</span>
+      </a>
+      <a href="../contact/" class="nav-rail__item nav-rail__item--active" aria-label="Contact">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">mail</span><span class="nav-rail__label">Contact</span>
+      </a>
+      <div class="nav-rail__spacer"></div>
+      <button class="md-icon-btn theme-toggle-btn" aria-label="Schakel thema"><span class="material-symbols-outlined">dark_mode</span></button>
+    </nav>
+
+    <!-- Nav Scrim & Drawer -->
+    <div class="nav-scrim" id="nav-scrim"></div>
+    <aside class="nav-drawer" id="nav-drawer">
+      <nav class="nav-drawer__content">
+        <a href="/" class="nav-drawer__item"><span class="material-symbols-outlined">home</span>Home</a>
+        <a href="/ervaringen/" class="nav-drawer__item"><span class="material-symbols-outlined">work</span>Ervaringen</a>
+        <a href="/over-mij/" class="nav-drawer__item"><span class="material-symbols-outlined">person</span>Over mij</a>
+        <a href="/contact/" class="nav-drawer__item nav-drawer__item--active"><span class="material-symbols-outlined">mail</span>Contact</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" style="display: flex; align-items: center; justify-content: center; padding: 24px;">
+      <section class="md-card md-card--elevated fade-in" style="display: flex; flex-wrap: wrap; width: 100%; max-width: 900px; border-radius: var(--md-sys-shape-corner-extra-large); overflow: hidden; background: var(--md-sys-color-surface-container-lowest);">
+        
+        <!-- Left Side Image -->
+        <div style="flex: 1; min-width: 300px; position: relative;">
+          <img src="../img/Skills-Finale-1.webp" alt="Jordy Hoebergen" style="width: 100%; height: 100%; min-height: 400px; object-fit: cover; display: block;" fetchpriority="high">
+        </div>
+
+        <!-- Right Side Contact Info -->
+        <div style="flex: 1; min-width: 320px; padding: 48px; display: flex; flex-direction: column; justify-content: center; background: var(--md-sys-color-surface-container-low);">
+          <h1 class="display-medium" style="margin: 0 0 8px 0; color: var(--md-sys-color-on-surface);">Neem Contact Op</h1>
+          <p class="body-large" style="color: var(--md-sys-color-on-surface-variant); margin: 0 0 40px 0; max-width: 400px;">
+            Heb je een vraag, zie je een kans voor samenwerking of wil je gewoon hallo zeggen? Stuur me gerust een bericht via een van de onderstaande kanalen.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <a href="mailto:jordy@hoebergen.net" class="md-btn md-btn--filled" style="justify-content: flex-start; height: 56px; padding: 0 24px; font-size: 16px; border-radius: 16px;">
+              <span class="material-symbols-outlined" style="margin-right: 12px;">mail</span>
+              jordy@hoebergen.net
+            </a>
             
-            <!-- Hamburger menu  -->
-            <div class="navbarMain">
-                <span id="navbarIcon" class="material-symbols-outlined">menu</span>
-            </div>
-    
+            <a href="https://linkedin.com/in/jordy-hoebergen" target="_blank" rel="noopener nofollow" class="md-btn md-btn--tonal" style="justify-content: flex-start; height: 56px; padding: 0 24px; font-size: 16px; border-radius: 16px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right: 12px;">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+              </svg>
+              Jordy Hoebergen
+            </a>
+
+            <a href="https://github.com/jordyegnl" target="_blank" rel="noopener nofollow" class="md-btn md-btn--tonal" style="justify-content: flex-start; height: 56px; padding: 0 24px; font-size: 16px; border-radius: 16px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right: 12px;">
+                <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+              </svg>
+              JordyEGNL
+            </a>
+          </div>
         </div>
+      </section>
+    </main>
+  </div>
 
-        <!-- content -->
-
-        <div class="mainContent"> 
-            <div class="header">
-                <h1>Contact</h1>
-                <img class="headerImage" src="../img/Skills-Finale-1.webp" alt="Foto van de prijsuitreiking tijdens Skills The Finals" fetchpriority="high" style="object-position: center 30%">
-            </div>
-            <div class="centerMedium">
-
-                <div class="socialMediaColumns">
-
-                    <a href="mailto:jordy@hoebergen.net" target="_blank" rel="nofollow">
-                            <i class="fa-solid fa-envelope"></i>
-                            <div class="socialMediaText">
-                                <h1>Email</h1>
-                                <a1>jordy@hoebergen.net</a1>
-                            </div>
-                    </a>
-    
-                    <a href="https://linkedin.com/in/jordy-hoebergen" target="_blank" rel="nofollow">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <div class="socialMediaText">
-                            <h1>LinkedIn</h1>
-                            <a1>jordy-hoebergen</a1>
-                        </div>
-                    </a>
-                    
-                    <a href="https://github.com/jordyegnl" target="_blank" rel="nofollow">
-                        <i class="fa fa-github"></i>
-                        <div class="socialMediaText">
-                            <h1>GitHub</h1>
-                            <a1>JordyEGNL</a1>
-                        </div>
-                    </a>
-    
-    
-                </div>
-
-            </div>
-        </div>
-
-    <script defer src="../js/navbar.js"></script>
-    <script async src="https://kit.fontawesome.com/a43959776c.js" crossorigin="anonymous"></script>
+  <script defer src="../js/navigation.js"></script>
 </body>
 </html>
