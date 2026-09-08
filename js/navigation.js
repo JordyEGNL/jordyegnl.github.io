@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Scroll-aware Top App Bar ----------------------------
   const appBar = document.querySelector('.top-app-bar');
-  let lastScrollY = 0;
   const SCROLL_THRESHOLD = 8;
 
   function updateAppBarElevation() {
@@ -64,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       appBar.classList.remove('top-app-bar--scrolled');
     }
-    lastScrollY = window.scrollY;
   }
 
   window.addEventListener('scroll', updateAppBarElevation, { passive: true });
@@ -118,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mainImg.addEventListener('click', () => {
       clickCount++;
       if (clickCount === 10) {
-        mainImg.src = 'img/cat.gif';
+        mainImg.src = '/img/cat.gif';
       }
     });
   }

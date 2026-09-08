@@ -25,6 +25,7 @@
 
   <meta name="description" content="Bekijk de ervaringen van Jordy Hoebergen: stages bij VDL Nederland en Agrippa, de Skills Heroes wedstrijd, certificeringen en homelab projecten.">
   <meta name="theme-color" content="#FAFDFB">
+  <meta name="robots" content="index, follow">
   <meta property="og:description" content="Bekijk de ervaringen van Jordy Hoebergen: stages bij VDL Nederland en Agrippa, de Skills Heroes wedstrijd, certificeringen en homelab projecten.">
   <meta property="og:title" content="Jordy Hoebergen - Ervaringen">
   <link rel="canonical" href="https://jordyhoebergen.nl/ervaringen/">
@@ -36,6 +37,16 @@
   <meta name="twitter:card" content="summary">
 
   <script src="../js/theme.js"></script>
+  <style>
+    .experience-card-wrapper { 
+      display: flex; 
+      flex-direction: column; 
+      height: 100%; 
+    }
+    .experience-card__content {
+      flex: 1; /* Pushes everything evenly */
+    }
+  </style>
 </head>
 <body>
   <div class="app-shell">
@@ -46,7 +57,7 @@
         <button class="md-icon-btn" id="theme-toggle" aria-label="Schakel thema">
           <span class="material-symbols-outlined">dark_mode</span>
         </button>
-        <button class="md-icon-btn top-app-bar__menu-btn" id="nav-menu-btn" aria-label="Menu">
+        <button class="md-icon-btn top-app-bar__menu-btn" id="nav-menu-btn" aria-label="Menu" aria-expanded="false">
           <span class="material-symbols-outlined">menu</span>
         </button>
       </div>
@@ -69,7 +80,7 @@
         <span class="material-symbols-outlined nav-rail__icon">person</span>
         <span class="nav-rail__label">Over mij</span>
       </a>
-      <a href="../certificeringen/" class="nav-rail__item" aria-label="Certificeringen">
+      <a href="/certificeringen/" class="nav-rail__item" aria-label="Certificeringen">
         <div class="nav-rail__item-indicator"></div>
         <span class="material-symbols-outlined nav-rail__icon">verified</span>
         <span class="nav-rail__label">Certificeringen</span>
@@ -87,7 +98,7 @@
 
     <!-- Navigation Drawer (Mobile) -->
     <div class="nav-scrim" id="nav-scrim"></div>
-    <aside class="nav-drawer" id="nav-drawer">
+    <aside class="nav-drawer" id="nav-drawer" aria-label="Navigatiemenu">
       <nav class="nav-drawer__content">
         <a href="/" class="nav-drawer__item">
           <span class="material-symbols-outlined">home</span>
@@ -101,7 +112,7 @@
           <span class="material-symbols-outlined">person</span>
           Over mij
         </a>
-        <a href="../certificeringen/" class="nav-drawer__item">
+        <a href="/certificeringen/" class="nav-drawer__item">
           <span class="material-symbols-outlined">verified</span>
           Certificeringen
         </a>
@@ -128,16 +139,6 @@
 
       <section class="container-large section-spacing">
         <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 32px; padding: 24px 0;">
-          <style>
-            .experience-card-wrapper { 
-              display: flex; 
-              flex-direction: column; 
-              height: 100%; 
-            }
-            .experience-card__content {
-              flex: 1; /* Pushes everything evenly */
-            }
-          </style>
           
           <a href="./stage-advantive/" class="experience-card md-card md-card--elevated fade-in experience-card-wrapper">
             <div class="experience-card__image-wrapper blur-load" style="background-image: url(../img/small.jpg);">

@@ -23,6 +23,7 @@
 
   <meta name="description" content="Persoonlijke website van Jordy Hoebergen. Op deze pagina vind je alle manieren om met mij contact op te nemen.">
   <meta name="theme-color" content="#FAFDFB">
+  <meta name="robots" content="index, follow">
   <meta property="og:description" content="Persoonlijke website van Jordy Hoebergen. Op deze pagina vind je alle manieren om met mij contact op te nemen.">
   <meta property="og:title" content="Jordy Hoebergen - Contact">
   <link rel="canonical" href="https://jordyhoebergen.nl/contact/">
@@ -43,7 +44,7 @@
       <a href="/" class="top-app-bar__logo">Jordy Hoebergen</a>
       <div class="top-app-bar__actions">
         <button class="md-icon-btn theme-toggle-btn" aria-label="Schakel thema"><span class="material-symbols-outlined">dark_mode</span></button>
-        <button class="md-icon-btn top-app-bar__menu-btn" id="nav-menu-btn"><span class="material-symbols-outlined">menu</span></button>
+        <button class="md-icon-btn top-app-bar__menu-btn" id="nav-menu-btn" aria-label="Menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
       </div>
     </header>
 
@@ -72,12 +73,12 @@
 
     <!-- Nav Scrim & Drawer -->
     <div class="nav-scrim" id="nav-scrim"></div>
-    <aside class="nav-drawer" id="nav-drawer">
+    <aside class="nav-drawer" id="nav-drawer" aria-label="Navigatiemenu">
       <nav class="nav-drawer__content">
         <a href="/" class="nav-drawer__item"><span class="material-symbols-outlined">home</span>Home</a>
         <a href="/ervaringen/" class="nav-drawer__item"><span class="material-symbols-outlined">work</span>Ervaringen</a>
         <a href="/over-mij/" class="nav-drawer__item"><span class="material-symbols-outlined">person</span>Over mij</a>
-        <a href="../certificeringen/" class="nav-drawer__item"><span class="material-symbols-outlined">verified</span>Certificeringen</a>
+        <a href="/certificeringen/" class="nav-drawer__item"><span class="material-symbols-outlined">verified</span>Certificeringen</a>
         <a href="/contact/" class="nav-drawer__item nav-drawer__item--active"><span class="material-symbols-outlined">mail</span>Contact</a>
       </nav>
     </aside>
