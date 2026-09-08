@@ -115,16 +115,25 @@
 
     <!-- Main Content -->
     <main class="main-content">
-      <div class="container-large" style="display: flex; gap: 40px; flex-wrap: wrap; margin-top: 40px;">
-        <h1 class="display-medium" style="font-weight: 700; margin: 0 0 16px 0; width: 100%;">Over mij</h1>
+      <!-- Page Header Banner -->
+      <section class="container-large fade-in" style="margin-top: 24px;">
+        <div class="page-banner">
+          <h1 class="display-medium page-banner__title">Over mij</h1>
+          <p class="body-large page-banner__subtitle">
+            Leer meer over wie ik ben, mijn passie voor IT en mijn opleidingen.
+          </p>
+        </div>
+      </section>
+
+      <div class="container-large supporting-pane-layout">
         <!-- Left Main Content -->
-        <div style="flex: 1; min-width: 300px;">
+        <div class="supporting-pane-main">
           <!-- Wie ben ik? -->
           <section class="section-grid fade-in" style="margin-bottom: 24px;">
             <div class="section-grid__text">
               <h2 class="headline-large" style="margin: 0 0 8px 0; font-weight: 700;">Wie ben ik?</h2>
               <p class="body-large" style="margin: 0 0 12px 0;">
-                Ik ben Jordy Hoebergen en momenteel ben ik <span class="dynamic-age">22</span> jaar oud. Momenteel ben ik werkzaam bij Advantive.
+                Ik ben Jordy Hoebergen en momenteel ben ik <span class="dynamic-age">22</span> jaar oud. Momenteel ben ik werkzaam bij Advantive als Service Engineer.
               </p>
               <p class="body-large" style="margin: 0;">
                 Al sinds jonge leeftijd ben ik erg geïnteresseerd in computers en alles wat daar mee te maken heeft. Het begon met simpele dingen zoals wat instellingen aanpassen op mijn computer (waardoor er soms dingen kapot gingen haha), tot wat hardware vervangen. Uiteindelijk ben ik steeds meer gaan leren. Zowel op school als thuis.
@@ -142,10 +151,10 @@
             <div class="section-grid__text">
               <h2 class="headline-large" style="margin: 0 0 8px 0; font-weight: 700;">Mijn skills</h2>
               <p class="body-large" style="margin: 0 0 12px 0;">
-                Ik vind het leuk om netwerken te realiseren en te configureren. Denk aan het instellen van switches, het maken van een IP-plan en het opzetten van een site-to-site VPN.
+                Ik vind het leuk om bezig te zijn met IT en het oplossen van problemen. Ik heb veel ervaring met Microsoft 365, Azure, Windows desktops &amp; servers, Active Directory, Linux desktops &amp; servers, VMware, Cisco switches &amp; routers en Fortinet Firewalls.
               </p>
               <p class="body-large" style="margin: 0;">
-                Daarnaast vind ik het belangrijk om ervoor te zorgen dat de infrastructuur makkelijk te beheren is met behulp van tools zoals Ansible en Terraform.
+                Daarnaast vind ik het belangrijk om ervoor te zorgen dat de infrastructuur makkelijk te beheren is met behulp van Infrastructure as Code en automatisering. Hiervoor heb ik ervaring met Git, Ansible, Terraform, PowerShell en diverse andere tools. 
               </p>
               <div class="skills-chips" style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px;">
                 <span class="md-chip">Ansible</span>
@@ -167,8 +176,8 @@
           </section>
         </div>
 
-        <!-- Right Supporting Pane (Sticky) -->
-        <aside class="supporting-pane-sidebar" style="flex-shrink: 0; position: sticky; top: 100px; background: var(--md-sys-color-surface-container-low); padding: 32px; border-radius: 28px; align-self: start;">
+        <!-- Right Supporting Pane (Sticky on wide screens) -->
+        <aside class="supporting-pane-sidebar">
           <h2 class="headline-large" style="margin: 0 0 16px 0; font-weight: 700;">Opleidingen</h2>
           <div class="about-education" style="display: flex; flex-direction: column; gap: 16px;">
             <div class="about-education__item" style="display: flex; gap: 16px; align-items: start;">

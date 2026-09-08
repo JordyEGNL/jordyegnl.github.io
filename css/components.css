@@ -489,7 +489,7 @@ a.md-card--elevated:hover {
 .hero__content-pane {
   background-color: var(--md-sys-color-surface-container-low);
   border-radius: var(--md-sys-shape-corner-extra-large);
-  padding: var(--md-sys-spacing-5);
+  padding: var(--md-sys-spacing-7);
   box-shadow: var(--md-sys-elevation-level-2);
   margin-top: 0; /* Fixed: Don't pull outside container */
   position: relative;
@@ -1044,7 +1044,7 @@ a.social-card:hover .social-card__arrow {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 840px;
+  max-width: 740px;
   border-radius: var(--md-sys-shape-corner-extra-large);
   overflow: hidden;
   background: var(--md-sys-color-surface-container-lowest);
@@ -1110,7 +1110,7 @@ a.social-card:hover .social-card__arrow {
   }
   
   .contact-card__image-pane {
-    width: 360px;
+    width: 260px;
     height: auto;
     min-height: 100%;
   }
@@ -1121,6 +1121,40 @@ a.social-card:hover .social-card__arrow {
 
   .contact-card__title {
     font-size: 28px;
+  }
+}
+
+
+/* -----------------------------------------------
+   Page Header / Hero Banner (Over mij, Certificeringen)
+   ----------------------------------------------- */
+.page-banner {
+  background: var(--md-sys-color-primary-container);
+  border-radius: var(--md-sys-shape-corner-extra-large);
+  padding: 48px 32px;
+  color: var(--md-sys-color-on-primary-container);
+  box-shadow: var(--md-sys-elevation-level-1);
+}
+
+.page-banner__title {
+  color: var(--md-sys-color-on-primary-container);
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.page-banner__subtitle {
+  margin: 0;
+  color: var(--md-sys-color-on-primary-container);
+  opacity: 0.9;
+}
+
+@media (max-width: 599px) {
+  .page-banner {
+    padding: 32px 24px;
+  }
+  .page-banner__title {
+    font-size: 32px;
+    line-height: 40px;
   }
 }
 
