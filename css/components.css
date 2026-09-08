@@ -88,7 +88,7 @@
     align-items: center;
     position: fixed;
     top: 0; left: 0; bottom: 0;
-    width: 88px; /* Slightly wider */
+    width: 88px;
     z-index: 100;
     background-color: var(--md-sys-color-surface);
     padding: var(--md-sys-spacing-6) 0;
@@ -118,9 +118,9 @@
   .nav-rail__item-indicator {
     position: absolute;
     width: 56px;
-    height: 40px; /* Taller background */
+    height: 40px;
     border-radius: 20px;
-    top: 10px; /* Adjusted to keep it centered around the icon */
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     background-color: transparent;
@@ -143,7 +143,7 @@
   .nav-rail__icon {
     z-index: 1;
     height: 28px;
-    width: 24px; /* Fixed width prevents shifting based on ligature text */
+    width: 24px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -433,7 +433,7 @@ a.md-card--elevated:hover {
    Hero Section (Home page - Modern Pane Layout)
    ----------------------------------------------- */
 .hero {
-  padding-top: 56px; /* Extra spacing to push text further down from the top */
+  padding-top: 56px;
   padding-bottom: var(--md-sys-spacing-10);
   position: relative;
 }
@@ -475,7 +475,7 @@ a.md-card--elevated:hover {
 
 /* Mobile image pulls up to overlap under the text block */
 .hero__container > .hero__image-pane:nth-child(2) {
-  margin-top: -32px; /* Restored overlap! Carefully balanced to preserve the forehead */
+  margin-top: -32px;
 }
 
 /* Base (Mobile) Banner override for subpages */
@@ -500,7 +500,7 @@ a.md-card--elevated:hover {
   .hero__content-pane {
     flex: 1;
     margin-top: 0;
-    margin-right: -100px; /* Overlap from left to right */
+    margin-right: -100px;
     padding: var(--md-sys-spacing-10);
     max-width: 600px;
     align-self: auto;
@@ -533,10 +533,10 @@ a.md-card--elevated:hover {
   gap: var(--md-sys-spacing-3);
 }
 
-.hero__subtitle {
+.hero__content-pane .hero__subtitle {
   color: var(--md-sys-color-on-surface-variant);
   margin: 0;
-  margin-bottom: var(--md-sys-spacing-6); /* Extra spacing requested by user */
+  margin-bottom: var(--md-sys-spacing-7);
 }
 
 .hero__description {
