@@ -44,7 +44,7 @@ a {
 @media (min-width: 840px) {
   .main-content {
     margin-top: 0;
-    margin-left: 88px; /* Width of the Navigation Rail */
+    margin-left: 104px; /* Width of the Navigation Rail */
     min-height: 100vh;
   }
 }

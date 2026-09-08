@@ -22,9 +22,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
   <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
 
-  <meta name="description" content="Overzicht van behaalde certificeringen en examens van Jordy Hoebergen: Microsoft Learn, Credly, Cisco, Broadcom en meer.">
+  <meta name="description" content="Overzicht van behaalde certificeringen en examens van Jordy Hoebergen: Microsoft Learn, Credly, Cisco en meer.">
   <meta name="theme-color" content="#FAFDFB">
-  <meta property="og:description" content="Overzicht van behaalde certificeringen en examens van Jordy Hoebergen: Microsoft Learn, Credly, Cisco, Broadcom en meer.">
+  <meta property="og:description" content="Overzicht van behaalde certificeringen en examens van Jordy Hoebergen: Microsoft Learn, Credly, Cisco en meer.">
   <meta property="og:title" content="Jordy Hoebergen - Certificeringen">
   <link rel="canonical" href="https://jordyhoebergen.nl/certificeringen/">
   <meta property="og:url" content="https://jordyhoebergen.nl/certificeringen/">
@@ -37,18 +37,6 @@
   <script src="../js/theme.js"></script>
 
   <style>
-    .cert-hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      background: var(--md-sys-color-surface-container-high);
-      border-radius: var(--md-sys-shape-corner-full);
-      font-size: var(--md-sys-typescale-label-large-size);
-      font-weight: 500;
-      color: var(--md-sys-color-on-surface-variant);
-      margin-bottom: var(--md-sys-spacing-3);
-    }
     .cert-section-header {
       display: flex;
       align-items: center;
@@ -63,6 +51,7 @@
     .cert-section-header__title {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 12px;
       margin: 0;
       font-weight: 700;
@@ -91,7 +80,6 @@
     .cert-card:hover {
       transform: translateY(-3px);
       box-shadow: var(--md-sys-elevation-level-2);
-      border-color: var(--md-sys-color-outline-variant);
       background-color: var(--md-sys-color-surface-container);
     }
     .cert-card__header {
@@ -189,10 +177,16 @@
     .cert-counter {
       background: var(--md-sys-color-secondary-container);
       color: var(--md-sys-color-on-secondary-container);
-      padding: 2px 10px;
+      padding: 4px 12px;
       border-radius: var(--md-sys-shape-corner-full);
       font-size: 13px;
       font-weight: 600;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      line-height: 1;
+      height: 26px;
+      flex-shrink: 0;
     }
   </style>
 </head>
@@ -218,7 +212,7 @@
         <span class="material-symbols-outlined nav-rail__icon">home</span>
         <span class="nav-rail__label">Home</span>
       </a>
-      <a href="../ervaringen/" class="nav-rail__item nav-rail__item--active" aria-label="Ervaringen">
+      <a href="../ervaringen/" class="nav-rail__item" aria-label="Ervaringen">
         <div class="nav-rail__item-indicator"></div>
         <span class="material-symbols-outlined nav-rail__icon">work</span>
         <span class="nav-rail__label">Ervaringen</span>
@@ -227,6 +221,11 @@
         <div class="nav-rail__item-indicator"></div>
         <span class="material-symbols-outlined nav-rail__icon">person</span>
         <span class="nav-rail__label">Over mij</span>
+      </a>
+      <a href="../certificeringen/" class="nav-rail__item nav-rail__item--active" aria-label="Certificeringen">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">verified</span>
+        <span class="nav-rail__label">Certificeringen</span>
       </a>
       <a href="../contact/" class="nav-rail__item" aria-label="Contact">
         <div class="nav-rail__item-indicator"></div>
@@ -247,13 +246,17 @@
           <span class="material-symbols-outlined">home</span>
           Home
         </a>
-        <a href="../ervaringen/" class="nav-drawer__item nav-drawer__item--active">
+        <a href="../ervaringen/" class="nav-drawer__item">
           <span class="material-symbols-outlined">work</span>
           Ervaringen
         </a>
         <a href="../over-mij/" class="nav-drawer__item">
           <span class="material-symbols-outlined">person</span>
           Over mij
+        </a>
+        <a href="../certificeringen/" class="nav-drawer__item nav-drawer__item--active">
+          <span class="material-symbols-outlined">verified</span>
+          Certificeringen
         </a>
         <a href="../contact/" class="nav-drawer__item">
           <span class="material-symbols-outlined">mail</span>
@@ -267,16 +270,12 @@
       <!-- Banner / Page Header -->
       <section class="container-large fade-in" style="margin-top: 32px;">
         <div style="background: var(--md-sys-color-primary-container); border-radius: var(--md-sys-shape-corner-extra-large); padding: 48px 32px; color: var(--md-sys-color-on-primary-container);">
-          <div style="max-width: 700px;">
-            <div class="cert-hero-badge">
-              <span class="material-symbols-outlined" style="font-size: 20px; color: var(--md-sys-color-primary);">verified</span>
-              <span>Officiële Kwalificaties</span>
-            </div>
+          <div>
             <h1 class="display-medium" style="color: var(--md-sys-color-on-primary-container); font-weight: 700; margin: 0 0 12px 0;">
-              Certificeringen & Examens
+              Certificeringen &amp; Examens
             </h1>
             <p class="body-large" style="margin: 0; color: var(--md-sys-color-on-primary-container); opacity: 0.9;">
-              Een compleet overzicht van alle behaalde certificaten en voltooide examens via Microsoft Learn, Credly, Cisco en Broadcom.
+              Een overzicht van al mijn behaalde certificeringenvia Microsoft Learn en Credly.
             </p>
           </div>
         </div>
@@ -289,11 +288,11 @@
         <div class="cert-section-header">
           <h2 class="headline-medium cert-section-header__title">
             <span class="material-symbols-outlined" style="color: var(--md-sys-color-primary);">school</span>
-            Microsoft Learn Examens
-            <span class="cert-counter">4 examens</span>
+            Microsoft Certificeringen
+            <span class="cert-counter">4 certificeringen</span>
           </h2>
-          <a href="https://learn.microsoft.com/credentials/" target="_blank" rel="noopener nofollow" class="cert-external-link">
-            <span>Microsoft Learn Credentials</span>
+          <a href="https://learn.microsoft.com/nl-nl/users/jordyhoebergen-8125/credentials?tab=credentials-tab" target="_blank" rel="noopener nofollow" class="cert-external-link">
+            <span>Microsoft Learn Profiel</span>
             <span class="material-symbols-outlined" style="font-size: 18px;">open_in_new</span>
           </a>
         </div>
@@ -397,7 +396,7 @@
           <h2 class="headline-medium cert-section-header__title">
             <span class="material-symbols-outlined" style="color: var(--md-sys-color-primary);">verified</span>
             Credly Badges &amp; Certificeringen
-            <span class="cert-counter">24 badges</span>
+            <span class="cert-counter">23 badges</span>
           </h2>
           <a href="https://www.credly.com/users/jordy-hoebergen/badges" target="_blank" rel="noopener nofollow" class="cert-external-link">
             <span>Credly Profiel</span>
@@ -406,30 +405,7 @@
         </div>
 
         <div class="cert-grid">
-          <!-- 1. Broadcom Cloud & Virtualization -->
-          <a href="https://www.credly.com/org/broadcom/badge/it-academy-cloud-and-virtualization-concepts" target="_blank" rel="noopener nofollow" class="cert-card">
-            <div class="cert-card__header">
-              <div class="cert-card__img-wrap">
-                <img src="https://images.credly.com/images/8ca28f8d-5ac0-49d7-b783-608cd4a61072/image.png" alt="Broadcom Badge" class="cert-card__img" loading="lazy">
-              </div>
-              <div class="cert-card__meta">
-                <div class="cert-card__issuer">Broadcom</div>
-                <h3 class="cert-card__title">IT Academy: Cloud and Virtualization Concepts</h3>
-              </div>
-            </div>
-            <div class="cert-card__footer">
-              <span class="cert-card__date">
-                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
-                17 april 2023
-              </span>
-              <span class="cert-card__status">
-                <span class="material-symbols-outlined">verified</span>
-                Verified
-              </span>
-            </div>
-          </a>
-
-          <!-- 2. Cisco CyberOps Associate -->
+          <!-- 1. Cisco CyberOps Associate -->
           <a href="https://www.credly.com/org/cisco/badge/cyberops-associate" target="_blank" rel="noopener nofollow" class="cert-card">
             <div class="cert-card__header">
               <div class="cert-card__img-wrap">
