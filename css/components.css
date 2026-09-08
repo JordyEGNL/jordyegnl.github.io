@@ -456,8 +456,8 @@ a.md-card--elevated:hover {
    Hero Section (Home page - Modern Pane Layout)
    ----------------------------------------------- */
 .hero {
-  padding-top: 56px;
-  padding-bottom: var(--md-sys-spacing-10);
+  padding-top: 16px;
+  padding-bottom: 24px;
   position: relative;
 }
 
@@ -513,6 +513,11 @@ a.md-card--elevated:hover {
 }
 
 @media (min-width: 840px) {
+  .hero {
+    padding-top: 56px;
+    padding-bottom: var(--md-sys-spacing-10);
+  }
+
   .hero__container {
     flex-direction: row;
     align-items: center;
