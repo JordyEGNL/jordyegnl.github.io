@@ -79,7 +79,7 @@
 
 @media (min-width: 840px) {
   .top-app-bar {
-    display: none; /* Hide top bar on desktop */
+    display: none;
   }
 
   .nav-rail {
@@ -88,7 +88,7 @@
     align-items: center;
     position: fixed;
     top: 0; left: 0; bottom: 0;
-    width: 104px;
+    width: 100px;
     z-index: 100;
     background-color: var(--md-sys-color-surface);
     padding: var(--md-sys-spacing-6) 0;
