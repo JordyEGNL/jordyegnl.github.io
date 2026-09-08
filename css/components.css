@@ -489,7 +489,7 @@ a.md-card--elevated:hover {
 .hero__content-pane {
   background-color: var(--md-sys-color-surface-container-low);
   border-radius: var(--md-sys-shape-corner-extra-large);
-  padding: var(--md-sys-spacing-7);
+  padding: var(--md-sys-spacing-5);
   box-shadow: var(--md-sys-elevation-level-2);
   margin-top: 0; /* Fixed: Don't pull outside container */
   position: relative;
@@ -1047,7 +1047,7 @@ a.social-card:hover .social-card__arrow {
   max-width: 740px;
   border-radius: var(--md-sys-shape-corner-extra-large);
   overflow: hidden;
-  background: var(--md-sys-color-surface-container-lowest);
+  background: var(--md-sys-color-surface-container-low);
   box-shadow: var(--md-sys-elevation-level-2);
 }
 

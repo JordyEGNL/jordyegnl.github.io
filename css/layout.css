@@ -235,7 +235,7 @@ a {
 
 /* List-Detail (Articles/Experiences) */
 .article-pane {
-  background: var(--md-sys-color-surface-container-lowest);
+  background: var(--md-sys-color-surface-container-low);
   padding: var(--md-sys-spacing-8);
   border-radius: var(--md-sys-shape-corner-extra-large);
   margin-top: -64px; /* overlap header */
