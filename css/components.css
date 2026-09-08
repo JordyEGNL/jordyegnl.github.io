@@ -456,7 +456,7 @@ a.md-card--elevated:hover {
    Hero Section (Home page - Modern Pane Layout)
    ----------------------------------------------- */
 .hero {
-  padding-top: 16px;
+  padding-top: 0;
   padding-bottom: 24px;
   position: relative;
 }
@@ -487,7 +487,7 @@ a.md-card--elevated:hover {
 .hero__content-pane {
   background-color: var(--md-sys-color-surface-container-low);
   border-radius: var(--md-sys-shape-corner-extra-large);
-  padding: var(--md-sys-spacing-5);
+  padding: var(--md-sys-spacing-7);
   box-shadow: var(--md-sys-elevation-level-2);
   margin-top: 0; /* Fixed: Don't pull outside container */
   position: relative;
@@ -523,20 +523,35 @@ a.md-card--elevated:hover {
     align-items: center;
     min-height: 80vh;
     gap: 0;
+    width: 100%;
+    max-width: 100%;
   }
   
-  .hero__content-pane {
-    flex: 1;
-    margin-top: 0;
-    margin-right: -100px;
-    padding: var(--md-sys-spacing-8);
+  .hero:not(.hero--banner) .hero__content-pane {
+    flex: 0 1 500px;
+    width: 100%;
     max-width: 500px;
+    min-width: 320px;
+    margin-top: 0;
+    margin-right: -80px;
+    padding: var(--md-sys-spacing-7);
     align-self: auto;
+    position: relative;
+    z-index: 2;
   }
 
-  .hero__image-pane {
-    flex: 1;
-    height: 600px;
+  .hero:not(.hero--banner) .hero__content-pane h1 {
+    font-size: clamp(30px, 2.5vw, 42px);
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+
+  .hero:not(.hero--banner) .hero__image-pane {
+    flex: 1 1 0;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 560px;
   }
   
   /* Banner override for subpages */
@@ -550,6 +565,7 @@ a.md-card--elevated:hover {
     margin-left: auto;
   }
   .hero--banner .hero__content-pane {
+    flex: 1;
     margin-right: -25%; /* ~30% visual overlap under the text block */
     max-width: 500px;
   }
