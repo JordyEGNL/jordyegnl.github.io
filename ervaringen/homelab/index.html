@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordy Hoebergen - Homelab</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="../../img/Raspberry-Pi.webp" fetchpriority="high">
+
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=block" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" type="image/png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../../img/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
+
+  <!-- SEO & Open Graph -->
+  <meta name="description" content="Ontdek het homelab van Jordy Hoebergen: van Raspberry Pi naar een server rack met GitOps automatisering, Traefik, CrowdSec en Grafana monitoring.">
+  <meta name="theme-color" content="#FAFDFB">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jordyhoebergen.nl/ervaringen/homelab/">
+  <meta property="og:title" content="Jordy Hoebergen - Homelab">
+  <meta property="og:description" content="Ontdek het homelab van Jordy Hoebergen: van Raspberry Pi naar een server rack met GitOps automatisering, Traefik, CrowdSec en Grafana monitoring.">
+  <meta property="og:url" content="https://jordyhoebergen.nl/ervaringen/homelab/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Jordy Hoebergen">
+  <meta property="og:image" content="https://jordyhoebergen.nl/img/Raspberry-Pi.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jordy Hoebergen - Homelab">
+  <meta name="twitter:description" content="Ontdek het homelab van Jordy Hoebergen: van Raspberry Pi naar een server rack met GitOps automatisering, Traefik, CrowdSec en Grafana monitoring.">
+  <meta name="twitter:image" content="https://jordyhoebergen.nl/img/Raspberry-Pi.webp">
+
+  <!-- Theme script (inline to prevent FOUC) -->
+  <script src="../../js/theme.js"></script>
+</head>
+<body>
+
+  <div class="app-shell">
+    <!-- Top App Bar (Mobile) -->
+    <header class="top-app-bar" role="banner">
+      <a href="/" class="top-app-bar__logo">Jordy Hoebergen</a>
+      <div class="top-app-bar__actions">
+        <button class="md-icon-btn theme-toggle-btn" aria-label="Schakel thema"><span class="material-symbols-outlined">dark_mode</span></button>
+        <button class="md-icon-btn top-app-bar__menu-btn" id="nav-menu-btn" aria-label="Menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
+      </div>
+    </header>
+
+    <!-- Navigation Rail (Desktop) -->
+    <nav class="nav-rail" aria-label="Hoofdnavigatie">
+      <a href="../../" class="nav-rail__item" aria-label="Home">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">home</span><span class="nav-rail__label">Home</span>
+      </a>
+      <a href="../../ervaringen/" class="nav-rail__item nav-rail__item--active" aria-label="Ervaringen">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">work</span><span class="nav-rail__label">Ervaringen</span>
+      </a>
+      <a href="../../over-mij/" class="nav-rail__item" aria-label="Over mij">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">person</span><span class="nav-rail__label">Over mij</span>
+      </a>
+      <a href="../../certificeringen/" class="nav-rail__item" aria-label="Certificeringen">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">verified</span>
+        <span class="nav-rail__label">Certificeringen</span>
+      </a>
+      <a href="../../contact/" class="nav-rail__item" aria-label="Contact">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">mail</span><span class="nav-rail__label">Contact</span>
+      </a>
+      <div class="nav-rail__spacer"></div>
+      <button class="md-icon-btn theme-toggle-btn" aria-label="Schakel thema"><span class="material-symbols-outlined">dark_mode</span></button>
+    </nav>
+
+    <!-- Nav Scrim & Drawer -->
+    <div class="nav-scrim" id="nav-scrim"></div>
+    <aside class="nav-drawer" id="nav-drawer" aria-label="Navigatiemenu">
+      <nav class="nav-drawer__content">
+        <a href="../../" class="nav-drawer__item"><span class="material-symbols-outlined">home</span>Home</a>
+        <a href="../../ervaringen/" class="nav-drawer__item nav-drawer__item--active"><span class="material-symbols-outlined">work</span>Ervaringen</a>
+        <a href="../../over-mij/" class="nav-drawer__item"><span class="material-symbols-outlined">person</span>Over mij</a>
+        <a href="../../certificeringen/" class="nav-drawer__item"><span class="material-symbols-outlined">verified</span>Certificeringen</a>
+        <a href="../../contact/" class="nav-drawer__item"><span class="material-symbols-outlined">mail</span>Contact</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <div class="article-header-image-container fade-in">
+        <div class="hero__image-pane">
+          <img src="../../img/Raspberry-Pi.webp" alt="Homelab Header" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        </div>
+      </div>
+
+      <article class="article-pane fade-in">
+        <h1 class="display-medium" style="margin-top: 0; margin-bottom: 8px;">Mijn Homelab</h1>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px;">
+        <div class="md-chip md-chip--assist" style="margin-bottom: 32px; display: inline-flex;">Mijn eigen private cloud en speeltuin</div>
+
+        </div>
+        
+        <!-- Intro & Links -->
+        <div class="section-grid">
+          <div class="section-grid__text">
+            <h2 class="headline-large">Van hobby naar volwaardige infrastructuur</h2>
+            <p class="body-large">
+              Het begon met een Raspberry Pi om mee te experimenteren, allemaal Linux packages installeren (zonder te weten wat het allemaal deed) en er kwamen verschillende applicaties bij. Van Bitwarden tot PiHole. 
+            </p>
+            <p class="body-large">
+              Later werd dit een Mini PC met daarop Proxmox om virtuale machines op te draaien. Met behulp van Docker kon ik gemakkelijk en snel applicaties aanmaken (en ook weer makkelijk afbreken of aanpassen).
+            </p>
+            
+            <!-- Snelle actielinks -->
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;">
+              <a href="https://status.hoebergen.net/status/default" target="_blank" rel="noopener nofollow" class="md-btn md-btn--filled">
+                <span class="material-symbols-outlined">speed</span>
+                Live Status Pagina
+              </a>
+              <a href="https://github.com/jordyegnl/docker" target="_blank" rel="noopener nofollow" class="md-btn md-btn--tonal">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                </svg>
+                GitHub Docker Repo
+              </a>
+            </div>
+          </div>
+          <div class="section-grid__media">
+            <div class="img-container blur-load" style="background-image: url('../../img/small.jpg');">
+              <img src="../../img/Raspberry-Pi.webp" alt="Homelab Setup" loading="lazy" style="aspect-ratio: 16/10;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Automatiseringen -->
+        <div class="section-grid section-grid--reverse" style="margin-top: 32px;">
+          <div class="section-grid__text">
+            <h3 class="headline-large">Automatiseringen: GitHub &amp; Komodo</h3>
+            <p class="body-large">
+              In het begin was het redelijk makkelijk, een paar apps en één Raspberry Pi, een keer in de week alles updaten en we kunnen weer vooruit. Maar hoe erger de hobby werd, hoe meer tijd het kostte om alles bij te houden. Daarom ben ik begonnen met het automatiseren van een hoop taken.
+            </p>
+            <p class="body-large">
+              Zo krijg ik realtime update meldingen via GitHub wanneer er een nieuwe versie van een applicatie beschikbaar is. Met behulp van Komodo kan ik vervolgens met één druk op de knop de applicatie updaten, zonder dat ik in hoef te loggen op de servers. Als er iets misgaat kan ik gemakkelijk terug door de vorige versie te herstellen.
+            </p>
+            <p class="body-large">
+              Mocht het echt heel goed misgegaan zijn, kan ik altijd nog terugvallen op de backups en snapshots die Proxmox automatisch maakt van alle virtuele machines. Natuurlijk op een ander device dan Proxmox zelf én offsite naar een Azure Storage Account. Zo kan ik altijd terug naar een werkende situatie.
+            </p>
+          </div>
+          <div class="section-grid__media">
+            <div class="img-container blur-load" style="background-image: url('../../img/small.jpg');">
+              <img src="../../img/Raspberry-Pi.webp" alt="Raspberry Pi setup" loading="lazy" style="aspect-ratio: 16/9;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Monitoring & Grafana -->
+        <div class="section-grid" style="margin-top: 32px;">
+          <div class="section-grid__text">
+            <h3 class="headline-large">Monitoring: Grafana &amp; Uptime Kuma</h3>
+            <p class="body-large">
+              Om ervoor te zorgen dat ik een SLA kan behalen van <em>ongeveer</em> 99.9% uptime, heb ik monitoring toegevoegd met behulp van Uptime Kuma en Grafana. Uptime Kuma houdt de beschikbaarheid van alle apps in de gaten, terwijl ik vanuit Grafana diepgaande logging en metrieken kan bekijken.
+            </p>
+            <p class="body-large">
+              De actuele status en uptime van alle publieke services is altijd realtime inzichtelijk via mijn publieke statuspagina:
+            </p>
+            <div style="margin-top: 16px;">
+              <a href="https://status.hoebergen.net/status/default" target="_blank" rel="noopener nofollow" class="md-btn md-btn--filled">
+                <span class="material-symbols-outlined">speed</span>
+                Bekijk status.hoebergen.net
+              </a>
+            </div>
+          </div>
+          <div class="section-grid__media">
+            <div class="img-container blur-load" style="background-image: url('../../img/small.jpg');">
+              <img src="../../img/Raspberry-Pi.webp" alt="Grafana Monitoring Dashboard" loading="lazy" style="aspect-ratio: 16/9;">
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </main>
+  </div>
+
+  <script defer src="../../js/navigation.js"></script>
+</body>
+</html>
