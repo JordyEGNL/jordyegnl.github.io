@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordy Hoebergen - Certificeringen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=block" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../img/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+
+  <!-- SEO & Open Graph -->
+  <meta name="description" content="Overzicht van behaalde certificeringen en examens van Jordy Hoebergen: Microsoft Learn, Credly, Cisco en meer.">
+  <meta name="theme-color" content="#FAFDFB">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jordyhoebergen.nl/certificeringen/">
+  <meta property="og:title" content="Jordy Hoebergen - Certificeringen">
+  <meta property="og:description" content="Overzicht van behaalde certificeringen en examens van Jordy Hoebergen: Microsoft Learn, Credly, Cisco en meer.">
+  <meta property="og:url" content="https://jordyhoebergen.nl/certificeringen/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Jordy Hoebergen">
+  <meta property="og:image" content="https://jordyhoebergen.nl/img/fotojordyzoom.webp">
+  <meta property="og:image:width" content="750">
+  <meta property="og:image:height" content="750">
+  <meta property="og:image:type" content="image/webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jordy Hoebergen - Certificeringen">
+  <meta name="twitter:description" content="Overzicht van behaalde certificeringen en examens van Jordy Hoebergen: Microsoft Learn, Credly, Cisco en meer.">
+  <meta name="twitter:image" content="https://jordyhoebergen.nl/img/fotojordyzoom.webp">
+
+  <!-- Theme script (inline to prevent FOUC) -->
+  <script src="../js/theme.js"></script>
+
+  <style>
+    .cert-section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 48px;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    }
+    .cert-section-header__title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 0;
+      font-weight: 700;
+    }
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .cert-card {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      background-color: var(--md-sys-color-surface-container-low);
+      border-radius: var(--md-sys-shape-corner-large);
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid transparent;
+      transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1),
+                  box-shadow 0.25s cubic-bezier(0.2, 0, 0, 1),
+                  background-color 0.25s ease,
+                  border-color 0.25s ease;
+    }
+    .cert-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--md-sys-elevation-level-2);
+      background-color: var(--md-sys-color-surface-container);
+    }
+    .cert-card__header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    .cert-card__img-wrap {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      border-radius: var(--md-sys-shape-corner-medium);
+      background: var(--md-sys-color-surface-container-highest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      overflow: hidden;
+    }
+    .cert-card__img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.35s cubic-bezier(0.2, 0, 0, 1);
+    }
+    .cert-card:hover .cert-card__img {
+      transform: scale(1.08);
+    }
+    .cert-card__meta {
+      flex: 1;
+      min-width: 0;
+    }
+    .cert-card__issuer {
+      font-size: var(--md-sys-typescale-label-medium-size);
+      color: var(--md-sys-color-primary);
+      font-weight: 500;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .cert-card__title {
+      font-size: var(--md-sys-typescale-title-medium-size);
+      font-weight: 700;
+      color: var(--md-sys-color-on-surface);
+      margin: 0;
+      line-height: 1.35;
+    }
+    .cert-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid var(--md-sys-color-outline-variant);
+      font-size: var(--md-sys-typescale-body-small-size);
+      color: var(--md-sys-color-on-surface-variant);
+    }
+    .cert-card__date {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .cert-card__status {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--md-sys-color-primary);
+      font-weight: 600;
+    }
+    .cert-card__status .material-symbols-outlined {
+      font-size: 16px;
+    }
+    .cert-external-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: var(--md-sys-shape-corner-full);
+      text-decoration: none;
+      color: var(--md-sys-color-on-secondary-container);
+      background: var(--md-sys-color-secondary-container);
+      font-size: var(--md-sys-typescale-label-large-size);
+      font-weight: 500;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .cert-external-link:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+    .badge-icon-microsoft {
+      color: #008AD7;
+      font-size: 32px;
+    }
+    .cert-counter {
+      background: var(--md-sys-color-secondary-container);
+      color: var(--md-sys-color-on-secondary-container);
+      padding: 4px 12px;
+      border-radius: var(--md-sys-shape-corner-full);
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      line-height: 1;
+      height: 26px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Top App Bar (Mobile only) -->
+    <header class="top-app-bar" role="banner">
+      <a href="/" class="top-app-bar__logo">Jordy Hoebergen</a>
+      <div class="top-app-bar__actions">
+        <button class="md-icon-btn" id="theme-toggle" aria-label="Schakel thema">
+          <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+        <button class="md-icon-btn top-app-bar__menu-btn" id="nav-menu-btn" aria-label="Menu" aria-expanded="false">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Navigation Rail (Desktop only) -->
+    <nav class="nav-rail" aria-label="Hoofdnavigatie">
+      <a href="../" class="nav-rail__item" aria-label="Home">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">home</span>
+        <span class="nav-rail__label">Home</span>
+      </a>
+      <a href="../ervaringen/" class="nav-rail__item" aria-label="Ervaringen">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">work</span>
+        <span class="nav-rail__label">Ervaringen</span>
+      </a>
+      <a href="../over-mij/" class="nav-rail__item" aria-label="Over mij">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">person</span>
+        <span class="nav-rail__label">Over mij</span>
+      </a>
+      <a href="../certificeringen/" class="nav-rail__item nav-rail__item--active" aria-label="Certificeringen">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">verified</span>
+        <span class="nav-rail__label">Certificeringen</span>
+      </a>
+      <a href="../contact/" class="nav-rail__item" aria-label="Contact">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">mail</span>
+        <span class="nav-rail__label">Contact</span>
+      </a>
+      <div class="nav-rail__spacer"></div>
+      <button class="md-icon-btn" id="theme-toggle-rail" aria-label="Schakel thema">
+        <span class="material-symbols-outlined">dark_mode</span>
+      </button>
+    </nav>
+
+    <!-- Navigation Drawer (Mobile) -->
+    <div class="nav-scrim" id="nav-scrim"></div>
+    <aside class="nav-drawer" id="nav-drawer" aria-label="Navigatiemenu">
+      <nav class="nav-drawer__content">
+        <a href="../" class="nav-drawer__item">
+          <span class="material-symbols-outlined">home</span>
+          Home
+        </a>
+        <a href="../ervaringen/" class="nav-drawer__item">
+          <span class="material-symbols-outlined">work</span>
+          Ervaringen
+        </a>
+        <a href="../over-mij/" class="nav-drawer__item">
+          <span class="material-symbols-outlined">person</span>
+          Over mij
+        </a>
+        <a href="../certificeringen/" class="nav-drawer__item nav-drawer__item--active">
+          <span class="material-symbols-outlined">verified</span>
+          Certificeringen
+        </a>
+        <a href="../contact/" class="nav-drawer__item">
+          <span class="material-symbols-outlined">mail</span>
+          Contact
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Banner / Page Header -->
+      <section class="container-large fade-in" style="margin-top: 24px;">
+        <div class="page-banner">
+          <h1 class="display-medium page-banner__title">
+            Certificeringen
+          </h1>
+          <p class="body-large page-banner__subtitle">
+            Een overzicht van al mijn behaalde certificeringen via Microsoft Learn en Credly.
+          </p>
+        </div>
+      </section>
+
+      <!-- Content Container -->
+      <section class="container-large section-spacing" style="padding-top: 8px;">
+
+        <!-- 1. Microsoft Learn Sectie -->
+        <div class="cert-section-header fade-in">
+          <h2 class="headline-medium cert-section-header__title">
+            <span class="material-symbols-outlined" style="color: var(--md-sys-color-primary);">school</span>
+            Microsoft Learn Certificeringen
+            <span class="cert-counter">4 certificeringen</span>
+          </h2>
+          <a href="https://learn.microsoft.com/nl-nl/users/jordyhoebergen-8125/credentials?tab=credentials-tab" target="_blank" rel="noopener nofollow" class="cert-external-link">
+            <span>Microsoft Learn Profiel</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">open_in_new</span>
+          </a>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Item 1: AI Business Professional -->
+          <a href="https://learn.microsoft.com/en-us/users/jordyhoebergen-8125/credentials/b0d6d879715aeae5" target="_blank" rel="noopener" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/mslearn/ai-business-professional.svg" alt="Microsoft Certified: AI Business Professional" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Microsoft</div>
+                <h3 class="cert-card__title">AI Business Professional (AB-730)</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                26 augustus 2026
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+
+          <!-- Item 2: Endpoint Administrator -->
+          <a href="https://learn.microsoft.com/en-us/users/jordyhoebergen-8125/credentials/7dcc312a209753a4" target="_blank" rel="noopener" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/mslearn/microsoft-certified-associate-badge.svg" alt="Microsoft Certified: Endpoint Administrator Associate" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Microsoft</div>
+                <h3 class="cert-card__title">Endpoint Administrator (MD-102)</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                18 mei 2026
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+
+          <!-- Item 3: Microsoft 365-beheerder -->
+          <a href="https://learn.microsoft.com/api/credentials/share/nl-nl/JordyHoebergen-8125/7DCC312A209753A4" target="_blank" rel="noopener" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/mslearn/microsoft-certified-expert-badge.svg" alt="Microsoft 365 Certified: Enterprise Administrator Expert" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Microsoft</div>
+                <h3 class="cert-card__title">Microsoft 365 Administrator (MS-102)</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                19 januari 2026
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+
+          <!-- Item 4: Microsoft Azure Fundamentals -->
+          <a href="https://learn.microsoft.com/en-us/users/jordyhoebergen-8125/credentials/197fc8fa4aa1a904" target="_blank" rel="noopener" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/mslearn/microsoft-certified-fundamentals-badge.svg" alt="Microsoft Certified: Azure Fundamentals" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Microsoft</div>
+                <h3 class="cert-card__title">Azure Fundamentals (AZ-900)</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                27 augustus (2025)
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- 2. Credly Badges Sectie -->
+        <div class="cert-section-header fade-in">
+          <h2 class="headline-medium cert-section-header__title">
+            <span class="material-symbols-outlined" style="color: var(--md-sys-color-primary);">verified</span>
+            Credly Badges
+            <span class="cert-counter">11 badges</span>
+          </h2>
+          <a href="https://www.credly.com/users/jordy-hoebergen/badges" target="_blank" rel="noopener nofollow" class="cert-external-link">
+            <span>Credly Profiel</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">open_in_new</span>
+          </a>
+        </div>
+
+        <div class="cert-grid">
+          <!-- 1. Cisco CyberOps Associate -->
+          <a href="https://www.credly.com/org/cisco/badge/cyberops-associate" target="_blank" rel="noopener nofollow" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/credly/CyberOpsAssoc.png" alt="CyberOps Associate Badge" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">CyberOps Associate</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                1 februari 2023
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+
+          <!-- 3. Cisco Endpoint Security -->
+          <a href="https://www.credly.com/org/cisco/badge/endpoint-security" target="_blank" rel="noopener nofollow" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/credly/EndpointSecurity.png" alt="Endpoint Security Badge" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">Endpoint Security</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                26 januari 2023
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+
+          <!-- 4. Cisco Networking Basics -->
+          <a href="https://www.credly.com/org/cisco/badge/networking-basics" target="_blank" rel="noopener nofollow" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/credly/image.png" alt="Networking Basics Badge" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">Networking Basics</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                25 januari 2023
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+
+          <!-- 5. Cisco Introduction to IoT -->
+          <a href="https://www.credly.com/org/cisco/badge/introduction-to-iot" target="_blank" rel="noopener nofollow" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/credly/Intro2IoT.png" alt="Introduction to IoT Badge" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">Introduction to IoT</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                8 juli 2022
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+
+          <!-- 6. CCNA Enterprise Networking -->
+          <a href="https://www.credly.com/org/cisco/badge/ccna-enterprise-networking-security-and-automation" target="_blank" rel="noopener nofollow" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/credly/CCNAENSA__1_.png" alt="CCNA Enterprise Networking Badge" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">CCNA: Enterprise Networking, Security, and Automation</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                5 juli 2022
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+
+          <!-- 7. CCNA Switching Routing Wireless -->
+          <a href="https://www.credly.com/org/cisco/badge/ccna-switching-routing-and-wireless-essentials.1" target="_blank" rel="noopener nofollow" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/credly/CCNASRWE__1_.png" alt="CCNA Switching Routing Wireless Badge" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">CCNA: Switching, Routing, and Wireless Essentials</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                16 maart 2022
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+
+          <!-- 10. Cisco Cybersecurity Essentials -->
+          <a href="https://www.credly.com/org/cisco/badge/cybersecurity-essentials" target="_blank" rel="noopener nofollow" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/credly/CyberEssentials.png" alt="Cybersecurity Essentials Badge" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">Cybersecurity Essentials</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                17 januari 2022
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+
+          <!-- 11. Cisco Introduction to Cybersecurity -->
+          <a href="https://www.credly.com/org/cisco/badge/introduction-to-cybersecurity" target="_blank" rel="noopener nofollow" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/credly/I2CS__1_.png" alt="Introduction to Cybersecurity Badge" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">Introduction to Cybersecurity</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                14 januari 2022
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+
+          <!-- 18. MOS Associate Office 2019 -->
+          <a href="https://www.credly.com/org/microsoft-certification/badge/microsoft-office-specialist-associate-office-2019" target="_blank" rel="noopener nofollow" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/credly/MOS_-_Office_Specialist_Associate-600x600.png" alt="MOS Associate Badge" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Microsoft</div>
+                <h3 class="cert-card__title">Microsoft Office Specialist: Associate</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                24 maart 2021
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+
+          <!-- 20. MOS Word Expert 2019 -->
+          <a href="https://www.credly.com/org/microsoft-certification/badge/microsoft-office-specialist-microsoft-word-expert-office-2019" target="_blank" rel="noopener nofollow" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/credly/MOS_Word_Expert1.png" alt="MOS Word Expert Badge" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Microsoft</div>
+                <h3 class="cert-card__title">Microsoft Office Specialist: Microsoft Word Expert</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                23 maart 2021
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+
+          <!-- 23. CCNA Introduction to Networks -->
+          <a href="https://www.credly.com/org/cisco/badge/ccna-introduction-to-networks" target="_blank" rel="noopener nofollow" class="cert-card fade-in">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="../img/credly/CCNAITN__1_.png" alt="CCNA Intro to Networks Badge" class="cert-card__img" loading="lazy">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">CCNA: Introduction to Networks</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined" style="font-size: 16px;">calendar_today</span>
+                18 februari 2021
+              </span>
+              <span class="cert-card__status">
+                <span class="material-symbols-outlined">verified</span>
+                Verified
+              </span>
+            </div>
+          </a>
+
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+  <script defer src="../js/navigation.js"></script>
+</body>
+</html>

@@ -1,164 +1,253 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordy Hoebergen - Ervaringen</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordy Hoebergen - Ervaringen</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="../img/Skills-Finale-2.webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="../img/Skills-Finale-2.webp" fetchpriority="high">
 
-    <link href="../css/style.css" rel="stylesheet" />
-    <link href="../css/navbar.css" rel="stylesheet" />
-    <link href="../css/ervaringen.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=block" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=block" rel="stylesheet">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="../img/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../img/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
 
-    <meta name="description" content="Bekijk de ervaringen van Jordy Hoebergen: stages bij VDL Nederland en Agrippa, de Skills Heroes wedstrijd, certificeringen en homelab projecten.">
-    <meta property="og:description" content="Bekijk de ervaringen van Jordy Hoebergen: stages bij VDL Nederland en Agrippa, de Skills Heroes wedstrijd, certificeringen en homelab projecten.">
-    <meta property="og:title" content="Jordy Hoebergen - Ervaringen">
-    <link rel="canonical" href="https://jordyhoebergen.nl/ervaringen/">
-    <meta property="og:url" content="https://jordyhoebergen.nl/ervaringen/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://jordyhoebergen.nl/img/fotojordyzoom.webp" />
-    <meta property="og:locale" content="nl_NL" />
-    <meta property="og:site_name" content="Jordy Hoebergen" />
-    <meta name="twitter:card" content="summary">
+  <!-- SEO & Open Graph -->
+  <meta name="description" content="Bekijk de ervaringen van Jordy Hoebergen: stages bij VDL Nederland en Agrippa, de Skills Heroes wedstrijd, certificeringen en homelab projecten.">
+  <meta name="theme-color" content="#FAFDFB">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jordyhoebergen.nl/ervaringen/">
+  <meta property="og:title" content="Jordy Hoebergen - Ervaringen">
+  <meta property="og:description" content="Bekijk de ervaringen van Jordy Hoebergen: stages bij VDL Nederland en Agrippa, de Skills Heroes wedstrijd, certificeringen en homelab projecten.">
+  <meta property="og:url" content="https://jordyhoebergen.nl/ervaringen/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Jordy Hoebergen">
+  <meta property="og:image" content="https://jordyhoebergen.nl/img/fotojordyzoom.webp">
+  <meta property="og:image:width" content="750">
+  <meta property="og:image:height" content="750">
+  <meta property="og:image:type" content="image/webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jordy Hoebergen - Ervaringen">
+  <meta name="twitter:description" content="Bekijk de ervaringen van Jordy Hoebergen: stages bij VDL Nederland en Agrippa, de Skills Heroes wedstrijd, certificeringen en homelab projecten.">
+  <meta name="twitter:image" content="https://jordyhoebergen.nl/img/fotojordyzoom.webp">
+
+  <!-- Theme script (inline to prevent FOUC) -->
+  <script src="../js/theme.js"></script>
+  <style>
+    .experience-card-wrapper { 
+      display: flex; 
+      flex-direction: column; 
+      height: 100%; 
+    }
+    .experience-card__content {
+      flex: 1; /* Pushes everything evenly */
+    }
+  </style>
 </head>
 <body>
-        <!-- Navbar -->
-        <div class="navbarFull">
+  <div class="app-shell">
+    <!-- Top App Bar (Mobile only) -->
+    <header class="top-app-bar" role="banner">
+      <a href="/" class="top-app-bar__logo">Jordy Hoebergen</a>
+      <div class="top-app-bar__actions">
+        <button class="md-icon-btn" id="theme-toggle" aria-label="Schakel thema">
+          <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+        <button class="md-icon-btn top-app-bar__menu-btn" id="nav-menu-btn" aria-label="Menu" aria-expanded="false">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </header>
 
-            <!-- Website logo -->
-            <a href="../" class="navbarLogo">Jordy Hoebergen</a>
-    
-            <!-- Main site items -->
-            <ul class="navbarItems">
-                <li><a href="../">Home</a></li>
-                <li><a class="active" href="#">Ervaringen</a></li>
-                <li><a href="../over-mij/">Over mij</a></li>
-                <li><a href="../contact/">Contact</a></li>
-            </ul>
-    
-            
-            <!-- Hamburger menu  -->
-            <div class="navbarMain">
-                <span id="navbarIcon" class="material-symbols-outlined">menu</span>
-            </div>
-    
+    <!-- Navigation Rail (Desktop only) -->
+    <nav class="nav-rail" aria-label="Hoofdnavigatie">
+      <a href="/" class="nav-rail__item" aria-label="Home">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">home</span>
+        <span class="nav-rail__label">Home</span>
+      </a>
+      <a href="/ervaringen/" class="nav-rail__item nav-rail__item--active" aria-label="Ervaringen">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">work</span>
+        <span class="nav-rail__label">Ervaringen</span>
+      </a>
+      <a href="/over-mij/" class="nav-rail__item" aria-label="Over mij">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">person</span>
+        <span class="nav-rail__label">Over mij</span>
+      </a>
+      <a href="/certificeringen/" class="nav-rail__item" aria-label="Certificeringen">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">verified</span>
+        <span class="nav-rail__label">Certificeringen</span>
+      </a>
+      <a href="/contact/" class="nav-rail__item" aria-label="Contact">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">mail</span>
+        <span class="nav-rail__label">Contact</span>
+      </a>
+      <div class="nav-rail__spacer"></div>
+      <button class="md-icon-btn" id="theme-toggle-rail" aria-label="Schakel thema">
+        <span class="material-symbols-outlined">dark_mode</span>
+      </button>
+    </nav>
+
+    <!-- Navigation Drawer (Mobile) -->
+    <div class="nav-scrim" id="nav-scrim"></div>
+    <aside class="nav-drawer" id="nav-drawer" aria-label="Navigatiemenu">
+      <nav class="nav-drawer__content">
+        <a href="/" class="nav-drawer__item">
+          <span class="material-symbols-outlined">home</span>
+          Home
+        </a>
+        <a href="/ervaringen/" class="nav-drawer__item nav-drawer__item--active">
+          <span class="material-symbols-outlined">work</span>
+          Ervaringen
+        </a>
+        <a href="/over-mij/" class="nav-drawer__item">
+          <span class="material-symbols-outlined">person</span>
+          Over mij
+        </a>
+        <a href="/certificeringen/" class="nav-drawer__item">
+          <span class="material-symbols-outlined">verified</span>
+          Certificeringen
+        </a>
+        <a href="/contact/" class="nav-drawer__item">
+          <span class="material-symbols-outlined">mail</span>
+          Contact
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="hero hero--banner container-large fade-in" style="margin-top: 24px;">
+        <div class="hero__container">
+          <div class="hero__content-pane" style="background-color: var(--md-sys-color-primary-container);">
+            <h1 class="display-medium" style="color: var(--md-sys-color-on-primary-container); font-weight: 700;">Mijn ervaringen</h1>
+            <p class="headline-small hero__subtitle" style="color: var(--md-sys-color-on-primary-container); opacity: 0.8;">Stages, wedstrijden & passie projecten</p>
+          </div>
+          <div class="hero__image-pane">
+            <img src="../img/Skills-Finale-2.webp" alt="Jordy tijdens Skills The Finals" fetchpriority="high">
+          </div>
         </div>
+      </section>
 
-        <!-- content -->
-
-        <div class="mainContent"> 
-            <div class="header">
-                <h1>Mijn ervaringen</h1>
-                <img class="headerImage" src="../img/Skills-Finale-2.webp" alt="Groepsfoto van de deelnemers en jury tijdens de Skills Heroes finale" fetchpriority="high" style="object-position: top;">
+      <section class="container-large section-spacing">
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 32px; padding: 24px 0;">
+          
+          <a href="./stage-advantive/" class="experience-card md-card md-card--elevated fade-in experience-card-wrapper">
+            <div class="experience-card__image-wrapper blur-load" style="background-image: url(../img/small.jpg);">
+              <img src="../img/Stage-Advantive-Werkplek-full.webp" alt="Foto van Jordy op een werkplek bij Advantive" loading="lazy" class="experience-card__image">
             </div>
-
-            <div class="sections centerBig">
-
-                <div>
-                    <a href="./stage-advantive">
-                        <h1 class="sectionTitleCenter">Stage Advantive</h1>
-                        <h2>Februari - Juli 2025</h2>
-                        <div class="image-container blur-load" style="background-image: url(/img/small.jpg);">
-                            <img src="/img/Stage-Advantive-Werkplek-full.webp" alt="Foto van Jordy op een werkplek bij Advantive" loading="lazy">
-                        </div>
-                        <p>
-                            In het laatste leerjaar van de opleiding ‘AD-ICT’ in de richting Infrastructuur bij het Fontys heb ik een halfjaar stage gelopen bij Advantive. Tevens heb ik hier mijn afstudeerproject uitgevoerd.<br><br>
-                            
-                            Klik hier om meer te lezen over mijn stage bij Advantive!
-                        </p>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="./stage-vdl">
-                        <h1 class="sectionTitleCenter">Stage VDL</h1>
-                        <h2>Februari - Juni 2023</h2>
-                        <div class="image-container blur-load" style="background-image: url(../img/small.jpg);">
-                            <img src="../img/Stage-VDL-1-1.webp" alt="Foto van Jordy voor het hoofdkantoor van VDL Nederland" loading="lazy">
-                        </div>
-                        <p>
-                            In het laatste leerjaar van de opleiding ‘Expert IT systems & devices’ heb ik een halfjaar stage gelopen bij VDL Nederland. Tevens heb ik hier mijn examen opdrachten afgerond.<br><br>
-                            
-                            Zien wat ik allemaal gedaan heb tijdens deze stage? Klik dan snel! 
-                        </p>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="./skills-heroes">
-                    <h1 class="sectionTitleCenter">Skills Heroes</h1>
-                    <h2>2022 - 2023</h2>
-                        <div class="image-container blur-load" style="background-image: url(../img/small.jpg);">
-                            <img src="../img/Skills-Kwalificatie.webp" style="object-position: top" alt="Links een foto van Jordy met bewijs van deelname en rechts een foto waar Jordy bezig is met de kwalificatie opdracht" loading="lazy">
-                        </div>
-                        <p>
-                            Tijdens mijn MBO 4 opleiding heb ik meegedaan aan de landelijke ICT-beheerders wedstrijd voor MBO. Dit wordt jaarlijks georganiseerd door Worldskills Netherlands. Ik heb meegedaan aan de kwalificatie ronde in 2022 en hierna zijn er 8 kandidaten doorgegaan naar de Finale, deze vond plaats in Maart 2023.
-                        </p>
-                    </a>
-                </div>
-                
-
-                <div>
-                    <a href="./stage-agrippa/">
-                    <h1 class="sectionTitleCenter">Stage Agrippa</h1>
-                    <h2>September 2021 - Februari 2022</h2>
-                        <div class="image-container blur-load" style="background-image: url(../img/small.jpg);">
-                            <img src="../img/Agrippa-HomeAssistant.webp" alt="Foto van de iPad op de balie waarop Home Assistant geïnstalleerd staat. Vanaf hier kunnen werknemers de slimme apparatuur bedienen" loading="lazy">
-                        </div>
-                        <p>
-                            In het tweede leerjaar van de opleiding ‘Expert IT systems & devices’ heb ik een halfjaar stage gelopen bij Agrippa. Tijdens deze stage heb ik meegewerkt aan verschillende projecten. Zo heb ik samen met een andere stagiair Home Asssistant ingesteld om de domotica binnen het bedrijf te automatiseren.
-                        </p>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="https://www.credly.com/users/jordy-hoebergen/badges" target="_blank" rel="nofollow">
-                    <h1 class="sectionTitleCenter">Certificeringen</h1>
-                    <div class="image-container blur-load" style="background-image: url(../img/small.jpg);">
-                        <img src="../img/Cisco.webp" alt="Foto van het logo van Cisco" loading="lazy">
-                    </div>
-                    <p>
-                        Bij Advantive heb ik verschillende Microsoft certificaten behaald, zoals de AZ-900, MD-102 en MS-102. Tijdens mijn opleiding heb ik ook andere certificaten behaald, zoals CCNA Switching Routing and Wireless Essentials en Enterprise Networking Security and Automation.<br><br>
-
-                        Klik hier om al mijn certificaten te bekijken.
-                    </p>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="https://status.hoebergen.net/status/default" target="_blank" rel="nofollow">
-                    <h1 class="sectionTitleCenter">Homelab</h1>
-                    <div class="image-container blur-load" style="background-image: url(../img/small.jpg);">
-                        <img src="../img/Raspberry-Pi.webp" alt="Foto met daarop het logo van Raspberry Pi met daarnaast de tekst Raspberry Pi, Linux en Docker" loading="lazy">
-                    </div>
-                    <p>
-                        In mijn vrije tijd vind ik het leuk om te werken met Linux, Docker en Kubernetes. Om hiermee te experimenteren heb ik een eigen homelab opgezet.<br><br>
-                        
-                        Hierop draai ik verschillende services zoals een website, Minecraft server en een foto backup systeem. Zien of alles nog online is? Klik dan hier!
-                    </p>
-                    </a>
-                </div>
-
-
+            <div class="experience-card__content">
+              <h2 class="title-large">Stage Advantive</h2>
+              <span class="md-chip experience-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                Februari – Juli 2025
+              </span>
+              <p class="body-medium">
+                In het laatste leerjaar van de opleiding 'AD-ICT' in de richting Infrastructuur bij het Fontys heb ik een halfjaar stage gelopen bij Advantive. Tevens heb ik hier mijn afstudeerproject uitgevoerd.
+              </p>
             </div>
+          </a>
 
+          <a href="./stage-vdl/" class="experience-card md-card md-card--elevated fade-in experience-card-wrapper">
+            <div class="experience-card__image-wrapper blur-load" style="background-image: url(../img/small.jpg);">
+              <img src="../img/Stage-VDL-1-1.webp" alt="Foto van Jordy voor het hoofdkantoor van VDL Nederland" loading="lazy" class="experience-card__image">
+            </div>
+            <div class="experience-card__content">
+              <h2 class="title-large">Stage VDL</h2>
+              <span class="md-chip experience-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                Februari – Juni 2023
+              </span>
+              <p class="body-medium">
+                In het laatste leerjaar van de opleiding 'Expert IT systems &amp; devices' heb ik een halfjaar stage gelopen bij VDL Nederland. Tevens heb ik hier mijn examen opdrachten afgerond.
+              </p>
+            </div>
+          </a>
 
+          <a href="./skills-heroes/" class="experience-card md-card md-card--elevated fade-in experience-card-wrapper">
+            <div class="experience-card__image-wrapper blur-load" style="background-image: url(../img/small.jpg);">
+              <img src="../img/Skills-Kwalificatie.webp" alt="Foto's van Jordy tijdens de Skills Heroes kwalificatie" loading="lazy" class="experience-card__image" style="object-position: top;">
+            </div>
+            <div class="experience-card__content">
+              <h2 class="title-large">Skills Heroes</h2>
+              <span class="md-chip experience-card__date">
+                <span class="material-symbols-outlined">emoji_events</span>
+                2022 – 2023
+              </span>
+              <p class="body-medium">
+                Tijdens mijn MBO 4 opleiding heb ik meegedaan aan de landelijke ICT-beheerders wedstrijd voor MBO. Dit wordt jaarlijks georganiseerd door Worldskills Netherlands.
+              </p>
+            </div>
+          </a>
+
+          <a href="./stage-agrippa/" class="experience-card md-card md-card--elevated fade-in experience-card-wrapper">
+            <div class="experience-card__image-wrapper blur-load" style="background-image: url(../img/small.jpg);">
+              <img src="../img/Agrippa-HomeAssistant.webp" alt="Home Assistant op iPad bij Agrippa" loading="lazy" class="experience-card__image">
+            </div>
+            <div class="experience-card__content">
+              <h2 class="title-large">Stage Agrippa</h2>
+              <span class="md-chip experience-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                September 2021 – Februari 2022
+              </span>
+              <p class="body-medium">
+                In het tweede leerjaar van de opleiding 'Expert IT systems &amp; devices' heb ik een halfjaar stage gelopen bij Agrippa. Hier heb ik Home Assistant ingesteld voor domotica.
+              </p>
+            </div>
+          </a>
+
+          <a href="../certificeringen/" class="experience-card md-card md-card--elevated fade-in experience-card-wrapper">
+            <div class="experience-card__image-wrapper blur-load" style="background-image: url(../img/small.jpg);">
+              <img src="../img/microsoft-certified.webp" alt="Logo van Cisco" loading="lazy" class="experience-card__image">
+            </div>
+            <div class="experience-card__content">
+              <h2 class="title-large">Certificeringen</h2>
+              <span class="md-chip experience-card__date">
+                <span class="material-symbols-outlined">verified</span>
+                AZ-900, MD-102, MS-102, CCNA
+              </span>
+              <p class="body-medium">
+                Bij Advantive heb ik verschillende Microsoft certificaten behaald. Tijdens mijn opleiding heb ik ook CCNA certificaten behaald.
+              </p>
+            </div>
+          </a>
+
+          <a href="https://status.hoebergen.net/status/default" target="_blank" rel="noopener nofollow" class="experience-card md-card md-card--elevated fade-in experience-card-wrapper">
+            <div class="experience-card__image-wrapper blur-load" style="background-image: url(../img/small.jpg);">
+              <img src="../img/Raspberry-Pi.webp" alt="Raspberry Pi, Linux en Docker logo's" loading="lazy" class="experience-card__image">
+            </div>
+            <div class="experience-card__content">
+              <h2 class="title-large">Homelab</h2>
+              <span class="md-chip experience-card__date">
+                <span class="material-symbols-outlined">dns</span>
+                Linux, Docker, Kubernetes
+              </span>
+              <p class="body-medium">
+                In mijn vrije tijd vind ik het leuk om te werken met Linux, Docker en Kubernetes. Ik heb een eigen homelab opgezet met diverse services.
+              </p>
+            </div>
+          </a>
         </div>
+      </section>
+    </main>
+  </div>
 
-    <script defer src="../js/lazy-load.js"></script>
-    <script defer src="../js/navbar.js"></script>
+  <script defer src="../js/navigation.js"></script>
 </body>
 </html>

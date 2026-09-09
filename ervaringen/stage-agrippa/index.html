@@ -1,144 +1,166 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordy Hoebergen - Stage Agrippa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordy Hoebergen - Stage Agrippa</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="../../img/headers/agrippa.webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="../../img/headers/agrippa.webp" fetchpriority="high">
 
-    <link href="../../css/style.css" rel="stylesheet" />
-    <link href="../../css/navbar.css" rel="stylesheet" />
-    <link href="../../css/ervaringen.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/layout.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=block" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=block" rel="stylesheet">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../../img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="../../img/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" type="image/png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../../img/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
 
-    <meta name="description" content="Op deze pagina lees je alles over mijn stage bij Agrippa BV in Meijel">
-    <meta property="og:description" content="Op deze pagina lees je alles over mijn stage bij Agrippa BV in Meijel">
-    <meta property="og:title" content="Jordy Hoebergen - Stage Agrippa">
-    <link rel="canonical" href="https://jordyhoebergen.nl/ervaringen/stage-agrippa/">
-    <meta property="og:url" content="https://jordyhoebergen.nl/ervaringen/stage-agrippa/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://jordyhoebergen.nl/img/headers/agrippa.webp" />
-    <meta property="og:locale" content="nl_NL" />
-    <meta property="og:site_name" content="Jordy Hoebergen" />
-    <meta name="twitter:card" content="summary">
+  <!-- SEO & Open Graph -->
+  <meta name="description" content="Op deze pagina lees je alles over mijn stage bij Agrippa BV in Meijel">
+  <meta name="theme-color" content="#FAFDFB">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jordyhoebergen.nl/ervaringen/stage-agrippa/">
+  <meta property="og:title" content="Jordy Hoebergen - Stage Agrippa">
+  <meta property="og:description" content="Op deze pagina lees je alles over mijn stage bij Agrippa BV in Meijel">
+  <meta property="og:url" content="https://jordyhoebergen.nl/ervaringen/stage-agrippa/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Jordy Hoebergen">
+  <meta property="og:image" content="https://jordyhoebergen.nl/img/headers/agrippa.webp">
+  <meta property="og:image:width" content="1980">
+  <meta property="og:image:height" content="1320">
+  <meta property="og:image:type" content="image/webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jordy Hoebergen - Stage Agrippa">
+  <meta name="twitter:description" content="Op deze pagina lees je alles over mijn stage bij Agrippa BV in Meijel">
+  <meta name="twitter:image" content="https://jordyhoebergen.nl/img/headers/agrippa.webp">
+
+  <!-- Theme script (inline to prevent FOUC) -->
+  <script src="../../js/theme.js"></script>
 </head>
 <body>
-        <!-- Navbar -->
-        <div class="navbarFull">
 
-            <!-- Website logo -->
-            <a href="../../" class="navbarLogo">Jordy Hoebergen</a>
-    
-            <!-- Main site items -->
-            <ul class="navbarItems">
-                <li><a href="../../">Home</a></li>
-                <li><a href="../">Ervaringen</a></li>
-                <li><a href="../../over-mij/">Over mij</a></li>
-                <li><a href="../../contact/">Contact</a></li>
-            </ul>
-    
-            
-            <!-- Hamburger menu  -->
-            <div class="navbarMain">
-                <span id="navbarIcon" class="material-symbols-outlined">menu</span>
-            </div>
-    
+  <div class="app-shell">
+    <!-- Top App Bar (Mobile) -->
+    <header class="top-app-bar" role="banner">
+      <a href="/" class="top-app-bar__logo">Jordy Hoebergen</a>
+      <div class="top-app-bar__actions">
+        <button class="md-icon-btn theme-toggle-btn" aria-label="Schakel thema"><span class="material-symbols-outlined">dark_mode</span></button>
+        <button class="md-icon-btn top-app-bar__menu-btn" id="nav-menu-btn" aria-label="Menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
+      </div>
+    </header>
+
+    <!-- Navigation Rail (Desktop) -->
+    <nav class="nav-rail" aria-label="Hoofdnavigatie">
+      <a href="../../" class="nav-rail__item" aria-label="Home">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">home</span><span class="nav-rail__label">Home</span>
+      </a>
+      <a href="../../ervaringen/" class="nav-rail__item nav-rail__item--active" aria-label="Ervaringen">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">work</span><span class="nav-rail__label">Ervaringen</span>
+      </a>
+      <a href="../../over-mij/" class="nav-rail__item" aria-label="Over mij">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">person</span><span class="nav-rail__label">Over mij</span>
+      </a>
+      <a href="../../certificeringen/" class="nav-rail__item" aria-label="Certificeringen">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">verified</span>
+        <span class="nav-rail__label">Certificeringen</span>
+      </a>
+      <a href="../../contact/" class="nav-rail__item" aria-label="Contact">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">mail</span><span class="nav-rail__label">Contact</span>
+      </a>
+      <div class="nav-rail__spacer"></div>
+      <button class="md-icon-btn theme-toggle-btn" aria-label="Schakel thema"><span class="material-symbols-outlined">dark_mode</span></button>
+    </nav>
+
+    <!-- Nav Scrim & Drawer -->
+    <div class="nav-scrim" id="nav-scrim"></div>
+    <aside class="nav-drawer" id="nav-drawer" aria-label="Navigatiemenu">
+      <nav class="nav-drawer__content">
+        <a href="../../" class="nav-drawer__item"><span class="material-symbols-outlined">home</span>Home</a>
+        <a href="../../ervaringen/" class="nav-drawer__item nav-drawer__item--active"><span class="material-symbols-outlined">work</span>Ervaringen</a>
+        <a href="../../over-mij/" class="nav-drawer__item"><span class="material-symbols-outlined">person</span>Over mij</a>
+        <a href="../../certificeringen/" class="nav-drawer__item"><span class="material-symbols-outlined">verified</span>Certificeringen</a>
+        <a href="../../contact/" class="nav-drawer__item"><span class="material-symbols-outlined">mail</span>Contact</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <div class="article-header-image-container fade-in">
+        <div class="hero__image-pane">
+          <img src="../../img/headers/agrippa.webp" alt="Kantoor van Agrippa BV in Meijel" style="width: 100%; height: 100%; object-fit: cover; object-position: center 35%;">
+        </div>
+      </div>
+
+      <article class="article-pane fade-in">
+        <h1 class="display-medium" style="margin-top: 0; margin-bottom: 8px;">Jordy Hoebergen - Stage Agrippa</h1>
+        <div class="md-chip md-chip--assist" style="margin-bottom: 32px; display: inline-flex;">September 2021 – Februari 2022</div>
+        
+        <div class="section-grid">
+          <div class="section-grid__text">
+            <h2 class="headline-large">In het kort</h2>
+            <p class="body-large">Tijdens het tweede leerjaar van mijn opleiding Expert IT Systems and Devices heb ik een halfjaar stage gelopen bij Agrippa B.V. Dit is een IT bedrijf in Meijel.</p>
+            <p class="body-large">Hier heb ik onder andere gewerkt met Sophos firewalls en DrayTek routers. Daarnaast heb ik ook samen met een andere stagiair Home Assistant geconfigureerd om alle slimme aparatuur aan te sturen vanaf één centraal punt.</p>
+            <p class="body-large">Tijdens deze stage heb ik niet alleen mijn technische kennis vergroot, ook heb ik geleerd om samen te werken met collega's en klanten. Dit was een leerzame en leuke ervaring.</p>
+          </div>
+          <div class="section-grid__media">
+            <a href="https://agrippa.nl/" target="_blank" rel="noopener">
+              <div class="img-container blur-load" style="background-image: url('../../img/small.jpg');">
+                <img src="../../img/Stage-Agrippa-1.webp" alt="Agrippa" loading="lazy" style="aspect-ratio: 16/10;">
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <div style="margin-top: 4rem;">
+            <h2 class="display-small" style="margin-bottom: 2rem;">Leermomenten</h2>
         </div>
 
-        <!-- content -->
-
-        <div class="mainContent"> 
-            <div class="header">
-                <h1>Stage - Agrippa</h1>
-                <h2>September 2021 - Februari 2022</h2>
-                <img class="headerImage" src="../../img/headers/agrippa.webp" alt="Foto van het gebouw van Agrippa BV in Meijel" fetchpriority="high" style="object-position: center 35%">
-            </div>
-            <div class="centerMedium">
-
-                <div class="subPageSection">
-
-                    <!-- First section -->
-                    <div>
-                        <h1 class="leftAlign">In het kort</h1>
-                        <a>
-                            Tijdens het tweede leerjaar van mijn opleiding Expert IT Systems and Devices heb ik een halfjaar stage gelopen bij Agrippa B.V. Dit is een IT bedrijf in Meijel.<br><br>
-
-                            Hier heb ik onder andere gewerkt met Sophos firewalls en DrayTek routers. Daarnaast heb ik ook samen met een andere stagiair Home Assistant geconfigureerd om alle slimme aparatuur aan te sturen vanaf één centraal punt.<br><br>
-
-                            Tijdens deze stage heb ik niet alleen mijn technische kennis vergroot, ook heb ik geleerd om samen te werken met collega's en klanten. Dit was een leerzame en leuke ervaring.
-                        </a>
-                    </div>
-
-                    <a href="https://agrippa.nl/" target="_blank" rel="nofollow">
-                        <div class="image-container blur-load" style="background-image: url(../../img/small.jpg); height: 100%; aspect-ratio: 16 / 10;">
-                            <img src="../../img/Stage-Agrippa-1.webp" alt="Foto van de 3 stagiars voor het gebouw van Agrippa BV" loading="lazy" title="Logo van Agrippa" style="height: 100%;">
-                            </div>
-                    </a>
-
-                </div>
-
-                <!-- Second section -->
-
-            
-            <div class="subPageSectionVertical">
-                <h1 class="center">Leermomenten</h1>
-                
-                <div class="subPageSection">
-                    <a href="../../img/Agrippa-WDS.webp">
-                        <div class="image-container blur-load" style="background-image: url(../../img/Agrippa-WDS-Small.webp); aspect-ratio: 16/9;" >
-                            <img src="../../img/Agrippa-WDS.webp" alt="Computer die automatisch geconfigureerd wordt met behulp van WDS" loading="lazy" title="WDS configuratie">
-                        </div>
-                    </a>
-                    <h2>Windows Deployment Server</h2>
-                    <div class="text">
-                        <a>
-                            Tijdens mijn stage bij Agrippa ben ik bezig geweest met het instellen van een WDS server. Hiermee kunnen nieuwe computers van klanten snel geïmaged worden. Zodat alle standaard applicaties zoals Microsoft Office en Google Chrome.<br><br>
-
-                            Voorheen werd dit gedaan met een image die gemaakt is op een laptop. Hierdoor werden soms de verkeerde drivers geïnstalleerd en crashte de computer soms. Dat probleem is met de WDS server verholpen.<br><br>
-
-                            Nu kunnen nieuwe computers gemakkelijk geïnstalleerd worden met de juiste drivers en applicaties. Dit scheelt veel tijd en zorgt ervoor dat de computers sneller geleverd kunnen worden.
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Third section -->
-                
-                <div class="subPageSection moveImgDownMobile">
-                    <a href="../../img/Agrippa-Domotica.webp">
-                        <div class="image-container blur-load" style="background-image: url(../../img/Agrippa-Domotica-Small.webp); aspect-ratio: 16/9;">
-                            <img src="../../img/Agrippa-Domotica.webp" alt="Foto van de iPad op de balie waarop Home Assistant geïnstalleerd staat. Vanaf hier kunnen werknemers de slimme apparatuur bedienen" loading="lazy" title="Domotica bij Agrippa">
-                        </div>
-                    </a>
-                    <h2>Domotica</h2>
-                    <div class="text">
-                        <a>
-                            Ook heb ik in samenwerking met een andere stagiair Home Assistant geïnstalleerd in een Hyper-V virtuele machine om zo alle lampen, tv's, de radio en andere slimme apparatuur te besturen vanaf één centraal punt.<br><br>
-
-                            Vanaf de iPad die geplaatst is in de centrale hal kun je alles bedienen, zo kun je bijvoorbeeld de lampen in het magazijn aan en uit zetten. Of de radio op een andere zender zetten.<br><br>
-
-                            We hebben in Home Assistant ook veel dingen geautomatiseerd. Bij binnenkomst gaan alle lampen automatisch aan en wanneer het ‘s avonds donkerder wordt gaan de lampen minder fel branden.
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="section-grid section-grid--reverse">
+          <div class="section-grid__text">
+            <h3 class="headline-large">Windows Deployment Server</h3>
+            <p class="body-large">Tijdens mijn stage bij Agrippa ben ik bezig geweest met het instellen van een WDS server. Hiermee kunnen nieuwe computers van klanten snel geïmaged worden. Zodat alle standaard applicaties zoals Microsoft Office en Google Chrome.</p>
+            <p class="body-large">Voorheen werd dit gedaan met een image die gemaakt is op een laptop. Hierdoor werden soms de verkeerde drivers geïnstalleerd en crashte de computer soms. Dat probleem is met de WDS server verholpen.</p>
+            <p class="body-large">Nu kunnen nieuwe computers gemakkelijk geïnstalleerd worden met de juiste drivers en applicaties. Dit scheelt veel tijd en zorgt ervoor dat de computers sneller geleverd kunnen worden.</p>
+          </div>
+          <div class="section-grid__media">
+            <a href="../../img/Agrippa-WDS.webp" target="_blank" rel="noopener">
+              <div class="img-container blur-load" style="background-image: url('../../img/small.jpg');">
+                <img src="../../img/Agrippa-WDS.webp" alt="WDS Server" loading="lazy" style="aspect-ratio: 16/9;">
+              </div>
+            </a>
+          </div>
         </div>
 
-            
-    </div>
+        <div class="section-grid" style="margin-top: 32px;">
+          <div class="section-grid__text">
+            <h3 class="headline-large">Domotica</h3>
+            <p class="body-large">Ook heb ik in samenwerking met een andere stagiair Home Assistant geïnstalleerd in een Hyper-V virtuele machine om zo alle lampen, tv's, de radio en andere slimme apparatuur te besturen vanaf één centraal punt.</p>
+            <p class="body-large">Vanaf de iPad die geplaatst is in de centrale hal kun je alles bedienen, zo kun je bijvoorbeeld de lampen in het magazijn aan en uit zetten. Of de radio op een andere zender zetten.</p>
+            <p class="body-large">We hebben in Home Assistant ook veel dingen geautomatiseerd. Bij binnenkomst gaan alle lampen automatisch aan en wanneer het 's avonds donkerder wordt gaan de lampen minder fel branden.</p>
+          </div>
+          <div class="section-grid__media">
+            <a href="../../img/Agrippa-Domotica.webp" target="_blank" rel="noopener">
+              <div class="img-container blur-load" style="background-image: url('../../img/Agrippa-Domotica-Small.webp');">
+                <img src="../../img/Agrippa-Domotica.webp" alt="Domotica" loading="lazy" style="aspect-ratio: 16/9;">
+              </div>
+            </a>
+          </div>
+        </div>
+      </article>
+    </main>
+  </div>
 
-    <script defer src="../../js/lazy-load.js"></script>
-    <script defer src="../../js/navbar.js"></script>
+  <script defer src="../../js/navigation.js"></script>
 </body>
 </html>
