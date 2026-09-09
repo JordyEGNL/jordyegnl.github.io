@@ -57,4 +57,10 @@
     <image:loc>https://jordyhoebergen.nl/img/fotojordyzoom.webp</image:loc>
   </image:image>
 </url>
+<url>
+  <loc>https://jordyhoebergen.nl/ervaringen/homelab/</loc>
+  <image:image>
+    <image:loc>https://jordyhoebergen.nl/img/Raspberry-Pi.webp</image:loc>
+  </image:image>
+</url>
 </urlset>
