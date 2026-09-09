@@ -146,19 +146,19 @@
     --md-sys-color-on-error: #690005;
     --md-sys-color-error-container: #93000A;
     --md-sys-color-on-error-container: #FFDAD6;
-    --md-sys-color-background: #090B0A; /* Extremely dark base background */
+    --md-sys-color-background: #111413;
     --md-sys-color-on-background: #E1E3E1;
-    --md-sys-color-surface: #1E2120; /* Distinctly lighter surface for Navbars */
+    --md-sys-color-surface: #111413;
     --md-sys-color-on-surface: #E1E3E1;
     --md-sys-color-surface-variant: #3F4946;
     --md-sys-color-on-surface-variant: #BEC9C5;
     --md-sys-color-outline: #899390;
-    --md-sys-color-outline-variant: #525C59;
-    --md-sys-color-surface-container-lowest: #141716; 
-    --md-sys-color-surface-container-low: #242726; /* Highly noticeable contrast for cards/sidebars */
-    --md-sys-color-surface-container: #2D302F; 
-    --md-sys-color-surface-container-high: #383B3A;
-    --md-sys-color-surface-container-highest: #434645;
+    --md-sys-color-outline-variant: #3F4946;
+    --md-sys-color-surface-container-lowest: #0C0F0E;
+    --md-sys-color-surface-container-low: #191C1B;
+    --md-sys-color-surface-container: #1D201F;
+    --md-sys-color-surface-container-high: #272B2A;
+    --md-sys-color-surface-container-highest: #323635;
     --md-sys-color-inverse-surface: #E1E3E1;
     --md-sys-color-inverse-on-surface: #191C1B;
     --md-sys-color-inverse-primary: #006B5E;
@@ -182,19 +182,19 @@
     --md-sys-color-on-error: #690005;
     --md-sys-color-error-container: #93000A;
     --md-sys-color-on-error-container: #FFDAD6;
-    --md-sys-color-background: #090B0A;
+    --md-sys-color-background: #111413;
     --md-sys-color-on-background: #E1E3E1;
-    --md-sys-color-surface: #1E2120;
+    --md-sys-color-surface: #111413;
     --md-sys-color-on-surface: #E1E3E1;
     --md-sys-color-surface-variant: #3F4946;
     --md-sys-color-on-surface-variant: #BEC9C5;
     --md-sys-color-outline: #899390;
-    --md-sys-color-outline-variant: #525C59;
-    --md-sys-color-surface-container-lowest: #141716;
-    --md-sys-color-surface-container-low: #242726;
-    --md-sys-color-surface-container: #2D302F;
-    --md-sys-color-surface-container-high: #383B3A;
-    --md-sys-color-surface-container-highest: #434645;
+    --md-sys-color-outline-variant: #3F4946;
+    --md-sys-color-surface-container-lowest: #0C0F0E;
+    --md-sys-color-surface-container-low: #191C1B;
+    --md-sys-color-surface-container: #1D201F;
+    --md-sys-color-surface-container-high: #272B2A;
+    --md-sys-color-surface-container-highest: #323635;
     --md-sys-color-inverse-surface: #E1E3E1;
     --md-sys-color-inverse-on-surface: #191C1B;
     --md-sys-color-inverse-primary: #006B5E;

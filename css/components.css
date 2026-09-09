@@ -50,7 +50,7 @@
   justify-content: space-between;
   padding: 0 var(--md-sys-spacing-4);
   height: 64px;
-  background-color: var(--md-sys-color-surface);
+  background-color: var(--md-sys-color-surface-container-low);
   color: var(--md-sys-color-on-surface);
   transition: background-color 0.3s, box-shadow 0.3s;
 }
@@ -90,7 +90,7 @@
     top: 0; left: 0; bottom: 0;
     width: 100px;
     z-index: 100;
-    background-color: var(--md-sys-color-surface);
+    background-color: var(--md-sys-color-surface-container-low);
     padding: var(--md-sys-spacing-6) 0;
     gap: var(--md-sys-spacing-2);
     border-right: 1px solid var(--md-sys-color-outline-variant);
