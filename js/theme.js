@@ -23,11 +23,13 @@
     return preference;
   }
 
-  function applyTheme(preference) {
+  function applyTheme(preference, isInitial = false) {
     const root = document.documentElement;
     const effectiveTheme = getEffectiveTheme(preference);
 
-    root.classList.add('theme-transitioning');
+    if (!isInitial) {
+      root.classList.add('theme-transitioning');
+    }
     root.setAttribute('data-theme', effectiveTheme);
 
     // Update all toggle buttons (icons and aria-labels)
@@ -47,9 +49,11 @@
       metaThemeColor.content = effectiveTheme === 'dark' ? '#111413' : '#FAFDFB';
     }
 
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => root.classList.remove('theme-transitioning'));
-    });
+    if (!isInitial) {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => root.classList.remove('theme-transitioning'));
+      });
+    }
   }
 
   function toggleTheme() {
@@ -62,8 +66,8 @@
     applyTheme(nextPref);
   }
 
-  // Initialize
-  applyTheme(getStoredPreference());
+  // Initialize immediately without transition
+  applyTheme(getStoredPreference(), true);
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
     if (getStoredPreference() === 'auto') {
