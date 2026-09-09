@@ -1044,7 +1044,7 @@ a.social-card:hover .social-card__arrow {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 740px;
+  max-width: 920px;
   border-radius: var(--md-sys-shape-corner-extra-large);
   overflow: hidden;
   background: var(--md-sys-color-surface-container-low);
@@ -1053,7 +1053,7 @@ a.social-card:hover .social-card__arrow {
 
 .contact-card__image-pane {
   width: 100%;
-  height: 200px;
+  height: 340px;
   position: relative;
   flex-shrink: 0;
 }
@@ -1062,7 +1062,7 @@ a.social-card:hover .social-card__arrow {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 20%;
   display: block;
 }
 
@@ -1104,13 +1104,13 @@ a.social-card:hover .social-card__arrow {
   gap: 12px;
 }
 
-@media (min-width: 680px) {
+@media (min-width: 780px) {
   .contact-card {
     flex-direction: row;
   }
   
   .contact-card__image-pane {
-    width: 260px;
+    width: 420px;
     height: auto;
     min-height: 100%;
   }
