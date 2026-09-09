@@ -500,13 +500,21 @@ a.md-card--elevated:hover {
   margin-top: 0;
   position: relative;
   z-index: 10;
-  max-width: 90%;
-  align-self: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Mobile image pulls up to overlap under the text block */
 .hero__container > .hero__image-pane:nth-child(2) {
   margin-top: -32px;
+}
+
+/* Mobile homepage profile photo: smaller and more compact than the text block */
+.hero:not(.hero--banner) .hero__image-pane {
+  width: 75%;
+  max-width: 320px;
+  height: 320px;
+  align-self: center;
 }
 
 /* Base (Mobile) Banner override for subpages */
@@ -560,6 +568,7 @@ a.md-card--elevated:hover {
     width: 100%;
     max-width: 100%;
     height: 560px;
+    align-self: auto;
   }
   
   /* Banner override for subpages */
