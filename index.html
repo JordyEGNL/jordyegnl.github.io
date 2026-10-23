@@ -15,9 +15,9 @@
   <link rel="preload" as="image" href="img/fotojordyzoom.webp" fetchpriority="high">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/tokens.css?v=3">
+  <link rel="stylesheet" href="css/components.css?v=6">
+  <link rel="stylesheet" href="css/layout.css?v=5">
 
   <!-- Google Fonts: Roboto + Material Symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -32,11 +32,11 @@
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 
   <!-- SEO & Open Graph -->
-  <meta name="description" content="Persoonlijke website van Jordy Hoebergen. Service Engineer bij Advantive.">
+  <meta name="description" content="Persoonlijke website van Jordy Hoebergen. Service Engineer bij Advantive en winnaar Skills The Finals ICT-Beheerder.">
   <meta name="theme-color" content="#FAFDFB">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://jordyhoebergen.nl/">
-  <meta property="og:title" content="Jordy Hoebergen">
+  <meta property="og:title" content="Jordy Hoebergen - Portfolio">
   <meta property="og:description" content="Persoonlijke website van Jordy Hoebergen. Service Engineer bij Advantive.">
   <meta property="og:url" content="https://jordyhoebergen.nl/">
   <meta property="og:type" content="website">
@@ -47,7 +47,7 @@
   <meta property="og:image:height" content="750">
   <meta property="og:image:type" content="image/webp">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Jordy Hoebergen">
+  <meta name="twitter:title" content="Jordy Hoebergen - Portfolio">
   <meta name="twitter:description" content="Persoonlijke website van Jordy Hoebergen. Service Engineer bij Advantive.">
   <meta name="twitter:image" content="https://jordyhoebergen.nl/img/fotojordyzoom.webp">
 
@@ -84,13 +84,13 @@
     ]
   }
   </script>
-
 </head>
 <body>
+  <a href="#home" class="skip-link">Overslaan naar inhoud</a>
   <div class="app-shell">
     <!-- Top App Bar (Mobile only) -->
     <header class="top-app-bar" role="banner">
-      <a href="/" class="top-app-bar__logo">Jordy Hoebergen</a>
+      <a href="#home" class="top-app-bar__logo">Jordy Hoebergen</a>
       <div class="top-app-bar__actions">
         <button class="md-icon-btn" id="theme-toggle" aria-label="Schakel thema">
           <span class="material-symbols-outlined">dark_mode</span>
@@ -103,27 +103,27 @@
 
     <!-- Navigation Rail (Desktop only) -->
     <nav class="nav-rail" aria-label="Hoofdnavigatie">
-      <a href="/" class="nav-rail__item nav-rail__item--active" aria-label="Home">
+      <a href="#home" class="nav-rail__item nav-rail__item--active" data-section="home" aria-label="Home">
         <div class="nav-rail__item-indicator"></div>
         <span class="material-symbols-outlined nav-rail__icon">home</span>
         <span class="nav-rail__label">Home</span>
       </a>
-      <a href="/ervaringen/" class="nav-rail__item" aria-label="Ervaringen">
-        <div class="nav-rail__item-indicator"></div>
-        <span class="material-symbols-outlined nav-rail__icon">work</span>
-        <span class="nav-rail__label">Ervaringen</span>
-      </a>
-      <a href="/over-mij/" class="nav-rail__item" aria-label="Over mij">
+      <a href="#over-mij" class="nav-rail__item" data-section="over-mij" aria-label="Over mij">
         <div class="nav-rail__item-indicator"></div>
         <span class="material-symbols-outlined nav-rail__icon">person</span>
         <span class="nav-rail__label">Over mij</span>
       </a>
-      <a href="/certificeringen/" class="nav-rail__item" aria-label="Certificeringen">
+      <a href="#ervaringen" class="nav-rail__item" data-section="ervaringen" aria-label="Ervaringen">
+        <div class="nav-rail__item-indicator"></div>
+        <span class="material-symbols-outlined nav-rail__icon">work</span>
+        <span class="nav-rail__label">Ervaringen</span>
+      </a>
+      <a href="#certificeringen" class="nav-rail__item" data-section="certificeringen" aria-label="Certificeringen">
         <div class="nav-rail__item-indicator"></div>
         <span class="material-symbols-outlined nav-rail__icon">verified</span>
-        <span class="nav-rail__label">Certificeringen</span>
+        <span class="nav-rail__label">Certificaten</span>
       </a>
-      <a href="/contact/" class="nav-rail__item" aria-label="Contact">
+      <a href="#contact" class="nav-rail__item" data-section="contact" aria-label="Contact">
         <div class="nav-rail__item-indicator"></div>
         <span class="material-symbols-outlined nav-rail__icon">mail</span>
         <span class="nav-rail__label">Contact</span>
@@ -138,23 +138,23 @@
     <div class="nav-scrim" id="nav-scrim"></div>
     <aside class="nav-drawer" id="nav-drawer" aria-label="Navigatiemenu">
       <nav class="nav-drawer__content">
-        <a href="/" class="nav-drawer__item nav-drawer__item--active">
+        <a href="#home" class="nav-drawer__item nav-drawer__item--active" data-section="home">
           <span class="material-symbols-outlined">home</span>
           Home
         </a>
-        <a href="/ervaringen/" class="nav-drawer__item">
-          <span class="material-symbols-outlined">work</span>
-          Ervaringen
-        </a>
-        <a href="/over-mij/" class="nav-drawer__item">
+        <a href="#over-mij" class="nav-drawer__item" data-section="over-mij">
           <span class="material-symbols-outlined">person</span>
           Over mij
         </a>
-        <a href="/certificeringen/" class="nav-drawer__item">
+        <a href="#ervaringen" class="nav-drawer__item" data-section="ervaringen">
+          <span class="material-symbols-outlined">work</span>
+          Ervaringen
+        </a>
+        <a href="#certificeringen" class="nav-drawer__item" data-section="certificeringen">
           <span class="material-symbols-outlined">verified</span>
           Certificeringen
         </a>
-        <a href="/contact/" class="nav-drawer__item">
+        <a href="#contact" class="nav-drawer__item" data-section="contact">
           <span class="material-symbols-outlined">mail</span>
           Contact
         </a>
@@ -163,19 +163,20 @@
 
     <!-- Main Content -->
     <main class="main-content" style="padding-bottom: 0;">
-      <section class="hero container-large fade-in">
+
+      <!-- ================= 1. HOME / HERO ================= -->
+      <section id="home" class="hero container-large fade-in">
         <div class="hero__container">
           <div class="hero__content-pane">
             <h1 class="display-medium"><span id="typing-text"></span><span class="cursor"></span> 👋🏼 ik ben Jordy!</h1>
             <p class="headline-small hero__subtitle" style="margin-bottom: var(--md-sys-spacing-3);">Service Engineer bij Advantive &amp; Winnaar Skills the Finals 2023</p>
             <p class="hero__description">Momenteel ben ik <span class="dynamic-age">22</span> jaar en werk ik bij Advantive als Service Engineer. In het dagelijks leven vind ik het leuk om bezig te zijn met IT. Zoals verder werken aan mijn homelab :)</p>
             <div class="hero__actions">
-              <a href="/ervaringen/" class="md-btn md-btn--filled">Mijn ervaringen <span class="material-symbols-outlined">arrow_forward</span></a>
-              <a href="/contact/" class="md-btn md-btn--tonal">Contact</a>
+              <a href="#ervaringen" class="md-btn md-btn--filled">Mijn ervaringen <span class="material-symbols-outlined">arrow_forward</span></a>
             </div>
             <!-- Social links -->
             <div class="hero__social" style="margin-top: 24px; display: flex; gap: 8px;">
-              <a href="mailto:jordy@hoebergen.net" target="_blank" rel="noopener" class="md-icon-btn md-icon-btn--tonal" aria-label="Email">
+              <a href="mailto:jordy@hoebergen.net" class="md-icon-btn md-icon-btn--tonal" aria-label="Email">
                 <span class="material-symbols-outlined">mail</span>
               </a>
               <a href="https://linkedin.com/in/jordy-hoebergen" target="_blank" rel="noopener" class="md-icon-btn md-icon-btn--tonal" aria-label="LinkedIn">
@@ -191,13 +192,543 @@
             </div>
           </div>
           <div class="hero__image-pane">
-            <img src="img/fotojordyzoom.webp" id="mainImg" alt="Jordy" fetchpriority="high">
+            <img src="img/fotojordyzoom.webp" id="mainImg" alt="Portretfoto van Jordy Hoebergen" width="750" height="750" fetchpriority="high" decoding="async">
           </div>
         </div>
       </section>
+
+      <!-- ================= 2. OVER MIJ ================= -->
+      <section id="over-mij" class="container-large onepage-section fade-in">
+        <div class="section-title-wrap">
+          <h2 class="display-small section-title">Over mij</h2>
+          <p class="body-large section-subtitle">Wie ik ben, mijn vaardigheden en mijn opleidingen.</p>
+        </div>
+
+        <div class="supporting-pane-layout" style="margin-top: var(--md-sys-spacing-4);">
+          <!-- Left: Bio & Skills -->
+          <div class="supporting-pane-main">
+            <!-- Wie ben ik -->
+            <div class="section-grid" style="margin-bottom: 24px; background: var(--md-sys-color-surface-container-low); padding: 24px; border-radius: var(--md-sys-shape-corner-extra-large);">
+              <div class="section-grid__text">
+                <h3 class="headline-medium" style="margin: 0 0 8px 0; font-weight: 700;">Wie ben ik?</h3>
+                <p class="body-large" style="margin: 0 0 12px 0;">
+                  Ik ben Jordy Hoebergen, <span class="dynamic-age">22</span> jaar oud en werkzaam bij Advantive als Service Engineer. Al op jonge leeftijd ontstond mijn passie voor IT en techniek: van sleutelen aan computers en dingen slopen, naar het inrichten van Cloud omgevingen en het ondersteunen van bedrijven.
+                </p>
+                <p class="body-large" style="margin: 0;">
+                  Ik houd ervan om complexe problemen op te lossen, beheertaken te automatiseren en systemen betrouwbaar en schaalbaar in te richten.
+                </p>
+              </div>
+              <div class="section-grid__media">
+                <div class="img-container blur-load" style="background-image: url(img/small.jpg);">
+                  <img src="img/Skills-Finale-1.webp" alt="Foto tijdens de prijsuitreiking van Skills The Finals" width="1263" height="806" loading="lazy" decoding="async" style="object-position: top; max-width: 100%; border-radius: 16px;">
+                </div>
+              </div>
+            </div>
+
+            <!-- Vaardigheden -->
+            <div style="background: var(--md-sys-color-surface-container-low); padding: 24px; border-radius: var(--md-sys-shape-corner-extra-large);">
+              <h3 class="headline-medium" style="margin: 0 0 8px 0; font-weight: 700;">Vaardigheden &amp; Kennis</h3>
+              <p class="body-large" style="margin: 0 0 16px 0;">
+                Ik heb veel ervaring met Microsoft 365, Azure, Windows &amp; Linux servers, netwerken en Powershell. Hieronder staan nog een aantal van mijn vaardigheden:
+              </p>
+              <div class="skills-chips" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <span class="md-chip">Microsoft Azure</span>
+                <span class="md-chip">Microsoft 365</span>
+                <span class="md-chip">Intune</span>
+                <span class="md-chip">Windows Server &amp; AD</span>
+                <span class="md-chip">Linux</span>
+                <span class="md-chip">Proxmox</span>
+                <span class="md-chip">VMware</span>
+                <span class="md-chip">Docker</span>
+                <span class="md-chip">Kubernetes</span>
+                <span class="md-chip">Ansible</span>
+                <span class="md-chip">Terraform</span>
+                <span class="md-chip">PowerShell</span>
+                <span class="md-chip">Cisco Netwerken</span>
+                <span class="md-chip">Fortinet Firewalls</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Opleidingen (Sticky sidebar) -->
+          <aside class="supporting-pane-sidebar">
+            <h3 class="headline-medium" style="margin: 0 0 16px 0; font-weight: 700;">Opleidingen</h3>
+            <div class="about-education" style="display: flex; flex-direction: column; gap: 16px;">
+              <div class="about-education__item" style="display: flex; gap: 16px; align-items: start;">
+                <div class="about-education__icon" style="background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); padding: 12px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                  <span class="material-symbols-outlined">school</span>
+                </div>
+                <div>
+                  <p class="title-medium" style="margin: 0; font-weight: 700;">AD-ICT – Infrastructuur</p>
+                  <p class="body-medium" style="margin: 4px 0 0; color: var(--md-sys-color-on-surface-variant);">Fontys Hogeschool Eindhoven · Afgerond in 2025</p>
+                </div>
+              </div>
+              <div class="about-education__item" style="display: flex; gap: 16px; align-items: start;">
+                <div class="about-education__icon" style="background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); padding: 12px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                  <span class="material-symbols-outlined">school</span>
+                </div>
+                <div>
+                  <p class="title-medium" style="margin: 0; font-weight: 700;">Expert IT systems &amp; devices</p>
+                  <p class="body-medium" style="margin: 4px 0 0; color: var(--md-sys-color-on-surface-variant);">MBO 4 · ROC ter AA Helmond · Afgerond in 2023</p>
+                </div>
+              </div>
+            </div>
+            <div class="img-container blur-load" style="background-image: url(img/small.jpg); margin-top: 24px; border-radius: 16px; overflow: hidden;">
+              <img src="img/Fontys.webp" alt="Logo van Fontys Hogeschool in Eindhoven" width="1263" height="806" loading="lazy" decoding="async" style="width: 100%; display: block;">
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ================= 3. ERVARINGEN ================= -->
+      <section id="ervaringen" class="container-large onepage-section fade-in">
+        <div class="section-title-wrap">
+          <h2 class="display-small section-title">Ervaringen</h2>
+          <p class="body-large section-subtitle">Stages, wedstrijden en praktijkprojecten.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: var(--md-sys-spacing-4);">
+          <!-- 1. Stage Advantive -->
+          <a href="ervaringen/stage-advantive/" class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
+            <div class="experience-card__image-wrapper blur-load" style="background-image: url(img/small.jpg);">
+              <img src="img/Stage-Advantive-Werkplek-full.webp" alt="Jordy op werkplek bij Advantive" width="4624" height="3472" loading="lazy" decoding="async" class="experience-card__image">
+            </div>
+            <div class="experience-card__content">
+              <h3 class="title-large" style="margin: 0; font-weight: 700;">Stage Advantive</h3>
+              <p class="experience-card__date-text">Februari – Juli 2025</p>
+              <p class="body-medium">
+                In het laatste leerjaar van de opleiding 'AD-ICT' in de richting Infrastructuur bij het Fontys heb ik een halfjaar stage gelopen bij Advantive. Tevens heb ik hier mijn afstudeerproject uitgevoerd.
+              </p>
+            </div>
+          </a>
+
+          <!-- 2. Stage VDL -->
+          <a href="ervaringen/stage-vdl/" class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
+            <div class="experience-card__image-wrapper blur-load" style="background-image: url(img/small.jpg);">
+              <img src="img/Stage-VDL-1-1.webp" alt="Jordy voor het hoofdkantoor van VDL Nederland" width="1263" height="806" loading="lazy" decoding="async" class="experience-card__image">
+            </div>
+            <div class="experience-card__content">
+              <h3 class="title-large" style="margin: 0; font-weight: 700;">Stage VDL</h3>
+              <p class="experience-card__date-text">Februari – Juni 2023</p>
+              <p class="body-medium">
+                In het laatste leerjaar van de opleiding 'Expert IT systems &amp; devices' heb ik een halfjaar stage gelopen bij VDL Nederland. Tevens heb ik hier mijn examen opdrachten afgerond.
+              </p>
+            </div>
+          </a>
+
+          <!-- 3. Skills Heroes -->
+          <a href="ervaringen/skills-heroes/" class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
+            <div class="experience-card__image-wrapper blur-load" style="background-image: url(img/small.jpg);">
+              <img src="img/Skills-Kwalificatie.webp" alt="Jordy tijdens Skills Heroes" width="1263" height="806" loading="lazy" decoding="async" class="experience-card__image" style="object-position: top;">
+            </div>
+            <div class="experience-card__content">
+              <h3 class="title-large" style="margin: 0; font-weight: 700;">Skills Heroes</h3>
+              <p class="experience-card__date-text">2022 – 2023</p>
+              <p class="body-medium">
+                Tijdens mijn MBO 4 opleiding heb ik meegedaan aan de landelijke ICT-beheerders wedstrijd voor MBO. Dit wordt jaarlijks georganiseerd door Worldskills Netherlands.
+              </p>
+            </div>
+          </a>
+
+          <!-- 4. Stage Agrippa -->
+          <a href="ervaringen/stage-agrippa/" class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
+            <div class="experience-card__image-wrapper blur-load" style="background-image: url(img/small.jpg);">
+              <img src="img/Agrippa-HomeAssistant.webp" alt="Home Assistant op iPad bij Agrippa" width="1980" height="1320" loading="lazy" decoding="async" class="experience-card__image">
+            </div>
+            <div class="experience-card__content">
+              <h3 class="title-large" style="margin: 0; font-weight: 700;">Stage Agrippa</h3>
+              <p class="experience-card__date-text">September 2021 – Februari 2022</p>
+              <p class="body-medium">
+                In het tweede leerjaar van de opleiding 'Expert IT systems &amp; devices' heb ik een halfjaar stage gelopen bij Agrippa. Hier heb ik Home Assistant ingesteld voor domotica.
+              </p>
+            </div>
+          </a>
+
+          <!-- 5. Homelab & Projecten -->
+          <a href="https://status.hoebergen.net/status/default" target="_blank" rel="noopener nofollow" class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
+            <div class="experience-card__image-wrapper blur-load" style="background-image: url(img/small.jpg);">
+              <img src="img/Raspberry-Pi.webp" alt="Raspberry Pi, Linux en Docker logo's" width="1263" height="806" loading="lazy" decoding="async" class="experience-card__image">
+            </div>
+            <div class="experience-card__content">
+              <h3 class="title-large" style="margin: 0; font-weight: 700;">Homelab &amp; Projecten</h3>
+              <p class="experience-card__date-text">Linux, Docker, Kubernetes</p>
+              <p class="body-medium">
+                In mijn vrije tijd vind ik het leuk om te werken met Linux, Docker en Kubernetes. Ik heb een eigen homelab opgezet met diverse services.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ================= 4. CERTIFICERINGEN ================= -->
+      <section id="certificeringen" class="container-large onepage-section fade-in">
+        <div class="section-title-wrap" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h2 class="display-small section-title">Certificeringen</h2>
+            <p class="body-large section-subtitle">Behaalde certificaten via Microsoft Learn en Credly / Cisco.</p>
+          </div>
+          <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <a href="https://learn.microsoft.com/nl-nl/users/jordyhoebergen-8125/credentials?tab=credentials-tab" target="_blank" rel="noopener nofollow" class="cert-external-link">
+              <span>Microsoft Learn Profiel</span>
+              <span class="material-symbols-outlined" style="font-size: 16px;">open_in_new</span>
+            </a>
+            <a href="https://www.credly.com/users/jordy-hoebergen/badges" target="_blank" rel="noopener nofollow" class="cert-external-link">
+              <span>Credly Profiel</span>
+              <span class="material-symbols-outlined" style="font-size: 16px;">open_in_new</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Initial Grid: 4 Meest Recente Certificaten (Microsoft) -->
+        <div class="cert-grid" id="cert-grid" style="margin-top: var(--md-sys-spacing-4);">
+          <!-- 1. AI Business Professional -->
+          <a href="https://learn.microsoft.com/en-us/users/jordyhoebergen-8125/credentials/b0d6d879715aeae5" target="_blank" rel="noopener" class="cert-card">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/mslearn/ai-business-professional.svg" alt="AI Business Professional" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Microsoft</div>
+                <h3 class="cert-card__title">AI Business Professional (AB-730)</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                26 augustus 2026
+              </span>
+            </div>
+          </a>
+
+          <!-- 2. Endpoint Administrator -->
+          <a href="https://learn.microsoft.com/en-us/users/jordyhoebergen-8125/credentials/7dcc312a209753a4" target="_blank" rel="noopener" class="cert-card">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/mslearn/microsoft-certified-associate-badge.svg" alt="Endpoint Administrator Associate" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Microsoft</div>
+                <h3 class="cert-card__title">Endpoint Administrator (MD-102)</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                18 mei 2026
+              </span>
+            </div>
+          </a>
+
+          <!-- 3. Microsoft 365 Administrator -->
+          <a href="https://learn.microsoft.com/api/credentials/share/nl-nl/JordyHoebergen-8125/7DCC312A209753A4" target="_blank" rel="noopener" class="cert-card">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/mslearn/microsoft-certified-expert-badge.svg" alt="Microsoft 365 Enterprise Administrator Expert" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Microsoft</div>
+                <h3 class="cert-card__title">Microsoft 365 Administrator (MS-102)</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                19 januari 2026
+              </span>
+            </div>
+          </a>
+
+          <!-- 4. Azure Fundamentals -->
+          <a href="https://learn.microsoft.com/en-us/users/jordyhoebergen-8125/credentials/197fc8fa4aa1a904" target="_blank" rel="noopener" class="cert-card">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/mslearn/microsoft-certified-fundamentals-badge.svg" alt="Azure Fundamentals" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Microsoft</div>
+                <h3 class="cert-card__title">Azure Fundamentals (AZ-900)</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                27 augustus 2025
+              </span>
+            </div>
+          </a>
+
+          <!-- 5. Cisco CyberOps Associate -->
+          <a href="https://www.credly.com/org/cisco/badge/cyberops-associate" target="_blank" rel="noopener nofollow" class="cert-card cert-card--desktop-extra">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/credly/CyberOpsAssoc.png" alt="CyberOps Associate Badge" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">CyberOps Associate</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                1 februari 2023
+              </span>
+            </div>
+          </a>
+
+          <!-- 6. Cisco Endpoint Security -->
+          <a href="https://www.credly.com/org/cisco/badge/endpoint-security" target="_blank" rel="noopener nofollow" class="cert-card cert-card--desktop-extra">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/credly/EndpointSecurity.png" alt="Endpoint Security Badge" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">Endpoint Security</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                26 januari 2023
+              </span>
+            </div>
+          </a>
+
+          <!-- 7. Cisco Networking Basics -->
+          <a href="https://www.credly.com/org/cisco/badge/networking-basics" target="_blank" rel="noopener nofollow" class="cert-card cert-card--collapsible">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/credly/image.png" alt="Networking Basics Badge" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">Networking Basics</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                25 januari 2023
+              </span>
+            </div>
+          </a>
+
+          <!-- 8. Cisco Introduction to IoT -->
+          <a href="https://www.credly.com/org/cisco/badge/introduction-to-iot" target="_blank" rel="noopener nofollow" class="cert-card cert-card--collapsible">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/credly/Intro2IoT.png" alt="Introduction to IoT Badge" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">Introduction to IoT</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                8 juli 2022
+              </span>
+            </div>
+          </a>
+
+          <!-- 9. CCNA Enterprise Networking -->
+          <a href="https://www.credly.com/org/cisco/badge/ccna-enterprise-networking-security-and-automation" target="_blank" rel="noopener nofollow" class="cert-card cert-card--collapsible">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/credly/CCNAENSA__1_.png" alt="CCNA Enterprise Networking Badge" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">CCNA: Enterprise Networking, Security, and Automation</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                5 juli 2022
+              </span>
+            </div>
+          </a>
+
+          <!-- 10. CCNA Switching Routing Wireless -->
+          <a href="https://www.credly.com/org/cisco/badge/ccna-switching-routing-and-wireless-essentials.1" target="_blank" rel="noopener nofollow" class="cert-card cert-card--collapsible">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/credly/CCNASRWE__1_.png" alt="CCNA Switching Routing Wireless Badge" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">CCNA: Switching, Routing, and Wireless Essentials</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                16 maart 2022
+              </span>
+            </div>
+          </a>
+
+          <!-- 11. Cisco Cybersecurity Essentials -->
+          <a href="https://www.credly.com/org/cisco/badge/cybersecurity-essentials" target="_blank" rel="noopener nofollow" class="cert-card cert-card--collapsible">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/credly/CyberEssentials.png" alt="Cybersecurity Essentials Badge" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">Cybersecurity Essentials</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                17 januari 2022
+              </span>
+            </div>
+          </a>
+
+          <!-- 12. Cisco Introduction to Cybersecurity -->
+          <a href="https://www.credly.com/org/cisco/badge/introduction-to-cybersecurity" target="_blank" rel="noopener nofollow" class="cert-card cert-card--collapsible">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/credly/I2CS__1_.png" alt="Introduction to Cybersecurity Badge" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">Introduction to Cybersecurity</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                14 januari 2022
+              </span>
+            </div>
+          </a>
+
+          <!-- 13. MOS Associate Office 2019 -->
+          <a href="https://www.credly.com/org/microsoft-certification/badge/microsoft-office-specialist-associate-office-2019" target="_blank" rel="noopener nofollow" class="cert-card cert-card--collapsible">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/credly/MOS_-_Office_Specialist_Associate-600x600.png" alt="MOS Associate Badge" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Microsoft</div>
+                <h3 class="cert-card__title">Microsoft Office Specialist: Associate</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                24 maart 2021
+              </span>
+            </div>
+          </a>
+
+          <!-- 14. MOS Word Expert 2019 -->
+          <a href="https://www.credly.com/org/microsoft-certification/badge/microsoft-office-specialist-microsoft-word-expert-office-2019" target="_blank" rel="noopener nofollow" class="cert-card cert-card--collapsible">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/credly/MOS_Word_Expert1.png" alt="MOS Word Expert Badge" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Microsoft</div>
+                <h3 class="cert-card__title">Microsoft Office Specialist: Word Expert</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                23 maart 2021
+              </span>
+            </div>
+          </a>
+
+          <!-- 15. CCNA Introduction to Networks -->
+          <a href="https://www.credly.com/org/cisco/badge/ccna-introduction-to-networks" target="_blank" rel="noopener nofollow" class="cert-card cert-card--collapsible">
+            <div class="cert-card__header">
+              <div class="cert-card__img-wrap">
+                <img src="img/credly/CCNAITN__1_.png" alt="CCNA Intro to Networks Badge" width="60" height="60" loading="lazy" decoding="async" class="cert-card__img">
+              </div>
+              <div class="cert-card__meta">
+                <div class="cert-card__issuer">Cisco</div>
+                <h3 class="cert-card__title">CCNA: Introduction to Networks</h3>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__date">
+                <span class="material-symbols-outlined">calendar_today</span>
+                18 februari 2021
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Toggle View More Button -->
+        <div style="text-align: center; margin-top: 32px;">
+          <button class="md-btn md-btn--tonal" id="cert-toggle-btn" aria-expanded="false" style="gap: 8px;">
+            <span id="cert-toggle-text">Toon alle certificeringen (11 meer)</span>
+            <span class="material-symbols-outlined" id="cert-toggle-icon">expand_more</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= 5. CONTACT ================= -->
+      <section id="contact" class="container-large onepage-section fade-in" style="padding-bottom: 48px;">
+        <div class="contact-card" style="margin: 0 auto;">
+          <!-- Image Side -->
+          <div class="contact-card__image-pane">
+            <img src="img/Skills-Finale-1.webp" alt="Jordy Hoebergen" width="1263" height="806" loading="lazy" decoding="async">
+          </div>
+
+          <!-- Contact Info Side -->
+          <div class="contact-card__content-pane">
+            <h2 class="contact-card__title">Neem contact met me op!</h2>
+            <p class="body-medium contact-card__subtitle">
+              Heb je een vraag, zie je een kans voor samenwerking of wil je gewoon hallo zeggen? Stuur me gerust een bericht via een van de onderstaande kanalen.
+            </p>
+
+            <div class="contact-card__actions">
+              <a href="mailto:jordy@hoebergen.net" class="md-btn md-btn--filled contact-btn">
+                <span class="material-symbols-outlined">mail</span>
+                <span>jordy@hoebergen.net</span>
+              </a>
+
+              <a href="https://linkedin.com/in/jordy-hoebergen" target="_blank" rel="noopener nofollow" class="md-btn md-btn--tonal contact-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+                <span>Jordy Hoebergen</span>
+              </a>
+
+              <a href="https://github.com/jordyegnl" target="_blank" rel="noopener nofollow" class="md-btn md-btn--tonal contact-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                </svg>
+                <span>JordyEGNL</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FOOTER ================= -->
+      <footer class="site-footer">
+        <div class="container-large" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+          <span>&copy; <span id="current-year">2026</span> Jordy Hoebergen</span>
+          <a href="#home" class="md-btn md-btn--text" style="gap: 6px; font-size: 14px; text-decoration: none;">
+            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_upward</span>
+            Naar boven
+          </a>
+        </div>
+      </footer>
+
     </main>
   </div>
 
-  <script defer src="js/navigation.js"></script>
+  <script defer src="js/navigation.js?v=4"></script>
 </body>
 </html>

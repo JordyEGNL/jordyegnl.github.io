@@ -47,11 +47,11 @@
 
 </head>
 <body>
-
+  <a href="#main" class="skip-link">Overslaan naar inhoud</a>
   <div class="app-shell">
     <!-- Top App Bar (Mobile) -->
     <header class="top-app-bar" role="banner">
-      <a href="/" class="top-app-bar__logo">Jordy Hoebergen</a>
+      <a href="../../#home" class="top-app-bar__logo">Jordy Hoebergen</a>
       <div class="top-app-bar__actions">
         <button class="md-icon-btn theme-toggle-btn" aria-label="Schakel thema"><span class="material-symbols-outlined">dark_mode</span></button>
         <button class="md-icon-btn top-app-bar__menu-btn" id="nav-menu-btn" aria-label="Menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
@@ -60,21 +60,19 @@
 
     <!-- Navigation Rail (Desktop) -->
     <nav class="nav-rail" aria-label="Hoofdnavigatie">
-      <a href="../../" class="nav-rail__item" aria-label="Home">
+      <a href="../../#home" class="nav-rail__item" aria-label="Home">
         <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">home</span><span class="nav-rail__label">Home</span>
       </a>
-      <a href="../../ervaringen/" class="nav-rail__item nav-rail__item--active" aria-label="Ervaringen">
-        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">work</span><span class="nav-rail__label">Ervaringen</span>
-      </a>
-      <a href="../../over-mij/" class="nav-rail__item" aria-label="Over mij">
+      <a href="../../#over-mij" class="nav-rail__item" aria-label="Over mij">
         <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">person</span><span class="nav-rail__label">Over mij</span>
       </a>
-      <a href="../../certificeringen/" class="nav-rail__item" aria-label="Certificeringen">
-        <div class="nav-rail__item-indicator"></div>
-        <span class="material-symbols-outlined nav-rail__icon">verified</span>
-        <span class="nav-rail__label">Certificeringen</span>
+      <a href="../../#ervaringen" class="nav-rail__item nav-rail__item--active" aria-label="Ervaringen">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">work</span><span class="nav-rail__label">Ervaringen</span>
       </a>
-      <a href="../../contact/" class="nav-rail__item" aria-label="Contact">
+      <a href="../../#certificeringen" class="nav-rail__item" aria-label="Certificeringen">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">verified</span><span class="nav-rail__label">Certificaten</span>
+      </a>
+      <a href="../../#contact" class="nav-rail__item" aria-label="Contact">
         <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">mail</span><span class="nav-rail__label">Contact</span>
       </a>
       <div class="nav-rail__spacer"></div>
@@ -85,24 +83,32 @@
     <div class="nav-scrim" id="nav-scrim"></div>
     <aside class="nav-drawer" id="nav-drawer" aria-label="Navigatiemenu">
       <nav class="nav-drawer__content">
-        <a href="../../" class="nav-drawer__item"><span class="material-symbols-outlined">home</span>Home</a>
-        <a href="../../ervaringen/" class="nav-drawer__item nav-drawer__item--active"><span class="material-symbols-outlined">work</span>Ervaringen</a>
-        <a href="../../over-mij/" class="nav-drawer__item"><span class="material-symbols-outlined">person</span>Over mij</a>
-        <a href="../../certificeringen/" class="nav-drawer__item"><span class="material-symbols-outlined">verified</span>Certificeringen</a>
-        <a href="../../contact/" class="nav-drawer__item"><span class="material-symbols-outlined">mail</span>Contact</a>
+        <a href="../../#home" class="nav-drawer__item"><span class="material-symbols-outlined">home</span>Home</a>
+        <a href="../../#over-mij" class="nav-drawer__item"><span class="material-symbols-outlined">person</span>Over mij</a>
+        <a href="../../#ervaringen" class="nav-drawer__item nav-drawer__item--active"><span class="material-symbols-outlined">work</span>Ervaringen</a>
+        <a href="../../#certificeringen" class="nav-drawer__item"><span class="material-symbols-outlined">verified</span>Certificeringen</a>
+        <a href="../../#contact" class="nav-drawer__item"><span class="material-symbols-outlined">mail</span>Contact</a>
       </nav>
     </aside>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main class="main-content" id="main">
       
       <div class="article-header-image-container fade-in">
         <div class="hero__image-pane">
-          <img src="../../img/Stage-VDL-1.webp" alt="Jordy voor het hoofdkantoor van VDL Nederland" style="width: 100%; height: 100%; object-fit: cover; object-position: center 35%;">
+          <img src="../../img/Stage-VDL-1.webp" alt="Jordy voor het hoofdkantoor van VDL Nederland" width="1263" height="806" fetchpriority="high" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center 35%;">
         </div>
       </div>
 
       <article class="article-pane fade-in">
+
+        <!-- Terug knop bovenaan -->
+        <div style="margin-bottom: 20px;">
+          <a href="../../#ervaringen" class="md-btn md-btn--tonal" style="display: inline-flex; align-items: center; gap: 8px; border-radius: var(--md-sys-shape-corner-full); padding: 0 16px; height: 38px; text-decoration: none; font-size: 14px; font-weight: 500;">
+            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+            <span>Terug naar ervaringen</span>
+          </a>
+        </div>
         <h1 class="display-medium" style="margin-top: 0; margin-bottom: 8px;">Jordy Hoebergen - Stage VDL</h1>
         <div class="md-chip md-chip--assist" style="margin-bottom: 32px; display: inline-flex;">Februari – Juni 2023</div>
         
@@ -115,7 +121,7 @@
           <div class="section-grid__media">
             <a href="https://www.vdlgroep.com/" target="_blank" rel="noopener">
               <div class="img-container blur-load" style="background-image: url('../../img/small.jpg');">
-                <img src="../../img/Stage-VDL-1-1.webp" alt="VDL Groep" loading="lazy">
+                <img src="../../img/Stage-VDL-1-1.webp" alt="Hoofdkantoor VDL Groep" width="1263" height="806" loading="lazy" decoding="async">
               </div>
             </a>
           </div>
@@ -129,7 +135,7 @@
           </div>
           <div class="section-grid__media">
             <div class="img-container blur-load" style="background-image: url('../../img/small.jpg');">
-              <img src="../../img/Stage-VDL-2.webp" alt="Stage VDL 2" loading="lazy">
+              <img src="../../img/Stage-VDL-2.webp" alt="VDL netwerk switches configuratie" width="1263" height="806" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -143,9 +149,21 @@
           </div>
           <div class="section-grid__media">
             <div class="img-container blur-load" style="background-image: url('../../img/small.jpg');">
-              <img src="../../img/Stage-VDL-4-2.webp" alt="Uitrol Moderne Werkplek" loading="lazy">
+              <img src="../../img/Stage-VDL-4-2.webp" alt="Uitrol Moderne Werkplek bij VDL" width="1748" height="987" loading="lazy" decoding="async">
             </div>
           </div>
+        </div>
+      
+        <!-- Terug navigatie onderaan -->
+        <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--md-sys-color-outline-variant); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <a href="../../#ervaringen" class="md-btn md-btn--filled" style="display: inline-flex; align-items: center; gap: 8px; border-radius: var(--md-sys-shape-corner-medium); padding: 0 20px; height: 44px; text-decoration: none; font-size: 14px; font-weight: 500;">
+            <span class="material-symbols-outlined" style="font-size: 20px;">arrow_back</span>
+            <span>Terug naar alle ervaringen</span>
+          </a>
+          <a href="../../#contact" class="md-btn md-btn--tonal" style="display: inline-flex; align-items: center; gap: 8px; border-radius: var(--md-sys-shape-corner-medium); padding: 0 20px; height: 44px; text-decoration: none; font-size: 14px; font-weight: 500;">
+            <span>Contact opnemen</span>
+            <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
+          </a>
         </div>
       </article>
     </main>
