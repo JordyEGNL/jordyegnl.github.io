@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // --- Certificates: "View More" Toggle (Responsive 3x2, 2x2, 1x4) ---
+  // --- Certificates: "View More" Toggle (Responsive 3x3, 2x2, 1x4) ---
   const certGrid = document.getElementById('cert-grid');
   const certToggleBtn = document.getElementById('cert-toggle-btn');
   const certToggleText = document.getElementById('cert-toggle-text');
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (certToggleIcon) certToggleIcon.textContent = 'expand_less';
       } else {
         const isWide = window.innerWidth >= 1080;
-        const moreCount = isWide ? 9 : 11;
+        const moreCount = isWide ? 6 : 11;
         if (certToggleText) certToggleText.textContent = `Toon alle certificeringen (${moreCount} meer)`;
         if (certToggleIcon) certToggleIcon.textContent = 'expand_more';
       }

@@ -9,18 +9,11 @@
 
 html {
   scrollbar-gutter: stable; /* Modern way to prevent layout jumps without double scrollbars */
-  scroll-padding-top: 80px;
-}
-
-@media (min-width: 840px) {
-  html {
-    scroll-padding-top: 32px;
-  }
 }
 
 section[id],
 .onepage-section {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 64px;
 }
 
 @media (min-width: 840px) {
@@ -287,6 +280,14 @@ a {
 }
 
 @media (max-width: 599px) {
+  .main-content--article {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .main-content:has(.article-header-image-container) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   .article-header-image-container {
     width: 100%;
     margin-top: 0;
@@ -296,7 +297,8 @@ a {
     border-radius: 0;
   }
   .article-pane {
-    padding: var(--md-sys-spacing-6) var(--md-sys-spacing-4);
+    padding: var(--md-sys-spacing-6) var(--md-sys-spacing-4) var(--md-sys-spacing-9);
+    padding-bottom: calc(var(--md-sys-spacing-9) + env(safe-area-inset-bottom, 0px));
     margin-top: -32px;
     width: 100%;
     max-width: 100%;

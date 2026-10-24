@@ -1116,7 +1116,7 @@ a.social-card:hover .social-card__arrow {
 
 /* -----------------------------------------------
    Certificates Grid & Breakpoints
-   - Wide (>= 1080px): 3 columns (3 and 3 = 6 cards)
+   - Wide (>= 1080px): 3 columns (3 x 3 = 9 cards)
    - Medium (680px - 1079px): 2 columns (2 and 2 = 4 cards)
    - Small (< 680px): 1 column (4 cards stacked)
    ----------------------------------------------- */
@@ -1154,7 +1154,7 @@ a.social-card:hover .social-card__arrow {
               transform var(--md-sys-motion-duration-short3) var(--md-sys-motion-easing-standard);
 }
 
-/* Cards 5 & 6: visible initially on wide screens (making 2 full rows of 3), hidden on smaller screens */
+/* Cards 5-9: visible initially on wide screens (making 3 full rows of 3), hidden on smaller screens */
 .cert-card.cert-card--desktop-extra {
   display: none;
 }
@@ -1165,18 +1165,18 @@ a.social-card:hover .social-card__arrow {
   }
 }
 
-/* Cards 7-15: hidden initially */
+/* Cards 10-15: hidden initially */
 .cert-card.cert-card--collapsible {
   display: none;
 }
 
-/* Expanded state: cards 7-15 fade in smoothly on all screens */
+/* Expanded state: cards 10-15 fade in smoothly on all screens */
 .cert-grid.is-expanded .cert-card.cert-card--collapsible {
   display: flex;
   animation: certFadeIn 0.3s ease;
 }
 
-/* Expanded state: cards 5 & 6 fade in on screens < 1080px */
+/* Expanded state: cards 5-9 fade in on screens < 1080px */
 @media (max-width: 1079px) {
   .cert-grid.is-expanded .cert-card.cert-card--desktop-extra {
     display: flex;
@@ -1184,7 +1184,7 @@ a.social-card:hover .social-card__arrow {
   }
 }
 
-/* Expanded state: on desktop (>= 1080px), cards 5 & 6 are already visible: NO animation or jump */
+/* Expanded state: on desktop (>= 1080px), cards 5-9 are already visible: NO animation or jump */
 @media (min-width: 1080px) {
   .cert-grid.is-expanded .cert-card.cert-card--desktop-extra {
     display: flex;
