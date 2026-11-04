@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <!-- Theme script (first in head to prevent FOUC) -->
+  <script src="../../js/theme.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordy Hoebergen - Advantive</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="../../img/headers/advantive.png" fetchpriority="high">
+
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=block" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" type="image/png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../../img/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
+
+  <!-- SEO & Open Graph -->
+  <meta name="description" content="Op deze pagina lees je alles over mijn werk als Service Engineer bij Advantive in Weert">
+  <meta name="theme-color" content="#FAFDFB">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jordyhoebergen.nl/ervaringen/advantive/">
+  <meta property="og:title" content="Jordy Hoebergen - Advantive">
+  <meta property="og:description" content="Op deze pagina lees je alles over mijn werk als Service Engineer bij Advantive in Weert">
+  <meta property="og:url" content="https://jordyhoebergen.nl/ervaringen/advantive/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Jordy Hoebergen">
+  <meta property="og:image" content="https://jordyhoebergen.nl/img/headers/advantive.png">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jordy Hoebergen - Advantive">
+  <meta name="twitter:description" content="Op deze pagina lees je alles over mijn werk als Service Engineer bij Advantive in Weert">
+  <meta name="twitter:image" content="https://jordyhoebergen.nl/img/headers/advantive.png">
+
+</head>
+<body>
+  <a href="#main" class="skip-link">Overslaan naar inhoud</a>
+  <div class="app-shell">
+    <!-- Top App Bar (Mobile) -->
+    <header class="top-app-bar" role="banner">
+      <a href="../../#home" class="top-app-bar__logo">Jordy Hoebergen</a>
+      <div class="top-app-bar__actions">
+        <button class="md-icon-btn theme-toggle-btn" aria-label="Schakel thema"><span class="material-symbols-outlined">dark_mode</span></button>
+        <button class="md-icon-btn top-app-bar__menu-btn" id="nav-menu-btn" aria-label="Menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
+      </div>
+    </header>
+
+    <!-- Navigation Rail (Desktop) -->
+    <nav class="nav-rail" aria-label="Hoofdnavigatie">
+      <a href="../../#home" class="nav-rail__item" aria-label="Home">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">home</span><span class="nav-rail__label">Home</span>
+      </a>
+      <a href="../../#over-mij" class="nav-rail__item" aria-label="Over mij">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">person</span><span class="nav-rail__label">Over mij</span>
+      </a>
+      <a href="../../#ervaringen" class="nav-rail__item nav-rail__item--active" aria-label="Ervaringen">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">work</span><span class="nav-rail__label">Ervaringen</span>
+      </a>
+      <a href="../../#certificeringen" class="nav-rail__item" aria-label="Certificeringen">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">verified</span><span class="nav-rail__label">Certificaten</span>
+      </a>
+      <a href="../../#contact" class="nav-rail__item" aria-label="Contact">
+        <div class="nav-rail__item-indicator"></div><span class="material-symbols-outlined nav-rail__icon">mail</span><span class="nav-rail__label">Contact</span>
+      </a>
+      <div class="nav-rail__spacer"></div>
+      <button class="md-icon-btn theme-toggle-btn" aria-label="Schakel thema"><span class="material-symbols-outlined">dark_mode</span></button>
+    </nav>
+
+    <!-- Nav Scrim & Drawer -->
+    <div class="nav-scrim" id="nav-scrim"></div>
+    <aside class="nav-drawer" id="nav-drawer" aria-label="Navigatiemenu">
+      <nav class="nav-drawer__content">
+        <a href="../../#home" class="nav-drawer__item"><span class="material-symbols-outlined">home</span>Home</a>
+        <a href="../../#over-mij" class="nav-drawer__item"><span class="material-symbols-outlined">person</span>Over mij</a>
+        <a href="../../#ervaringen" class="nav-drawer__item nav-drawer__item--active"><span class="material-symbols-outlined">work</span>Ervaringen</a>
+        <a href="../../#certificeringen" class="nav-drawer__item"><span class="material-symbols-outlined">verified</span>Certificeringen</a>
+        <a href="../../#contact" class="nav-drawer__item"><span class="material-symbols-outlined">mail</span>Contact</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content main-content--article" id="main">
+      
+      <div class="article-header-image-container fade-in">
+        <div class="hero__image-pane">
+          <img src="../../img/headers/advantive.png" alt="Header Advantive Kantoor" width="1920" height="1080" fetchpriority="high" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center 55%;">
+        </div>
+      </div>
+
+      <article class="article-pane fade-in">
+
+        <!-- Terug knop bovenaan -->
+        <div style="margin-bottom: 20px;">
+          <a href="../../#ervaringen" class="md-btn md-btn--tonal" style="display: inline-flex; align-items: center; gap: 8px; border-radius: var(--md-sys-shape-corner-full); padding: 0 16px; height: 38px; text-decoration: none; font-size: 14px; font-weight: 500;">
+            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+            <span>Terug naar ervaringen</span>
+          </a>
+        </div>
+        <h1 class="display-medium" style="margin-top: 0; margin-bottom: 8px;">Jordy Hoebergen - Advantive</h1>
+        <div class="md-chip md-chip--assist" style="margin-bottom: 32px; display: inline-flex;">Juni 2025 – Heden</div>
+        
+        <div class="section-grid">
+          <div class="section-grid__text">
+            <h2 class="headline-large">In het kort</h2>
+            <p class="body-large">Sinds juni 2025 ben ik werkzaam als Service Engineer bij Advantive in Weert. Advantive is een Microsoft Solutions Partner die organisaties helpt met hun digitale transformatie en innovatieve cloudoplossingen.</p>
+            <p class="body-large">Binnen het Managed Services team ben ik verantwoordelijk voor het ondersteunen van diverse klanten en het beheren van hun IT-omgevingen. Na mijn afstudeerstage ben ik direct gestart in deze functie.</p>
+            <p class="body-large">Passie, plezier en professionaliteit zijn de drie kernwaarden van Advantive, en met die instelling sta ik dagelijks klaar om onze klanten optimaal te ondersteunen.</p>
+          </div>
+          <div class="section-grid__media">
+            <a href="https://www.advantive.nl" target="_blank" rel="noopener">
+              <div class="img-container blur-load" style="background-image: url('../../img/small.jpg');">
+                <img src="../../img/Stage-Advantive-Nummerplaat.webp" alt="Advantive Weert" width="773" height="515" loading="lazy" decoding="async" style="object-position: bottom; aspect-ratio: 16/10;">
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="section-grid section-grid--reverse" style="margin-top: 32px;">
+          <div class="section-grid__text">
+            <h2 class="headline-large">2e-lijns support &amp; proactief beheer</h2>
+            <p class="body-large">Als Service Engineer bij Managed Services ben ik als 2e-lijns het aanspreekpunt voor onze klanten. Hier lossen we complexere incidenten, escalaties en wijzigingsverzoeken op die diepere  kennis vereisen van Microsoft-omgevingen.</p>
+            <p class="body-large">Naast reactieve support ligt onze focus nadrukkelijk op proactief beheer. We zorgen ervoor dat klantomgevingen continu geoptimaliseerd, veilig en up-to-date blijven. Door preventief te monitoren en knelpunten vroegtijdig te signaleren, minimaliseren we downtime en helpen we klanten het maximale uit hun omgevingen te halen.</p>
+          </div>
+          <div class="section-grid__media">
+            <div class="img-container blur-load" style="background-image: url('../../img/small.jpg');">
+              <img src="../../img/Stage-Advantive-Werkplek.webp" alt="Advantive Microsoft Solutions Partner" width="1500" height="1000" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+
+        <div class="section-grid" style="margin-top: 32px;">
+          <div class="section-grid__text">
+            <h2 class="headline-large">Local support op locatie</h2>
+            <p class="body-large">Daarnaast ben ik ook actief als local support op locatie bij klanten. Hier bied ik ondersteuning aan medewerkers en ben ik het vertrouwde gezicht op de werkvloer voor technische vraagstukken.</p>
+            <p class="body-large">Dankzij mijn rol binnen Advantive kan ik klanten op locatie optimaal ondersteunen: ik combineer persoonlijke hulp ter plekke met diepgaande achtergrondkennis van hun centrale IT-infrastructuur. Bovendien kan ik altijd direct terugvallen op de brede expertise van collega's binnen Advantive, waardoor ook complexe uitdagingen snel en effectief worden opgelost.</p>
+          </div>
+          <div class="section-grid__media">
+            <div class="img-container blur-load" style="background-image: url('../../img/small.jpg');">
+              <img src="../../img/Stage-Advantive-Microsoft.webp" alt="Werkplek bij Advantive" width="4624" height="2934" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      
+        <!-- Terug navigatie onderaan -->
+        <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--md-sys-color-outline-variant); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <a href="../../#ervaringen" class="md-btn md-btn--filled" style="display: inline-flex; align-items: center; gap: 8px; border-radius: var(--md-sys-shape-corner-medium); padding: 0 20px; height: 44px; text-decoration: none; font-size: 14px; font-weight: 500;">
+            <span class="material-symbols-outlined" style="font-size: 20px;">arrow_back</span>
+            <span>Terug naar alle ervaringen</span>
+          </a>
+          <a href="../../#contact" class="md-btn md-btn--tonal" style="display: inline-flex; align-items: center; gap: 8px; border-radius: var(--md-sys-shape-corner-medium); padding: 0 20px; height: 44px; text-decoration: none; font-size: 14px; font-weight: 500;">
+            <span>Contact opnemen</span>
+            <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
+          </a>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <script defer src="../../js/navigation.js"></script>
+</body>
+</html>
+
