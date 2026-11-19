@@ -36,20 +36,25 @@
   <meta name="theme-color" content="#FAFDFB">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://jordyhoebergen.nl/">
-  <meta property="og:title" content="Jordy Hoebergen | Service Engineer &amp; ICT-beheerder">
+  <meta property="og:title" content="Jordy Hoebergen | Service Engineer & ICT-beheerder">
   <meta property="og:description" content="Persoonlijke website van Jordy Hoebergen: Service Engineer bij Advantive en winnaar Skills The Finals ICT-beheerder.">
   <meta property="og:url" content="https://jordyhoebergen.nl/">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="profile">
+  <meta property="profile:first_name" content="Jordy">
+  <meta property="profile:last_name" content="Hoebergen">
+  <meta property="profile:username" content="jordyhoebergen">
   <meta property="og:locale" content="nl_NL">
   <meta property="og:site_name" content="Jordy Hoebergen">
   <meta property="og:image" content="https://jordyhoebergen.nl/img/jordy-hoebergen.webp">
+  <meta property="og:image:alt" content="Portretfoto van Jordy Hoebergen">
   <meta property="og:image:width" content="750">
   <meta property="og:image:height" content="750">
   <meta property="og:image:type" content="image/webp">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Jordy Hoebergen | Service Engineer &amp; ICT-beheerder">
+  <meta name="twitter:title" content="Jordy Hoebergen | Service Engineer & ICT-beheerder">
   <meta name="twitter:description" content="Persoonlijke website van Jordy Hoebergen: Service Engineer bij Advantive en winnaar Skills The Finals ICT-beheerder.">
   <meta name="twitter:image" content="https://jordyhoebergen.nl/img/jordy-hoebergen.webp">
+  <meta name="twitter:image:alt" content="Portretfoto van Jordy Hoebergen">
 
   <!-- Structured Data (Schema.org) -->
   <script type="application/ld+json">
@@ -220,16 +225,19 @@
             <div class="hero__social" style="margin-top: 24px; display: flex; gap: 8px;">
               <a href="mailto:jordy@hoebergen.net" class="md-icon-btn md-icon-btn--tonal" aria-label="Email">
                 <span class="material-symbols-outlined">mail</span>
+                <span class="visually-hidden">E-mail naar jordy@hoebergen.net</span>
               </a>
-              <a href="https://linkedin.com/in/jordy-hoebergen" target="_blank" rel="noopener" class="md-icon-btn md-icon-btn--tonal" aria-label="LinkedIn">
+              <a href="https://linkedin.com/in/jordy-hoebergen" target="_blank" rel="me noopener" class="md-icon-btn md-icon-btn--tonal" aria-label="LinkedIn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                 </svg>
+                <span class="visually-hidden">LinkedIn profiel van Jordy Hoebergen</span>
               </a>
-              <a href="https://github.com/jordyegnl" target="_blank" rel="noopener" class="md-icon-btn md-icon-btn--tonal" aria-label="GitHub">
+              <a href="https://github.com/jordyegnl" target="_blank" rel="me noopener" class="md-icon-btn md-icon-btn--tonal" aria-label="GitHub">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
                 </svg>
+                <span class="visually-hidden">GitHub profiel van Jordy Hoebergen</span>
               </a>
             </div>
           </div>
@@ -331,88 +339,100 @@
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: var(--md-sys-spacing-4);">
           <!-- 1. Advantive -->
-          <a href="ervaringen/advantive/" class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
+          <article class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
             <div class="experience-card__image-wrapper blur-load" style="background-image: url(img/small.jpg);">
               <img src="img/Stage-Advantive-Nummerplaat.webp" alt="Advantive Microsoft Solutions Partner" width="1500" height="1000" loading="lazy" decoding="async" class="experience-card__image">
             </div>
             <div class="experience-card__content">
-              <h3 class="title-large" style="margin: 0; font-weight: 700;">Advantive</h3>
+              <h3 class="title-large" style="margin: 0; font-weight: 700;">
+                <a href="ervaringen/advantive/" class="stretched-link">Advantive</a>
+              </h3>
               <p class="experience-card__date-text">Juni 2025 – Heden</p>
               <p class="body-medium">
                 Werkzaam als Service Engineer bij Managed Services: 2e-lijns support, proactief beheer in Microsoft 365, Azure en Copilot, én local support op locatie bij klanten.
               </p>
             </div>
-          </a>
+          </article>
 
           <!-- 2. Stage Advantive -->
-          <a href="ervaringen/stage-advantive/" class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
+          <article class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
             <div class="experience-card__image-wrapper blur-load" style="background-image: url(img/small.jpg);">
               <img src="img/Stage-Advantive-Werkplek-full.webp" alt="Jordy op werkplek bij Advantive" width="4624" height="3472" loading="lazy" decoding="async" class="experience-card__image">
             </div>
             <div class="experience-card__content">
-              <h3 class="title-large" style="margin: 0; font-weight: 700;">Stage Advantive</h3>
+              <h3 class="title-large" style="margin: 0; font-weight: 700;">
+                <a href="ervaringen/stage-advantive/" class="stretched-link">Stage Advantive</a>
+              </h3>
               <p class="experience-card__date-text">Februari – Juli 2025</p>
               <p class="body-medium">
                 Tijdens mijn afstudeerstage heb ik de operationele monitoring voor het Managed Services team geoptimaliseerd met een centrale, hybride monitoringsoplossing.
               </p>
             </div>
-          </a>
+          </article>
 
           <!-- 3. Stage VDL -->
-          <a href="ervaringen/stage-vdl/" class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
+          <article class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
             <div class="experience-card__image-wrapper blur-load" style="background-image: url(img/small.jpg);">
               <img src="img/Stage-VDL-1-1.webp" alt="Jordy voor het hoofdkantoor van VDL Nederland" width="1263" height="806" loading="lazy" decoding="async" class="experience-card__image">
             </div>
             <div class="experience-card__content">
-              <h3 class="title-large" style="margin: 0; font-weight: 700;">Stage VDL</h3>
+              <h3 class="title-large" style="margin: 0; font-weight: 700;">
+                <a href="ervaringen/stage-vdl/" class="stretched-link">Stage VDL</a>
+              </h3>
               <p class="experience-card__date-text">Februari – Juni 2023</p>
               <p class="body-medium">
                 Tijdens mijn eindstage bij VDL Nederland werkte ik binnen Werkplekbeheer aan 2e-lijns support, de uitrol van de Moderne Werkplek en netwerkgerelateerde examenopdrachten.
               </p>
             </div>
-          </a>
+          </article>
 
           <!-- 4. Skills Heroes -->
-          <a href="ervaringen/skills-heroes/" class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
+          <article class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
             <div class="experience-card__image-wrapper blur-load" style="background-image: url(img/small.jpg);">
               <img src="img/Skills-Kwalificatie.webp" alt="Jordy tijdens Skills Heroes" width="1263" height="806" loading="lazy" decoding="async" class="experience-card__image" style="object-position: top;">
             </div>
             <div class="experience-card__content">
-              <h3 class="title-large" style="margin: 0; font-weight: 700;">Skills Heroes</h3>
+              <h3 class="title-large" style="margin: 0; font-weight: 700;">
+                <a href="ervaringen/skills-heroes/" class="stretched-link">Skills Heroes</a>
+              </h3>
               <p class="experience-card__date-text">2022 – 2023</p>
               <p class="body-medium">
                 Tijdens mijn MBO 4 opleiding heb ik meegedaan aan de landelijke ICT-beheerders wedstrijd voor MBO. Dit wordt jaarlijks georganiseerd door Worldskills Netherlands.
               </p>
             </div>
-          </a>
+          </article>
 
           <!-- 5. Stage Agrippa -->
-          <a href="ervaringen/stage-agrippa/" class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
+          <article class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
             <div class="experience-card__image-wrapper blur-load" style="background-image: url(img/small.jpg);">
               <img src="img/Agrippa-HomeAssistant.webp" alt="Home Assistant op iPad bij Agrippa" width="1980" height="1320" loading="lazy" decoding="async" class="experience-card__image">
             </div>
             <div class="experience-card__content">
-              <h3 class="title-large" style="margin: 0; font-weight: 700;">Stage Agrippa</h3>
+              <h3 class="title-large" style="margin: 0; font-weight: 700;">
+                <a href="ervaringen/stage-agrippa/" class="stretched-link">Stage Agrippa</a>
+              </h3>
               <p class="experience-card__date-text">September 2021 – Februari 2022</p>
               <p class="body-medium">
                 Tijdens mijn stage bij Agrippa werkte ik met Sophos firewalls en DrayTek routers, zette ik een WDS-server op voor snelle computeruitrollen en implementeerde we centrale domotica via Home Assistant.
               </p>
             </div>
-          </a>
+          </article>
 
           <!-- 6. Homelab & Projecten -->
-          <a href="https://status.hoebergen.net/status/default" target="_blank" rel="noopener nofollow" class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
+          <article class="experience-card md-card md-card--elevated experience-card-wrapper fade-in">
             <div class="experience-card__image-wrapper blur-load" style="background-image: url(img/small.jpg);">
               <img src="img/Raspberry-Pi.webp" alt="Raspberry Pi, Linux en Docker logo's" width="1263" height="806" loading="lazy" decoding="async" class="experience-card__image">
             </div>
             <div class="experience-card__content">
-              <h3 class="title-large" style="margin: 0; font-weight: 700;">Homelab &amp; Projecten</h3>
+              <h3 class="title-large" style="margin: 0; font-weight: 700;">
+                <a href="https://status.hoebergen.net/status/default" target="_blank" rel="noopener" class="stretched-link">Homelab &amp; Projecten</a>
+              </h3>
               <p class="experience-card__date-text">Linux, Docker, Kubernetes</p>
               <p class="body-medium">
                 In mijn vrije tijd vind ik het leuk om te werken met Linux, Docker en Kubernetes. Ik heb een eigen homelab opgezet met diverse services.
               </p>
             </div>
-          </a>
+          </article>
         </div>
       </section>
 
@@ -445,7 +465,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Microsoft</div>
-                <h3 class="cert-card__title">AI Business Professional (AB-730)</h3>
+                <p class="cert-card__title">AI Business Professional (AB-730)</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -464,7 +484,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Microsoft</div>
-                <h3 class="cert-card__title">Endpoint Administrator (MD-102)</h3>
+                <p class="cert-card__title">Endpoint Administrator (MD-102)</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -483,7 +503,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Microsoft</div>
-                <h3 class="cert-card__title">Microsoft 365 Administrator (MS-102)</h3>
+                <p class="cert-card__title">Microsoft 365 Administrator (MS-102)</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -502,7 +522,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Microsoft</div>
-                <h3 class="cert-card__title">Azure Fundamentals (AZ-900)</h3>
+                <p class="cert-card__title">Azure Fundamentals (AZ-900)</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -521,7 +541,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Cisco</div>
-                <h3 class="cert-card__title">CyberOps Associate</h3>
+                <p class="cert-card__title">CyberOps Associate</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -540,7 +560,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Cisco</div>
-                <h3 class="cert-card__title">Endpoint Security</h3>
+                <p class="cert-card__title">Endpoint Security</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -559,7 +579,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Cisco</div>
-                <h3 class="cert-card__title">Networking Basics</h3>
+                <p class="cert-card__title">Networking Basics</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -578,7 +598,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Cisco</div>
-                <h3 class="cert-card__title">Introduction to IoT</h3>
+                <p class="cert-card__title">Introduction to IoT</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -597,7 +617,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Cisco</div>
-                <h3 class="cert-card__title">CCNA: Enterprise Networking, Security, and Automation</h3>
+                <p class="cert-card__title">CCNA: Enterprise Networking, Security, and Automation</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -616,7 +636,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Cisco</div>
-                <h3 class="cert-card__title">CCNA: Switching, Routing, and Wireless Essentials</h3>
+                <p class="cert-card__title">CCNA: Switching, Routing, and Wireless Essentials</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -635,7 +655,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Cisco</div>
-                <h3 class="cert-card__title">Cybersecurity Essentials</h3>
+                <p class="cert-card__title">Cybersecurity Essentials</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -654,7 +674,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Cisco</div>
-                <h3 class="cert-card__title">Introduction to Cybersecurity</h3>
+                <p class="cert-card__title">Introduction to Cybersecurity</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -673,7 +693,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Microsoft</div>
-                <h3 class="cert-card__title">Microsoft Office Specialist: Associate</h3>
+                <p class="cert-card__title">Microsoft Office Specialist: Associate</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -692,7 +712,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Microsoft</div>
-                <h3 class="cert-card__title">Microsoft Office Specialist: Word Expert</h3>
+                <p class="cert-card__title">Microsoft Office Specialist: Word Expert</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -711,7 +731,7 @@
               </div>
               <div class="cert-card__meta">
                 <div class="cert-card__issuer">Cisco</div>
-                <h3 class="cert-card__title">CCNA: Introduction to Networks</h3>
+                <p class="cert-card__title">CCNA: Introduction to Networks</p>
               </div>
             </div>
             <div class="cert-card__footer">
@@ -753,19 +773,24 @@
                 <span>jordy@hoebergen.net</span>
               </a>
 
-              <a href="https://linkedin.com/in/jordy-hoebergen" target="_blank" rel="noopener nofollow" class="md-btn md-btn--tonal contact-btn">
+              <a href="https://linkedin.com/in/jordy-hoebergen" target="_blank" rel="me noopener" class="md-btn md-btn--tonal contact-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                 </svg>
                 <span>Jordy Hoebergen</span>
               </a>
 
-              <a href="https://github.com/jordyegnl" target="_blank" rel="noopener nofollow" class="md-btn md-btn--tonal contact-btn">
+              <a href="https://github.com/jordyegnl" target="_blank" rel="me noopener" class="md-btn md-btn--tonal contact-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
                 </svg>
                 <span>JordyEGNL</span>
               </a>
+
+              <button type="button" class="md-btn md-btn--tonal contact-btn" id="share-profile-btn" aria-label="Deel portfolio">
+                <span class="material-symbols-outlined">share</span>
+                <span id="share-btn-text">Deel portfolio</span>
+              </button>
             </div>
           </div>
         </div>

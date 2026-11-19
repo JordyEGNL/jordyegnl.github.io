@@ -3,12 +3,12 @@
 /* -----------------------------------------------
    State Layers (M3 hover/press overlays)
    ----------------------------------------------- */
-:where(.md-btn, .md-icon-btn, a.md-card, a.social-card, a.experience-card, a.cert-card) {
+:where(.md-btn, .md-icon-btn, a.md-card, .md-card, a.social-card, a.experience-card, .experience-card, a.cert-card) {
   position: relative;
   overflow: hidden;
 }
 
-:where(.md-btn, .md-icon-btn, a.md-card, a.social-card, a.experience-card, a.cert-card)::before {
+:where(.md-btn, .md-icon-btn, a.md-card, .md-card, a.social-card, a.experience-card, .experience-card, a.cert-card)::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -19,15 +19,16 @@
   z-index: 1;
 }
 
-:where(.md-btn, .md-icon-btn, a.md-card, a.social-card, a.experience-card, a.cert-card):hover::before {
+:where(.md-btn, .md-icon-btn, a.md-card, .md-card, a.social-card, a.experience-card, .experience-card, a.cert-card):hover::before {
   opacity: 0.08;
 }
 
-:where(.md-btn, .md-icon-btn, a.md-card, a.social-card, a.experience-card, a.cert-card):active::before {
+:where(.md-btn, .md-icon-btn, a.md-card, .md-card, a.social-card, a.experience-card, .experience-card, a.cert-card):active::before {
   opacity: 0.12;
 }
 
-:where(.md-btn, .md-icon-btn, a.md-card, a.social-card, a.experience-card, a.cert-card):focus-visible {
+:where(.md-btn, .md-icon-btn, a.md-card, a.social-card, a.experience-card, a.cert-card):focus-visible,
+.experience-card:focus-within {
   outline: 3px solid var(--md-sys-color-primary);
   outline-offset: 2px;
 }
@@ -289,7 +290,7 @@
   color: var(--md-sys-color-on-surface);
 }
 
-a.md-card:hover {
+:is(a.md-card, .md-card:has(.stretched-link)):hover {
   transform: translateY(-2px);
 }
 
@@ -298,7 +299,7 @@ a.md-card:hover {
   box-shadow: var(--md-sys-elevation-level-1);
 }
 
-a.md-card--elevated:hover {
+:is(a.md-card--elevated, .md-card--elevated:has(.stretched-link)):hover {
   box-shadow: var(--md-sys-elevation-level-3);
 }
 
@@ -644,8 +645,10 @@ a.md-card--elevated:hover {
    Experience Cards (Ervaringen page)
    ----------------------------------------------- */
 .experience-card {
+  position: relative;
   text-decoration: none;
   color: var(--md-sys-color-on-surface);
+  cursor: pointer;
 }
 
 .experience-card__image-wrapper {
@@ -665,9 +668,25 @@ a.md-card--elevated:hover {
   transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1), filter 0.3s ease;
 }
 
-a.experience-card:hover .experience-card__image {
+:is(a.experience-card, .experience-card):hover .experience-card__image {
   transform: scale(1.06);
   filter: brightness(0.9);
+}
+
+.stretched-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.stretched-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.stretched-link:focus-visible {
+  outline: none;
 }
 
 .experience-card__content {
@@ -1378,5 +1397,18 @@ a.cert-card:hover .cert-card__img {
   margin-top: 48px;
   color: var(--md-sys-color-on-surface-variant);
   font-size: 14px;
+}
+
+/* Accessibility / SEO Utility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 

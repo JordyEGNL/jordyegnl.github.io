@@ -332,6 +332,42 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
+
+  // --- Share Portfolio Button ------------------------------
+  const shareBtn = document.getElementById('share-profile-btn');
+  const shareBtnText = document.getElementById('share-btn-text');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', async () => {
+      const shareData = {
+        title: 'Jordy Hoebergen | Service Engineer & ICT-beheerder',
+        text: 'Bekijk het portfolio van Jordy Hoebergen: Service Engineer bij Advantive en winnaar Skills The Finals.',
+        url: window.location.origin || 'https://jordyhoebergen.nl/'
+      };
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+        } catch (err) {
+          // User dismissed or canceled share dialog
+        }
+      } else if (navigator.clipboard) {
+        try {
+          await navigator.clipboard.writeText('https://jordyhoebergen.nl/');
+          if (shareBtnText) {
+            const originalText = shareBtnText.textContent;
+            shareBtnText.textContent = 'Link gekopieerd! ✓';
+            setTimeout(() => {
+              shareBtnText.textContent = originalText;
+            }, 2500);
+          }
+        } catch (e) {
+          window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent('https://jordyhoebergen.nl/'), '_blank');
+        }
+      } else {
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent('https://jordyhoebergen.nl/'), '_blank');
+      }
+    });
+  }
+
 });
 
 if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
